@@ -18,3 +18,35 @@ code {
   border-bottom: 1px solid rgb(219, 31, 163);
   height: 13vh;
 }
+
+.cin {
+  display: flex;
+    justify-content: left;
+    width: 900px;
+    height: 100px;
+    margin :3%;
+    
+    border: px hwb(69 7% 77%) solid;
+    align-items: center;
+}
+.cinemaCinemas {
+  display: flex;
+  justify-content: left;
+  width: 200px;
+  height: 80px;
+  align-items: center;
+}
+.cinemaTitle {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  align-items: center;
+}
+.cinemaDay {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 80px;
+  align-items: center;
+}
