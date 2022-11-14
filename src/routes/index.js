@@ -39,9 +39,10 @@ const routes = [
           {
             path: "myaccount",
             element: <Account />
-          },
+          }
+         
         ]
-      }
-]
+    }
+      ]
 
 export default routes;

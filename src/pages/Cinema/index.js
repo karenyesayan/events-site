@@ -12,27 +12,28 @@ import instance from "../../api/axios"
        
    
    useEffect(() => {
-    axios.
-        get("http://localhost:3000/cinema")
+  
+       instance.get("/cinema")
         .then(res => setMovies(res.data))
           
    }, [])
 
-    
-
-    return (
-
+      return (
+      
         <div>
             {movies.map (item  => {
                 return(
                     
-                <div className={"cin"}  
-                    key = {item.id}>
-                    <p className="cinemaCinemas">{item.cinemas}</p>
-                    <p className="cinemaTitle" >"{item.title}"</p>
-                    <p className="cinemaDay">{item.day}</p>
-                    <p>{item.price}dr. </p>
-                    <button>Buy now</button>
+                <div key = {item.id} style={{backgroundImage: `url(	)`}}>
+                    
+                    <img className="event-types-img"  src={item.img}/>
+                    <div className={"cin"} >
+                    <h2 className={""}>{item.day}</h2>
+                        <h1 className={""}>"{item.title}"</h1>
+                        <h5 className={""}>{item.cinemas}</h5>
+                        <h2 className={""}>{item.price}dr. </h2>
+                        <button>Buy now</button>
+                    </div>
 
                 </div>
                 
