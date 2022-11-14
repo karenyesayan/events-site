@@ -45,6 +45,116 @@
       "about":"«Պրեմիերա Կատակերգությունը»"
     }
   ],
+  "upcomingEvents": [
+        {
+            "id": 1,
+            "img": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-3/avatar-3_bmf4.128.jpg",
+            "title": "Avatar 2",
+            "date": "december 2022",
+            "info": "Jake Sully lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their planet."
+        },
+        {
+            "id": 2,
+            "img": "https://upload.wikimedia.org/wikipedia/ru/thumb/3/3b/John_Wick_4_poster.jpg/225px-John_Wick_4_poster.jpg",
+            "title": "John Wick",
+            "date": "2023",
+            "info": "John Wick (Keanu Reeves) uncovers a path to defeating the High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes. Lionsgate presents, a Thunder Road Films / 87eleven production."
+        },
+        {
+            "id": 3,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKUHUG208ws0SFgqbnAhRfphh61wqBdo8fognuaXoo7q3T90bqD4voZIrPoZtg6rv9vvY&usqp=CAU",
+            "title": "Ant-man",
+            "date": "February 2023",
+            "info": "Scott Lang and Hope Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, where they interact with strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible."
+        }
+    ],
+    "homeBackImg": [
+      {
+        "id": 1,
+        "src": "https://guardian.ng/wp-content/uploads/2022/10/Poster-Wakanda-forever-2-1424x802-1.jpeg",
+        "title": "Black Panther"
+      },
+      {
+        "id": 2,
+        "src": "https://azat.tv/wp-content/uploads/2022/10/anqnutyun-scaled.jpg",
+        "title": "Անքնություն"
+      },
+      {
+        "id": 3,
+        "src": "https://images.squarespace-cdn.com/content/v1/5c213a383c3a53bf091b1c36/54c847e3-4c18-4564-be3c-900931be55c8/black.jpeg",
+        "title": "Black Adam"
+      }
+    ],
+    "eventTypes": [
+      {
+        "id": 1,
+        "src": "https://storage.googleapis.com/afs-prod/media/e53811360eed4b8ba26b5f635d703a7c/3000.jpeg",
+        "title": "Cinema",
+        "price": 1500,
+        "date": "20/11/22"
+      },
+      {
+        "id": 2,
+        "src": "https://www.bca.co.id/-/media/Feature/News/Edukatips/2022/09/20220912-tips-nonton-konser-pertama-kali-banner.jpg",
+        "title": "Concert",
+        "price": 1500,
+        "date": "02/11/22"
+      },
+      {
+        "id": 3,
+        "src": "https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=650%2Cmetadata=none%2Conerror=redirect%2Cq=70%2Csharpen=1%2Cwidth=956/wp-content/uploads/world-theater-day.jpg",
+        "title": "Theater",
+         "price": 1500,
+        "date": "20/11/22"
+      },
+      {
+        "id": 4,
+        "src": "https://caucasusholidays.am/sites/default/files/Opera-%26-Ballet-Theatre-2.2.jpg",
+        "title": "Opera and theater",
+        "price": 1500,
+        "date": "20/11/22"
+      },
+      {
+        "id": 5,
+        "src": "https://www.houstoncitybook.com/media-library/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNjgyMjk3MC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTcyNjIxMjQzOH0.XruMC_JRXa6bAjQDnSKUKyxvIw1hHJxPdBKv04PbtPg/image.jpg?width=1245&height=700&quality=85&coordinates=0%2C63%2C0%2C111",
+        "title": "Club and pub",
+        "price": 1500,
+        "date": "03/12/22"
+      },
+      {
+        "id": 6,
+        "src": "https://rg.ru/uploads/images/207/64/03/cirk.jpg",
+        "title": "Other",
+        "price": 1500,
+        "date": "30/11/22"
+      }
+    ],
+    "events":  [
+      {
+          "id": 1,
+          "img": "",
+          "title": "",
+          "date": "",
+          "time": "2022-11-21",
+          "place": ""
+      },
+      {
+          "id": 1,
+          "img": "",
+          "title": "",
+          "date": "2022-11-22",
+          "time": "",
+          "place": ""
+      },
+      {
+          "id": 1,
+          "img": "",
+          "title": "",
+          "date": "2022-11-23",
+          "time": "",
+          "place": ""
+      }
+  ],
   "profile": {
     "name": "typicode"
   }

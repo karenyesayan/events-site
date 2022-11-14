@@ -1,29 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import instance from "../../api/axios"
 
 import Events from "./Events"
+import Schedule from "./Schedule"
+import Upcomings from "./Upcomings"
 
 const Home = () => {
   const [imgIndex, setImgIndex] = useState(1)
+  const [backImg, setBackImg] = useState([])
 
-  const backImg = [
-    {
-      id: 1,
-      src: 'https://guardian.ng/wp-content/uploads/2022/10/Poster-Wakanda-forever-2-1424x802-1.jpeg',
-      title: 'Black Panther'
-    },
-    {
-      id: 2,
-      src: 'https://azat.tv/wp-content/uploads/2022/10/anqnutyun-scaled.jpg',
-      title: 'Անքնություն'
-    },
-    {
-      id: 3,
-      src: 'https://images.squarespace-cdn.com/content/v1/5c213a383c3a53bf091b1c36/54c847e3-4c18-4564-be3c-900931be55c8/black.jpeg',
-      title: 'Black Adam'
-    }
-  ]
-
-
+  useEffect(() => {
+    instance.get('homeBackImg')
+      .then(res => {
+          setBackImg(res.data)
+      })
+      .catch(err => {
+          console.log(err)
+      })
+  }, [])
 
   const right = () => {
     if (imgIndex == backImg.length) {
@@ -39,18 +33,15 @@ const Home = () => {
       } else {
         setImgIndex(imgIndex - 1);
       }
-  }
-
-console.log(imgIndex)
- 
+  } 
 
   return (
     <>
       {
           backImg.map(({id, src, title}) => (
-              <div style={id == imgIndex ? {backgroundImage: `url(${src})`}: {display: 'none'}} className='home-back' >
+              <div key={id} style={id == imgIndex ? {backgroundImage: `url(${src})`}: {display: 'none'}} className='home-back' >
                 <div className="homepage-title">
-                  Upcoming movies
+                  Ongoing movies
                 </div>
                   <div className="homepage-content">
                       <div className="homepage-content-title">
@@ -74,9 +65,8 @@ console.log(imgIndex)
           ))
       }
       <Events />
-      <div className="schedule">
-
-      </div>
+      <Schedule />
+      <Upcomings />
     </>
   )
 }
