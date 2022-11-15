@@ -8,6 +8,8 @@ import Theater from "../pages/Theater";
 import Other from "../pages/Other";
 
 import Account from "../pages/Account";
+import Profile from "../pages/Profile";
+import Registration from "../pages/Registration";
 
 
 const routes = [
@@ -39,6 +41,14 @@ const routes = [
           {
             path: "myaccount",
             element: <Account />
+          },
+          {
+            path: "profile",
+            element: <Profile />
+          },
+          {
+            path: "registration",
+            element: <Registration />
           }
          
         ]
