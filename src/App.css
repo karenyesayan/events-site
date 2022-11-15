@@ -1,5 +1,293 @@
-*{
-  padding: 0;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* HomePage */
+
+.home-back{
+  height: 100vh;
+  width: 99.1vw;
+  background-size: cover;
+  animation: backimage 1s forwards;
+}
+@keyframes backimage {
+  from {opacity: 0}
+  to {opacity: 1;}
+}
+.homepage-content-btns{
+  position: relative;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.homepage-btn{
+  border: rgb(16, 1, 36) 2px solid;
+  padding: 20px 0;
+  border-radius: 50%;
+  width: 40px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.homepage-btn:hover{
+  background-color: rgb(43, 20, 71);
+  opacity: 0.4;
+}
+.homepage-content{
+  position: absolute;
+  top: 550px;
+  left: 150px;
+}
+.homepage-content-title{
+  font-size: 100px;
+  color: whitesmoke;
+  animation: title 0.5s forwards;
+  animation-delay: 0.5s;
+  margin-left: 150px;
+  opacity: 0;
+}
+@keyframes title {
+  from {opacity: 0; margin-left: 150px}
+  to {opacity: 1; margin-left: 0;}
+}
+.homepage-content-order{
+  border: 1px solid rgb(16, 1, 36);
+  background-color: rgb(16, 1, 36);
+  color: whitesmoke;
+  border-radius: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  transition: 0.5s all;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.homepage-content-order:hover{
+  background-color: rgb(43, 20, 71);
+}
+.homepage-title{
+  font-size: 80px;
+  color: rgb(247, 226, 247);
+  display: flex;
+  justify-content: center;
+}
+
+
+.event-types-cards{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  height: 100vh;
+  width: 99.1vw;
+  padding-top: 150px;
+}
+
+.event-types-card{
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.event-types-card{
+  border-radius: 8px;
+  padding: 9px;
   box-sizing: border-box;
+  background-color: none;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.event-types-card:hover{
+  transform:translateY(-8px) translateX(8px);
+}
+.event-types-img{
+  width: 400px;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.event-types-title{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+}
+.event-types-img-div{
+  position: relative;
+}
+
+
+
+.schedule{
+  background-color: rgb(1, 1, 34);
+  color: whitesmoke;
+  padding-top: 100px;
+  padding: 100px 0;
+}
+.schedule-title{
+  font-size: 70px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+.scgedule-date-div{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.schedule-date{
+  width: 200px;
+  height: 50px;
+  padding: 0 15px;
+}
+.schedule-events{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.schedule-event{
+  width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  border: 2px solid whitesmoke;
+  position: relative;
+  margin-top: 50px;
+}
+.event-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.event-info{
+  margin: 0 25px;
+}
+.event-title{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.event-place{
+  font-size: 12px;
+  color: #beb9b9;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.event-ticket{
+  position: absolute;
+  right: 25px;
+  border: rgb(43, 20, 71) 2px solid;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.event-ticket:hover{
+  background-color: rgb(43, 20, 71);
+}
+.event-date{
+  margin-left: 100px;
+  text-transform: uppercase;
+}
+.event-error{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: red;
+  margin-top: 50px;
+}
+.choose{
+  font-size: 25px;
+  color: rgb(255,0,241);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+.upcoming{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 100px 0;
+}
+.upcoming-events{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  justify-content: center;
+}
+.upcoming-container{
+  width: 1500px;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+.upcoming-title{
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+.upcoming-event{
+  border: 2px solid black;
+  padding: 20px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 8px;
+}
+.upcoming-event-title{
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.upcoming-event-date{
+  text-transform: uppercase;
+}
+.upcoming-event-info{
+  position: absolute;
+  bottom: 20px;
+}
+.upcoming-event-img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }

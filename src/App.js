@@ -4,10 +4,7 @@ import Header from './Components/Header';
 
 function App() {
   return (
-    <div >
-      <Header />
-      <Outlet />
-    </div>
+    <div></div>
   );
 }
 
