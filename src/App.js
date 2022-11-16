@@ -55,7 +55,7 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="Container">
       <div style={mystyle}>
           <div className="poster-items">
               <div className="poster-title">{obj[count].title}</div>

@@ -54,7 +54,7 @@ const Header = () => {
         <header className='header'>
             <nav className='nav'>
                 <div className="logo">
-                    <img src={logo} className="App-logo" alt="logo"></img>
+                    <img src={logo} className="Site-logo" alt="logo"></img>
                 </div>
                     {
                         navigation.map(({id, title, to}) => (
