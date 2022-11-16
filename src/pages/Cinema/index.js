@@ -20,29 +20,52 @@ import instance from "../../api/axios"
 
       return (
       
-        <div>
+        <div className="upcoming">
+            <div className="upcoming-container">
+                <div className="upcoming-title">
+                    MOVIES
+                </div>
+                <div className="upcoming-events">
             {movies.map (item  => {
                 return(
                     
-                <div key = {item.id} style={{backgroundImage: `url(	)`}}>
+                <div key = {item.id} className={"upcoming-event"}>
                     
-                    <img className="event-types-img"  src={item.img}/>
-                    <div className={"cin"} >
-                    <h2 className={""}>{item.day}</h2>
-                        <h1 className={""}>"{item.title}"</h1>
-                        <h5 className={""}>{item.cinemas}</h5>
-                        <h2 className={""}>{item.price}dr. </h2>
-                        <button>Buy now</button>
+                    
+                    <div className="upcoming-event-img-div">
+                        <img src={item.img} className="upcoming-event-img"/>
                     </div>
-
-                </div>
-                
-                )})
-            }
+                    <div className="upcoming-event-title">
+                        {item.title}
+                    </div>
+                    <div className="upcoming-event-date">
+                        {item.day}
+                    </div>
+                    <div className="upcoming-event-info">
+                        {item.about}
+                    </div>
+                    
+                    <div className="upcoming-event-date">
+                        {item.price}
+                    </div>
+                        <button className={"button-cinem"}>Buy now</button>
+                        </div>
+               
+               
+                )
+            } ) }
+            </div>
+            </div >   
         </div>
-    )
+            
+            
+
+                
+                )
+            }
+        
     
-}
+    
 
 
 export default Cinema

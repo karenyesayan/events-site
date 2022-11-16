@@ -6,6 +6,8 @@ import Cinema from "../pages/Cinema";
 import Concert from "../pages/Concert";
 import Theater from "../pages/Theater";
 import Other from "../pages/Other";
+import OperaBallet from "../pages/OperaBallet";
+import ClubsPubs from "../pages/ClubsPubs";
 
 import Account from "../pages/Account";
 import Profile from "../pages/Profile";
@@ -33,6 +35,14 @@ const routes = [
           {
             path: "theater",
             element: <Theater />
+          },
+          {
+            path: "operaBallet",
+            element: <OperaBallet />
+          },
+          {
+            path: "clubsPubs",
+            element: <ClubsPubs />
           },
           {
             path: "other",

@@ -30,55 +30,61 @@ const Account = (navigateTo) => {
                         navigate('/profile') 
                     } else {
                         navigate('/registration') 
-                        console.log('Wrong username or password!')
-                        
+                                               
                     }
                  } 
                 )
                 }
                         
-<Profile userName/>
+
     return (
         
-            <div className='auth-container'>
-                <h3>LOGIN</h3>
+            <div className="upcoming">
+                <div >
+                <h3 className={"login-registration"}>Personal details</h3>
+                <p className="p">Name </p>
                 <input
                     type="text"
                     value={userName}
-                    className='auth-input'
+                    className = {"input"}
                     placeholder='username'
                    onChange={e => setUserName(e.target.value)}
              
                 />
+                <p className="p">Email </p>
                 <input
                     type="E-mail"
                     value={userEmail}
-                    className='auth-input'
+                    className = {"input"}
                     placeholder='E-mail'
                     onChange={e => setUserEmail(e.target.value)}
                 />
+                <p className="p">Password</p>
                 <input
                     type="password"
                     value={userPass}
-                    className='auth-input'
+                    className = {"input"}
                     placeholder='password'
                   onChange={e => setUserPass(e.target.value)}
                 />
+                <p className="p"></p>
                 <button
-                    className='auth-submit'
+                    className = {"button"}
                    onClick={handleLogin}
                 >
                     Log in
                 </button>
-                 
+                                 
                 <div className='auth-navigate'>
-                    <p className='auth-notification'>Don`t have an account?</p>
+                    <p className="p">Don`t have an account?</p>
                     <button
-                        className='auth-submit'
+                        className = {"button"}
                        onClick={() => {navigate('/registration')}}
                     >Sign up</button>
                 </div>
+                </div>
             </div>
+        
         )
      }
 

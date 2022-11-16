@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -12,33 +13,111 @@ code {
     monospace;
 }
 
+/* HEADER */
 
 .header {
+  width: 100%;
+  height: 15vh;
   display: flex;
-  border-bottom: 1px solid rgb(219, 31, 163);
-  height: 13vh;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.cin {
+.rightBar {
+  width: 15%;
+  height: 15vh;
   display: flex;
-  justify-content:center;
-  height: 35vh;
-  width: 50vw;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.nav {
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-items {
+  height: 8vh;
+  width: 7vw;
+  display: flex; 
+}
+
+.logo {
+  height: 5vh;
+  width: 8vw;
+  background-color: crimson;
+  display: flex;
+  align-self: center;
+}
+
+.Site-logo {
+  width: 70%;
+  height: auto;
+  color: #6B86A6;
+}
+
+.hidden {
+  display:none;
+}
+
+.search-bar {
+  display: flex;
+  color: #6B86A6;
+}
+
+.search-bar:hover > .hidden {
+  display:flex;
+}
+
+.language-bar {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.user {
+  height: 8vh;
+  width: 100%;
+  background-color: crimson;
+  display: flex;
+  align-self: center;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  color: #6B86A6;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.account {
+  list-style: none;
+  text-decoration: none;
+  color: #6B86A6;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* CINEMA */
+
+.cin {
+  background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612244826_199-p-spasibo-za-vnimanie-fioletovii-fon-234.jpg);
+  display: flex;
   background-size: cover;
-  margin-top:0cm;
-   text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    font-size: 0.8rem;
-    display: block;
-    font-size: 0.7em;
-   
-    margin-inline-start: 5px;
-       font-weight: bold;
-       font-family: font-poppins;
-    color: heading;
-    line-height: 1.25;
-    font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 0.2rem;
+  display: block;
+  margin-inline-start: 5px;
+    
 }
 
 .cinema-home-back{
@@ -51,12 +130,70 @@ code {
   margin-top:1cm;
   margin-bottom: 2cm;
 }
+.button-cinem {
+  background-color: #7228c6;
+  color: white;
+  padding: 15px 25px;
+ width: 20cm;
+  margin-left: 10cm;
+  border: solid;
+ height: 15%;
+  width: 17%;
+ }
+ .button-cinem:active{
+  background-color: #f20606;
+ }
 
 /* LOGIN - REGISTER */
 .auth-container {
-  margin: 3%;
-  width: 45%;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.account{
+  display: flex;
+  margin-bottom: 50px;
+  font-size: 0.2rem;
+  display: block;
+  margin-inline-start: 5px; 
+}
+ .button {
+  background-color: #6b14cf;
+  color: white;
+  padding: 14px 20px;
+  margin: 0px 0;
+  margin-left: 10cm;
+  border: solid;
+  cursor: pointer;
+  width: 8%;
+ }
+ .input {
+  min-width: 15rem;
+    border-radius: 5px;
+    padding: 10px;
+    border: .5px #cccccc solid;
+    margin-left: 21Ch;
+   width: 5cm;
+ }
+ .p {
+  font-size: medium;
+  font: 1.2em sans-serif;
+  color:#ccc;
+  margin-left: 15ch;
+  margin-right: 1ch;
+ 
+ }
+ .login-registration{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 0cm;
+  text-transform: uppercase;
 }
