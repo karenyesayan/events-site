@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -12,12 +13,100 @@ code {
     monospace;
 }
 
+/* HEADER */
 
 .header {
+  width: 100%;
+  height: 15vh;
   display: flex;
-  border-bottom: 1px solid rgb(219, 31, 163);
-  height: 13vh;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
+
+.rightBar {
+  width: 15%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.nav {
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-items {
+  height: 8vh;
+  width: 7vw;
+  display: flex; 
+}
+
+.logo {
+  height: 5vh;
+  width: 8vw;
+  background-color: crimson;
+  display: flex;
+  align-self: center;
+}
+
+.App-logo {
+  width: 70%;
+  height: auto;
+  color: #6B86A6;
+}
+
+.hidden {
+  display:none;
+}
+
+.search-bar {
+  display: flex;
+  color: #6B86A6;
+}
+
+.search-bar:hover > .hidden {
+  display:flex;
+}
+
+.language-bar {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-self: center;
+}
+
+.user {
+  height: 8vh;
+  width: 100%;
+  background-color: crimson;
+  display: flex;
+  align-self: center;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  color: #6B86A6;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.account {
+  list-style: none;
+  text-decoration: none;
+  color: #6B86A6;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* CINEMA */
 
 .cin {
   display: flex;

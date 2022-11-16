@@ -1,6 +1,11 @@
 import {NavLink, Outlet} from "react-router-dom";
 
 
+import Search from "../Search";
+import User from "../User";
+import LanguageBar from "../LanguageBar";
+import logo from "../../images/logo.png"
+
 const navigation = [
     {
         id: '1',
@@ -22,49 +27,53 @@ const navigation = [
         title: 'Theater',
         to: 'theater',
     },
-
     {
         id: '5',
+        title: 'Opera & Ballet',
+        to: 'operaBallet',
+    },
+    {
+        id: '6',
+        title: 'Clubs & Pubs',
+        to: 'clubsPubs',
+    },
+
+    {
+        id: '7',
         title: 'Other',
         to: 'other',
     },
 ]
 
+
+
+
 const Header = () => {
-
-
     return (
         <>
         <header className='header'>
-            <div>Logo</div>
-            <nav>
-                <ul className='nav'>
+            <nav className='nav'>
+                <div className="logo">
+                    <img src={logo} className="App-logo" alt="logo"></img>
+                </div>
                     {
                         navigation.map(({id, title, to}) => (
-                            <NavLink
-                                to={to}
-                                key={id}
-                                className={({isActive}) => isActive ? 'active-nav' : 'nav'}
-                            >{title}
-                            </NavLink>
+                                <NavLink
+                                    to={to}
+                                    key={id}
+                                    className={({isActive}) => isActive ? 'active-nav' : 'nav-item'}
+                                >{title}
+                                </NavLink>
                         ))
-                    }
-                </ul>
-                <input 
-                    type="search" 
-                    className="site-search"  
-                    placeholder="search">
-                </input>
-                <div>
-                    <NavLink
-                        to={"myaccount"}
-                        key={"5"}
-                        className={({isActive}) => isActive ? 'active-account' : 'account'}
-                    >Personal account
-                    </NavLink>
-                </div>
+                    } 
+                    <Search />
             </nav>
+            <div className="rightBar">
+                <LanguageBar />
+                <User />
+            </div>
         </header>
+        
             <Outlet/>
         </>
     )
