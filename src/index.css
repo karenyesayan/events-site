@@ -13,6 +13,15 @@ code {
     monospace;
 }
 
+/* LOADING */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40vh;
+}
+
 /* HEADER */
 
 .header {
