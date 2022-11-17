@@ -8,6 +8,12 @@
   ],
   "users": [
     {
+      "id": 0,
+      "userName": "ADMIN",
+      "email": "ADMIN@gmail.com",
+      "pass": "ADMIN"
+    },
+    {
       "id": 1,
       "userName": "Meri",
       "email": "mn@gmail.com",

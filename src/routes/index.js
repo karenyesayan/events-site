@@ -59,6 +59,10 @@ const routes = [
           {
             path: "registration",
             element: <Registration />
+          },
+          {
+            path: "admin",
+            element: <Admin />
           }
          
         ]

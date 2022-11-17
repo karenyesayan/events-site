@@ -26,9 +26,14 @@ const Account = (navigateTo) => {
                const handleLogin  = () => {
                 users.map(item => {
                     if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
-                        console.log(item.userName,item.Email,item.pass)
-                        navigate('/profile') 
-                    } else {
+                       navigate('/profile') 
+                    } else if (item.userName === "ADMIN" && item.email === "ADMIN@gmail.com" && item.pass === "ADMIN")  {
+                       navigate('/admin') 
+                       console.log("ADMIN")
+                                               
+                    }
+                    
+                    else {
                         navigate('/registration') 
                                                
                     }
