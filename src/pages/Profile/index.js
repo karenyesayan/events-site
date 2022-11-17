@@ -1,5 +1,4 @@
-import { useEffect, useMemo } from "react"
-
+i
 const Profile = ({navigateTo}) => {
 
     
@@ -8,7 +7,6 @@ const Profile = ({navigateTo}) => {
     .toString(16)
     .substring(2))}
 
-   console.log(discountCode())
     return (
         <div className={"upcoming"}>
             <h5>Hello {} this is your profile

@@ -2,24 +2,23 @@ import { useState } from "react"
 import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
 
+
 const Registration = ({navigateTo}) => {
     const navigate = useNavigate()
 
-    const[userName,setUserName] = useState();
-    const[userEmail,setUserEmail] = useState();
-    const[userPass,setUserPass] = useState();
+    const [userName,setUserName] = useState("");
+    const [userEmail,setUserEmail] = useState("");
+    const [userPass,setUserPass] = useState("");
 
     let obj ={
       
         "userName": userName,
-        "Email": userEmail,
+        "email": userEmail,
         "pass": userPass
     }
     const submit = () => {
         instance.post("/users", obj )
        
-
-
     }
 
     return (
