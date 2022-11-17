@@ -13,6 +13,7 @@ const Account = (navigateTo) => {
     const[userEmail,setUserEmail] = useState([]);
     const[userPass,setUserPass] = useState([]);
     const [user,setUser]= useState([]);
+    console.log(user)
     
     
         useEffect(() => {

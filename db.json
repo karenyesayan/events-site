@@ -24,8 +24,18 @@
       "Email": "mn@gmail.com",
       "pass": "111",
       "id": 3
+    },
+    {
+      "Email": "h@gmail.com",
+      "pass": "888",
+      "id": 4
+    },
+    {
+      "userName": "Meri Nikoghosyan",
+      "Email": "mn@gmail.com",
+      "pass": "111",
+      "id": 5
     }
-    
   ],
   "cinema": [
     {
