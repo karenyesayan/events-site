@@ -10,29 +10,29 @@
     {
       "id": 1,
       "userName": "Meri",
-      "Email": "mn@gmail.com",
+      "email": "mn@gmail.com",
       "pass": "111"
     },
     {
       "userName": "Harut",
-      "Email": "h@gmail.com",
+      "email": "h@gmail.com",
       "pass": "555",
       "id": 2
     },
     {
       "userName": "Meri Nikoghosyan",
-      "Email": "mn@gmail.com",
+      "email": "mn@gmail.com",
       "pass": "111",
       "id": 3
     },
     {
-      "Email": "h@gmail.com",
+      "email": "h@gmail.com",
       "pass": "888",
       "id": 4
     },
     {
       "userName": "Meri Nikoghosyan",
-      "Email": "mn@gmail.com",
+      "email": "mn@gmail.com",
       "pass": "111",
       "id": 5
     }
