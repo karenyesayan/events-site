@@ -3,8 +3,8 @@ import ReactLoading from "react-loading";
 
 export default function Loading() {
   return (
-    <div>
-      <ReactLoading type="cylon" color="#0000FF" height={100} width={50} />
+    <div className="loading">
+      <ReactLoading type="cylon" color="crimson" height={200} width={120} />
     </div>
   );
 }
