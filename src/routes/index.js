@@ -3,6 +3,7 @@ import {lazy} from "react";
 import App from "../App";
 import Header from "../components/Header";
 
+
 const Home = lazy(() => import("../pages/Home"))
 const Cinema = lazy(() => import("../pages/Cinema"))
 const Concert = lazy(() => import("../pages/Concert"))
@@ -51,6 +52,17 @@ const routes = [
             path: "myaccount",
             element: <Account />
           },
+          {
+            path: "profile",
+            element: <Profile />
+          },
+          {
+            path: "registration",
+            element: <Registration />
+          }
+         
         ]
-      }
-]
+    }
+      ]
+
+export default routes;
