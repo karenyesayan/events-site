@@ -1,11 +1,12 @@
 import {NavLink, Outlet} from "react-router-dom";
 
 
-import Search from "../Search";
-import User from "../User";
-import LanguageBar from "../LanguageBar";
-// import logo from "../../images/logo.png"
-import Logo from "../Logo"
+import Search from "./Search";
+import User from "./User"
+import LanguageBar from "./LanguageBar"
+import Logo from "./Logo"
+
+// import logo from "../images/logo.png"
 
 const navigation = [
     {
@@ -54,10 +55,10 @@ const Header = () => {
         <>
         <header className='header'>
             <nav className='nav'>
+                <Logo />
                 {/* <div className="logo">
                     <img src={logo} className="Site-logo" alt="logo"></img>
                 </div> */}
-                <Logo />
                     {
                         navigation.map(({id, title, to}) => (
                                 <NavLink
@@ -83,5 +84,3 @@ const Header = () => {
 
 
 export default Header
-
-

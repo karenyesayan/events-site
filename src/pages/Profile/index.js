@@ -1,4 +1,3 @@
-i
 const Profile = ({navigateTo}) => {
 
     

@@ -12,6 +12,9 @@ const Other = lazy(() => import("../pages/Other"))
 const OperaBallet = lazy(() => import("../pages/OperaBallet"))
 const ClubsPubs = lazy(() => import("../pages/ClubsPubs"))
 const Account = lazy(() => import("../pages/Account"))
+const Profile = lazy(() => import("../pages/Profile"))
+const Registration = lazy(() => import("../pages/Registration"))
+
 
 
 const routes = [
