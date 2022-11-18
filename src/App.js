@@ -2,6 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import './App.css';
+import Footer from "./components/Footer";
+// import {hash} from "./helpers"
+import Content from "./components/Content";
 
 
 const obj = [
@@ -33,8 +36,65 @@ const obj = [
 ];
 
 
+// const topItems = [
+//   {
+//       id: 1,
+//       className: 'block1',
+//       backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://www.feellini.ru/wordpress/wp-content/uploads/2020/05/shooting.jpg")`,
+//       to: "cinema", 
+//   },
+//     {
+//       id: 2,
+//       className: 'block2',
+//       backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://get.wallhere.com/photo/music-blue-microphone-audio-singing-performance-stage-rock-concert-288421.jpg")`,
+//       to: "concert", 
+//   },
+// ]
+
+// const bottomItems = [
+//   {
+//     id: 1,
+//     className: 'block3',
+//     backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://leader-id.storage.yandexcloud.net/event_photo/240394/6176a08124862427589141.jpg")`,
+//     to: "theater", 
+//   },
+//   {
+//     id: 2,
+//     className: 'block4',
+//     backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://traveltimes.ru/wp-content/uploads/2021/09/RIAN_5621307.HR_.ru_d_850.jpg")`,
+//     to: "operaBallet", 
+//   },
+// ]
+
 function App() {
   const [count, setCount] = useState(0);
+
+//   const style = [
+//     {
+//       id: 1,
+//       className: 'block1',
+//       backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://www.feellini.ru/wordpress/wp-content/uploads/2020/05/shooting.jpg")`,
+//       to: "cinema", 
+//   },
+//     {
+//       id: 2,
+//       className: 'block2',
+//       backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://get.wallhere.com/photo/music-blue-microphone-audio-singing-performance-stage-rock-concert-288421.jpg")`,
+//       to: "concert", 
+//   },
+//   {
+//     id: 1,
+//     className: 'block3',
+//     backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://leader-id.storage.yandexcloud.net/event_photo/240394/6176a08124862427589141.jpg")`,
+//     to: "theater", 
+//   },
+//   {
+//     id: 2,
+//     className: 'block4',
+//     backgroundImage: `linear-gradient( rgba(8, 8, 37, 0.85), rgba(0, 15, 80, 0.675)), url("https://traveltimes.ru/wp-content/uploads/2021/09/RIAN_5621307.HR_.ru_d_850.jpg")`,
+//     to: "operaBallet", 
+//   },
+// ];
 
   const mystyle = {
     backgroundImage: `url(${obj[count].poster})`,
@@ -55,14 +115,51 @@ function App() {
   });
 
   return (
-    <div className="Container">
-      <div style={mystyle}>
-          <div className="poster-items">
-              <div className="poster-title">{obj[count].title}</div>
-              <div className="detailsBtn">Details</div>
+    <>
+      <main className="Container">
+        <div style={mystyle}>
+            <div className="poster-items">
+                <div className="poster-title">{obj[count].title}</div>
+                <div className="detailsBtn">Details</div>
+            </div>
+          </div> 
+      </main>
+      {/* <content className="main-content"> */}
+        {/* <div className="first-block">
+          <div className="left-items">
+            <div className="header-block">1</div>
+            <div className="link-block">2</div>
           </div>
-        </div> 
-    </div>
+          <div className="right-items">Concert</div>
+        </div>
+        <div className="second-block">
+          <div className="left-items">Theater</div>
+          <div className="right-items">Opera & Ballet</div>
+        </div> */}
+        {/* <div className="first-block">
+          <div  className="block1"  style={style[0]}>
+            <div className="header-block">1</div>
+            <div className="link-block">2</div>
+          </div>
+          <div className="block2" style={style[1]}>
+            <div className="header-block">1</div>
+            <div className="link-block">2</div>
+          </div>
+        </div>
+        <div className="second-block">
+          <div className="block3" style={style[2]}>
+            <div className="header-block">1</div>
+            <div className="link-block">2</div>
+          </div>
+          <div className="block4" style={style[3]}>
+            <div className="header-block">1</div>
+            <div className="link-block">2</div>
+          </div>
+        </div> */}
+      {/* </content> */}
+      <Content />
+      <Footer />
+    </>
   );
 }
 

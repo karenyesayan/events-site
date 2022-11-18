@@ -4,7 +4,8 @@ import {NavLink, Outlet} from "react-router-dom";
 import Search from "../Search";
 import User from "../User";
 import LanguageBar from "../LanguageBar";
-import logo from "../../images/logo.png"
+// import logo from "../../images/logo.png"
+import Logo from "../Logo"
 
 const navigation = [
     {
@@ -53,9 +54,10 @@ const Header = () => {
         <>
         <header className='header'>
             <nav className='nav'>
-                <div className="logo">
+                {/* <div className="logo">
                     <img src={logo} className="Site-logo" alt="logo"></img>
-                </div>
+                </div> */}
+                <Logo />
                     {
                         navigation.map(({id, title, to}) => (
                                 <NavLink

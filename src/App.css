@@ -278,7 +278,8 @@
 
 .Container {
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
+  height: 75vh;
   background-color: #282c34;
 }
 
@@ -291,22 +292,262 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #6B86A6;
+  /* color: #6B86A6; */
+  color: rgba(11,0,129,1);
+
 }
 
 .detailsBtn {
   display: block;
   width: 65%;
   height: 12%;
-  background-color:#6B86A6; 
+  /* background-color:#6B86A6;  */
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
   border-radius: 1rem;
   text-align: center;
   line-height	: 2rem;
   color: white;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .poster-title {
   font-size: 4rem;
   font-weight: 900;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgb(205, 44, 44); */
+  flex-direction: column;
+}
+
+.first-block {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  /* background-color: #61dafb; */
+  justify-content:space-evenly;
+  align-items:center;
+}
+
+.second-block {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  /* background-color: #61dafb; */
+  justify-content: space-evenly;
+  align-items:flex-start;
+}
+
+.left-items {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-left: 7%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-image: linear-gradient(#DC4379,#11245E), url(https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg); */
+  /* background-image: 'https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg'; */
+  background-size: cover;
+}
+
+.block1 {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-left: 7%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-image: linear-gradient(#DC4379,#11245E), url(https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg); */
+  /* background-image: 'https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg'; */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.block2 {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-right: 7%;
+  border-radius: 0.7rem;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.block3 {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-left: 7%;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-image: linear-gradient(#DC4379,#11245E), url(https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg); */
+  /* background-image: 'https://html5book.ru/wp-content/uploads/2022/01/blend-image.jpg'; */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.block4 {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-right: 7%;
+  border-radius: 0.7rem;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-block {
+  width: 40%;
+  height: 10%;
+  /* background-color: #beb9b9; */
+  display: flex;
+  justify-content:space-evenly;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+}
+
+.link-block {
+  width: 40%;
+  height: 10%;
+  /* background-color: #beb9b9; */
+  display: flex;
+  justify-content:space-evenly;
+  font-weight: 450;
+  color: white;
+}
+
+.right-items {
+  width: 40%;
+  height: 80%;
+  background-color:#282c34;
+  margin-right: 7%;
+  border-radius: 0.7rem;
+}
+
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(1, 1, 34);
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(1, 1, 34);
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  display: flex;
+  width: 60%;
+  height: 20%;
+  background-color: rgb(1, 1, 34);
+  /* align-items: flex-end; */
+  /* justify-self:right; */
+}
+
+.footer-logo .logo {
+  background-color: rgb(1, 1, 34);
+  width: 100%;
+  height: 90%;
+  /* /* display: flex; */
+  margin-right: 10%; 
+}
+
+.number {
+  color: white;
+}
+
+.social-networks {
+  width: 60%;
+  height: 10%;
+  background-color: rgb(1, 1, 34);
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between;  */
+}
+
+.networks {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly; 
+}
+
+
+
+.phone-number {
+  width: 60%;
+  height: 20%;
+  background-color: rgb(1, 1, 34);
+  /* display: flex; */
+  /* flex-direction: row; */
+  margin-bottom: 25%;
+  
+}
+
+.phone {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+}
+
+.ifno {
+  width: 100%;
+  height: 100%;
+  background-color:rgb(1, 1, 34);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.info-items {
+  display: flex;
+  margin-right: 15vw;
+  margin-top: 5vh;
+  color: white;
+  font-weight:700;
+  font-size: 1.2rem;
+  /* position:absolute; */
+  /* top: 200vh; */
+  /* width: 20%; */
+  /* bottom: 1vh; */
+  /* right: 24vh; */
+}
+
+.facebook {
+  cursor: pointer;
+}
+
+.instagram {
+  cursor: pointer;
+}
+
+.youtube {
+  cursor: pointer;
 }
