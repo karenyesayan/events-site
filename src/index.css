@@ -113,6 +113,11 @@ code {
 
 .user-icon {
   width: 12%;
+  color: white;
+}
+
+.nav-ref {
+  color: white;
 }
 
 .nav-item {
