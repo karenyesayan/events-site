@@ -4,12 +4,17 @@ import './index.css';
 import Loading from "./Components/Loading/index.js"
 import routes from './routes/routes'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {Provider} from "react-redux";
+
+import {store} from './redux/store'
 
 const router = createBrowserRouter(routes)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Suspense fallback={<Loading />}>
-      <RouterProvider router={router}/>
+      <Provider store={store}>
+        <RouterProvider router={router}/>
+      </Provider>
   </Suspense>
 );

@@ -310,3 +310,182 @@
   font-size: 4rem;
   font-weight: 900;
 }
+
+
+/* Theatre */
+
+.event2{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 150px 0;
+  width: 99.1vw;
+  padding-top: 150px;
+}
+.event2-container{
+  width: 1500px;
+  margin: 0 auto;
+}
+.event2-content{
+  display: flex;
+  color: whitesmoke;
+  margin: 100px 0;
+}
+.event-content-info{
+  margin-left: 5%;
+}
+.event-content-info-title{
+  font-size: 30px;
+  font-weight: 700;
+
+}
+.event-content-info-text{
+  margin-top: 50px;
+  /* width: 80%; */
+  font-size: 20px;
+  opacity: 0.8;
+}
+.left-btn{
+  display: flex;
+  justify-content: flex-end;
+}
+.event-content-btn{
+  border: 1px solid rgb(16, 1, 36);
+  background-color: rgb(16, 1, 36);
+  color: whitesmoke;
+  border-radius: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  transition: 0.5s all;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 30px;
+  
+}
+.event-content-btn:hover{
+  background-color: rgb(43, 20, 71);
+}
+.event-content-dates{
+  margin: 20px 0;
+}
+.left{
+  text-align: end;
+  margin-right: 5%;
+}
+
+
+.theatre-back{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 100px 0;
+}
+.theatre-img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.theatre-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1500px;
+  margin: 0 auto;
+} 
+.theatre {
+ padding: 25px;
+  position: relative;
+  margin :3%;
+  border: 2px black solid;
+  align-items: center;
+  color: whitesmoke;
+  transition: 0.5s all;
+}
+.theatre:hover{
+  transform: translateX(5px) translateY(5px);
+  background-color: rgb(180, 180, 180, 0.2);
+}
+.theatre-name {
+  font-size: 25px;
+}
+.theatre-info {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+.theatre-date {
+  margin: 20px 0;
+}
+.theater-btn{
+  border: 1px solid black;
+  padding: 20px 35px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+.theater-btn:hover{
+  background-color: black;
+  color: whitesmoke;
+}
+
+.theatre-schedule{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 100px 0;
+}
+.theatre-schedule-container{
+  width: 1500px;
+  margin: 0 auto;
+}
+.theatre-schedule-img-div{
+  display: flex;
+  justify-content: center;
+}
+.theatre-schedule-img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.theatre-schedule-title{
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 25px 0;
+}
+.theatre-schedule-info{
+  color: whitesmoke;
+  opacity: 0.8;
+  font-size: 20px;
+}
+.theatre-schedule{
+  padding: 50px;
+  border: 3px black solid;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s all;
+}
+.theatre-schedule:hover{
+  transform: translateX(5px) translateY(5px);
+  background-color: rgb(180, 180, 180, 0.2);
+}
+.theatre-schedule-title{
+  font-size: 35px;
+  font-weight: 700;
+  color: whitesmoke;
+}
+.theatre-schedule-btn{
+  border: 1px solid black;
+  padding: 20px 35px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+.theatre-schedule-btn:hover{
+  background-color: black;
+  color: whitesmoke;
+}
