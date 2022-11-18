@@ -5,6 +5,7 @@ import './App.css';
 import Footer from "./components/Footer";
 // import {hash} from "./helpers"
 import Content from "./components/Content";
+// import Header from './Components/Header';
 
 
 const obj = [

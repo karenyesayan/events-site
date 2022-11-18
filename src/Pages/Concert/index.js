@@ -1,11 +1,9 @@
 const Concert = () => {
-
-
-    return (
-        <>
-        </>
-    )
+  return (
+    <div>
+      
+    </div>
+  );
 }
-
 
 export default Concert
