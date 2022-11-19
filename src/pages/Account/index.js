@@ -12,13 +12,13 @@ const Account = (navigateTo) => {
     const [userEmail,setUserEmail] = useState("");
     const [userPass,setUserPass] = useState("");
     const [users,setUsers]= useState([]);
+   
+  
     
-    
-    
-        useEffect(() => {
-            instance.get("/users")
+    useEffect(() => {
+        instance.get("/users")
             .then(res => {setUsers(res.data)} )
-        }, []) 
+    }, [])
 
         const admin = {
             id: 0,
@@ -26,39 +26,41 @@ const Account = (navigateTo) => {
             email: "ADMIN@gmail.com",
             pass: "ADMIN"
         }
+       
+
+                                       
+                  if(item.name === userName && item.email === userEmail   && item.pass === userPass )  {
                    
-
-
-               const handleLogin  = () => {
-                users.map(item => {
-                  if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
-                       navigate('/profile')                 
+                    navigate('/profile')            
                      } else if (admin.userName === userName && admin.email === userEmail && admin.pass === userPass)  {
                         navigate('/admin')                 
                       } else {
                         navigate('/registration') 
                                                
+                      }
                     }
-                 } 
                 )
                 }
+        
                         
 
     return (
-        
-            <div className="upcoming">
-                <div >
-                <h3 className={"login-registration"}>Personal details</h3>
-                <p className="p">Name </p>
+        <div className={"upcoming"}>
+<title className={"login-registration"}>Personal details</title>
+    <form className={"form"}>  
+            <div className={"group"}>
+            <label className={"label"}> Name </label>
                 <input
                     type="text"
-                    value={userName}
+                    value={userName} 
                     className = {"input"}
                     placeholder='username'
                    onChange={e => setUserName(e.target.value)}
              
                 />
-                <p className="p">Email </p>
+            </div>
+            <div className={"group"}>
+            <label className={"label"}> Email </label>
                 <input
                     type="E-mail"
                     value={userEmail}
@@ -66,7 +68,9 @@ const Account = (navigateTo) => {
                     placeholder='E-mail'
                     onChange={e => setUserEmail(e.target.value)}
                 />
-                <p className="p">Password</p>
+                </div>
+                <div className={"group"}>
+            <label className={"label"}> Password </label>
                 <input
                     type="password"
                     value={userPass}
@@ -74,24 +78,32 @@ const Account = (navigateTo) => {
                     placeholder='password'
                   onChange={e => setUserPass(e.target.value)}
                 />
-                <p className="p"></p>
+                </div>
+                <div className={"group"}>
+            <center>
                 <button
                     className = {"button"}
                    onClick={handleLogin}
                 >
-                    Log in
+                    Login
                 </button>
+                </center>
                                  
                 <div className='auth-navigate'>
                     <p className="p">Don`t have an account?</p>
-                    <button
+                    <center>
+                        <button
                         className = {"button"}
                        onClick={() => {navigate('/registration')}}
-                    >Sign up</button>
+                    >Sign up
+                    </button>
+                    </center>
                 </div>
                 </div>
-            </div>
-        
+            
+        </form>  
+        </div>
+       
         )
      }
 

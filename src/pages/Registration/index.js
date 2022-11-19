@@ -1,47 +1,98 @@
 import { useState } from "react"
 import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+
 
 
 const Registration = ({navigateTo}) => {
     const navigate = useNavigate()
 
-    const [userName,setUserName] = useState("");
-    const [userEmail,setUserEmail] = useState("");
-    const [userPass,setUserPass] = useState("");
+    const {
+        register,
+        formState: {errors},
+        handleSubmit,
+        reset
+    } = useForm({
+        mode:"onBlur"
+    });
 
-    const hash = () => Math.floor((1 + Math.random()) * 0x10000)
+    const [newUserName,setNewUserName] = useState("");
+    const [newUserEmail,setNewUserEmail] = useState("");
+    const [newUserPass,setNewUserPass] = useState("");
+
+    const id = () => Math.floor((1 + Math.random()) * 0x10000)
     .toString(16)
     .substring(2);
-
+   
     let obj ={
-        "id": hash,   
-        "userName": userName,
-        "email": userEmail,
-        "pass": userPass
+       
+        "name": newUserName,
+        "email": newUserEmail,
+        "pass": newUserPass
     }
     const submit = () => {
-        instance.post("/users", obj )
-        navigate('/myaccount')
+        instance.post("/users", {id:id(),...obj});
+        navigate('/myaccount');
+        reset();
        
     }
 
     return (
 
-        <div className={"upcoming"}>  
-         <h3 className={"login-registration"}>registration</h3>
-            <p className="p"> Name </p>
-            <input  className = {"input"} type={"text"} onChange={e => setUserName(e.target.value)}></input>
-            <p className="p">Email </p>
-            <input className = {"input"} type={"email"} onChange={e => setUserEmail(e.target.value)}></input>
-            <p className="p">Password </p>
-            <input className = {"input"} type={"password"} onChange={e => setUserPass(e.target.value)} ></input>
-            <p className="p"></p>
-            <button className = {"button"} onClick={submit}> SUBMIT</button>
+        <div className={"upcoming"}>
+<title className={"login-registration"}>Registration</title>
+    <form className={"form"} onSubmit={handleSubmit(submit)}>  
+      
+        <div className={"group"}>
+           <label className={"label"}> Name 
+            <input 
+             className = {"input"} 
+             type={"text"} 
+             {...register("name", {reguired:true})}
+             onChange={e => setNewUserName(e.target.value)} 
+             />
+           </label>
+           <div>
+           {errors.name && <p style={{color :"red"}}>Please enter your name</p>}
+           </div>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Email 
+            <input 
+            className = {"input"} 
+            type={"email"} 
+            {...register("email", {required: true})}
+            onChange={e => setNewUserEmail(e.target.value)}
+            />
+           </label>
+           <div>
+            {errors?.email && <p style={{color :"red"}}>Please enter your email</p>}
+           </div>
+        </div>  
+        
+        <div className={"group"}>
+           <label className={"label"}> Password 
+            <input 
+            className = {"input"} 
+            type={"password"}
+            {...register("pass", {required: true, minLength: 4})} 
+            onChange={e => setNewUserPass(e.target.value)} 
+            />
+            </label> 
+            <div>
+            {errors?.pass && <p style={{color :"red"}}>Please enter your password</p>}
+           </div>  
+        </div>
+        <center>
+          <button className = {"button"}  type={"submit"}>SUBMIT </button>
+        </center>
             <p className="p">Already have an account?</p>
+            <center>
             <button className = {"button"}  onClick={() => {navigate('/myaccount')}}
                     >LOGIN</button>
-            
+            </center>
+        </form>    
          
         </div>
     )

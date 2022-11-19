@@ -25,9 +25,13 @@ const Admin = (navigateTo) => {
         "info": info
 
     }
+    const id = () => Math.floor((1 + Math.random()) * 0x10000)
+    .toString(16)
+    .substring(2);
+   
 
     const add = () => {
-        instance.post(path, newEvent)
+        instance.post(path, {id:id(),...newEvent});
 
     }
 
@@ -38,30 +42,52 @@ const Admin = (navigateTo) => {
 
     return (
 
-        <div className={"upcoming"}>  
-         <h3 className={"login-registration"}>ADD NEW CINEMA</h3>
-           <p className="p"> Event Type </p>
-           <input  className = {"input"} type={"text"} onChange={e => setPath("/"+(e.target.value))}></input>
-           <p className="p"> Title </p>
+        <div className={"upcoming"}>
+        <title className={"login-registration"}>ADD NEW CINEMA</title>
+            <div className={"form"}>  
+      
+        <div className={"group"}>
+           <label className={"label"}> Event Type </label>
+           <input  className = {"input"} type={"text"} onChange={e => setPath("/" + (e.target.value))}></input>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Title </label>
            <input  className = {"input"} type={"text"} onChange={e => setTitle(e.target.value)}></input>
-           <p className="p">img </p>
-           <input  className = {"input"} type={"image"} onChange={e => setCinemas(e.target.image)}></input>
-           <p className="p"> Cinemas </p>
+        </div> 
+        <div className={"group"}>
+           <label className={"label"}>img </label>
+           <input  className = {"input"} type={"ref"} onChange={e => setCinemas(e.target.ref)}></input>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Cinemas </label>
            <input  className = {"input"} type={"text"} onChange={e => setCinemas(e.target.value)}></input>
-           <p className="p"> Date </p>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Date </label>
            <input  className = {"input"} type={"date"} onChange={e => setDate(e.target.date)}></input>
-           <p className="p"> Price </p>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Price </label>
            <input  className = {"input"} type={"text"} onChange={e => setPrice(e.target.value)}></input>
-           <p className="p"> Info </p>
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> Info </label>
            <input  className = {"input"} type={"text"} onChange={e => setInfo(e.target.value)}></input>
-          <div>
-             <button className = {"button"} onClick={add}> Add</button>
-             <button className = {"button"}  onClick={{cencel}}>Cencel</button>
+        </div>  
+          <div className={"group"}>
+           <center>
+             <button className = {"button"} onClick={add}> Add</button> 
+             <b> </b>
+             <button className = {"button"}  onClick={cencel}>Cencel</button>
+             </center>
+<center>
+             
+             </center>           
            </div>   
         
        </div>
              
-
+</div>
     )
  
 
