@@ -20,20 +20,22 @@ const Account = (navigateTo) => {
             .then(res => {setUsers(res.data)} )
         }, []) 
 
+        const admin = {
+            id: 0,
+            userName: "ADMIN",
+            email: "ADMIN@gmail.com",
+            pass: "ADMIN"
+        }
                    
 
 
                const handleLogin  = () => {
                 users.map(item => {
-                    if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
-                       navigate('/profile') 
-                    } else if (item.userName === "ADMIN" && item.email === "ADMIN@gmail.com" && item.pass === "ADMIN")  {
-                       navigate('/admin') 
-                       console.log("ADMIN")
-                                               
-                    }
-                    
-                    else {
+                  if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
+                       navigate('/profile')                 
+                     } else if (admin.userName === userName && admin.email === userEmail && admin.pass === userPass)  {
+                        navigate('/admin')                 
+                      } else {
                         navigate('/registration') 
                                                
                     }

@@ -10,14 +10,19 @@ const Registration = ({navigateTo}) => {
     const [userEmail,setUserEmail] = useState("");
     const [userPass,setUserPass] = useState("");
 
+    const hash = () => Math.floor((1 + Math.random()) * 0x10000)
+    .toString(16)
+    .substring(2);
+
     let obj ={
-      
+        "id": hash,   
         "userName": userName,
         "email": userEmail,
         "pass": userPass
     }
     const submit = () => {
         instance.post("/users", obj )
+        navigate('/myaccount')
        
     }
 
