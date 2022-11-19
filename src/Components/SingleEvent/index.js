@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { theatreEventSelector } from "../../redux/slices/theatreSlice"
 
-const TheatreSchedule = () => {
+const SingleEvent = () => {
     const {id, name, img, info, date} = useSelector(theatreEventSelector)
 
     return (
@@ -19,7 +19,7 @@ const TheatreSchedule = () => {
                 <div >
                     {
                         date.map((event) => (
-                            <div key={event.id} className="theatre-schedule">
+                            <div key={event.id} className="theatre-schedule-card">
                                 <div className="theatre-schedule-title">
                                     {name}
                                 </div>
@@ -40,4 +40,4 @@ const TheatreSchedule = () => {
     )
 }
 
-export default TheatreSchedule
+export default SingleEvent
