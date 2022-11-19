@@ -26,12 +26,13 @@ const Account = (navigateTo) => {
             email: "ADMIN@gmail.com",
             pass: "ADMIN"
         }
-       
+                  const handleLogin = () => {
+                    users.map(item => {
 
-                                       
-                  if(item.name === userName && item.email === userEmail   && item.pass === userPass )  {
+                    if(item.name === userName && item.email === userEmail   && item.pass === userPass )  {
                    
-                    navigate('/profile')            
+                    navigate('/profile') 
+                               
                      } else if (admin.userName === userName && admin.email === userEmail && admin.pass === userPass)  {
                         navigate('/admin')                 
                       } else {
