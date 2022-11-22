@@ -8,7 +8,7 @@ const SocialNetworks = () => {
             {/* TODO: change divs to a like below */}
 
             {/*<a className='facebook' href="https://www.facebook.com/" target='_blank'>*/}
-            {/*    <FaFacebookF size={28} color={'white'}/>*/}
+            {/*    <FaFacebookF size={28} color='white'/>*/}
             {/*</a>*/}
             <div
                 className='facebook'
