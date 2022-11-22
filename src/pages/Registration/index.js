@@ -84,9 +84,9 @@ const Registration = ({navigateTo}) => {
             {errors?.pass && <p style={{color :"red"}}>Please enter your password</p>}
            </div>  
         </div>
-        <center>
-          <button className = {"button"}  type={"submit"}>SUBMIT </button>
-        </center>
+        
+          <input className = {"button"}  type={"submit"} />
+        
             <p className="p">Already have an account?</p>
             <center>
             <button className = {"button"}  onClick={() => {navigate('/myaccount')}}

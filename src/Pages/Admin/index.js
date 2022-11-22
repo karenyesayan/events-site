@@ -1,12 +1,15 @@
 import instance from "../../api/axios"
 import { useState } from "react"
-
 import { useNavigate } from "react-router-dom"
-import { defaultEqualityCheck } from "reselect"
+import { useSelector } from "react-redux"
+import { userSelector } from "../../redux/slices/userSlice"
+import { user } from "../../redux/slices/userSlice"
+
 
 
 const Admin = (navigateTo) => {
-    const navigate = useNavigate()
+   const navigate = useNavigate();
+   const user = useSelector( userSelector);
 
     const [path,setPath] = useState("")
     const [title,setTitle] = useState("")
@@ -18,7 +21,7 @@ const Admin = (navigateTo) => {
 
     const newEvent = {
         "title": title,
-        "image" : image,
+        "img" : image,
         "cinemas": cinemas,
         "date": date,
         "price": price,
@@ -43,6 +46,7 @@ const Admin = (navigateTo) => {
     return (
 
         <div className={"upcoming"}>
+ <h1> {user.name} </h1>
         <title className={"login-registration"}>ADD NEW CINEMA</title>
             <div className={"form"}>  
       
@@ -56,7 +60,7 @@ const Admin = (navigateTo) => {
         </div> 
         <div className={"group"}>
            <label className={"label"}>img </label>
-           <input  className = {"input"} type={"ref"} onChange={e => setCinemas(e.target.ref)}></input>
+           <input  className = {"input"} type={"text"} onChange={e => setImage(e.target.value)}></input>
         </div>
         <div className={"group"}>
            <label className={"label"}> Cinemas </label>

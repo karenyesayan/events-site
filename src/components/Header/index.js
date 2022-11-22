@@ -4,7 +4,7 @@ import {NavLink, Outlet} from "react-router-dom";
 import Search from "../Search";
 import User from "../User";
 import LanguageBar from "../LanguageBar";
-// import logo from "../../images/logo.png"
+//import logo from "../../images/logo.png"
 import Logo from "../Logo"
 
 const navigation = [

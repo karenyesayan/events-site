@@ -1,13 +1,24 @@
 
-import axios from "axios";
 import { useEffect, useState } from "react"
+
 import instance from "../../api/axios"
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { userSelector } from "../../redux/slices/userSlice";
 
 
 
-   const Cinema = () => {
+
+
+   const Cinema = ({navigateTo}) => {
+    const navigate = useNavigate()
+  
+    const user = useSelector(userSelector);
+    
 
     const[movies,setMovies] = useState([]);
+    
+
    
        
    
@@ -15,14 +26,25 @@ import instance from "../../api/axios"
   
        instance.get("/cinema")
         .then(res => setMovies(res.data))
+        
+        
           
    }, [])
 
+   const buy = () => {
+   if(user.name){
+    navigate('/ticket') 
+   } else{ navigate('/myaccount') }
+    }
+   
+
+   
       return (
       
         <div className="upcoming">
             <div className="upcoming-container">
                 <div className="upcoming-title">
+                
                     MOVIES
                 </div>
                 <div className="upcoming-events">
@@ -39,17 +61,19 @@ import instance from "../../api/axios"
                         {item.title}
                     </div>
                     <div className="upcoming-event-date">
-                        {item.day}
+                        {item.date}
                     </div>
                     <div className="upcoming-event-info">
-                        {item.about}
+                        {item.info}
                     </div>
                     
                     <div className="upcoming-event-date">
                         {item.price}
                     </div>
-                        <button className={"button-cinem"}>Buy now</button>
-                        </div>
+                        <button className={"button-cinem"}  onClick={buy}>Buy now</button>
+                        
+                </div>
+                     
                
                
                 )
