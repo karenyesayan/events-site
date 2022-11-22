@@ -13,6 +13,13 @@
       "email": "meri@gmail.com",
       "pass": "meri",
       "ewallet": "5000"
+    },
+    {
+      "id": "279",
+      "name": "Ani",
+      "email": "ani@gmail.com",
+      "pass": "1111",
+      "ewallet": "5000"
     }
   ],
   "cinema": [
