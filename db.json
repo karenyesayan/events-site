@@ -8,34 +8,11 @@
   ],
   "users": [
     {
-      "name": "Ani",
-      "email": "Ani@gmail.com",
-      "pass": "222",
-      "id": 4
-    },
-    {
+      "id": "2aa",
       "name": "meri",
       "email": "meri@gmail.com",
       "pass": "meri",
-      "id": 5
-    },
-    {
-      "id": "da1",
-      "name": "NNN",
-      "email": "n@gmail.com",
-      "pass": "1234"
-    },
-    {
-      "id": "d53",
-      "name": "ADMIN",
-      "email": "ADMIN@gmail.com",
-      "pass": "ADMIN"
-    },
-    {
-      "id": "50e",
-      "name": "hayk",
-      "email": "hayk@gmail.com",
-      "pass": "hayk"
+      "ewallet": "5000"
     }
   ],
   "cinema": [

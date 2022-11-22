@@ -20,6 +20,7 @@ const Registration = ({navigateTo}) => {
     const [newUserName,setNewUserName] = useState("");
     const [newUserEmail,setNewUserEmail] = useState("");
     const [newUserPass,setNewUserPass] = useState("");
+    const [newUserEwallet,setNewUserEwallet] = useState("");
 
     const id = () => Math.floor((1 + Math.random()) * 0x10000)
     .toString(16)
@@ -29,7 +30,8 @@ const Registration = ({navigateTo}) => {
        
         "name": newUserName,
         "email": newUserEmail,
-        "pass": newUserPass
+        "pass": newUserPass,
+        "ewallet":newUserEwallet
     }
     const submit = () => {
         instance.post("/users", {id:id(),...obj});
@@ -82,6 +84,19 @@ const Registration = ({navigateTo}) => {
             </label> 
             <div>
             {errors?.pass && <p style={{color :"red"}}>Please enter your password</p>}
+           </div>  
+        </div>
+        <div className={"group"}>
+           <label className={"label"}> E-wallet
+            <input 
+            className = {"input"} 
+            type={"number"}
+            {...register("ewallet", {required: true,})} 
+            onChange={e => setNewUserEwallet(e.target.value)} 
+            />
+            </label> 
+            <div>
+            {errors?.ewallet && <p style={{color :"red"}}>Please enter your password</p>}
            </div>  
         </div>
         
