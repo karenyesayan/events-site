@@ -1,6 +1,6 @@
-
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
+
 import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
 import { userSelector } from "../../redux/slices/userSlice";
@@ -67,9 +67,5 @@ const Cinema = ({ navigateTo }) => {
 
     )
 }
-
-
-
-
 
 export default Cinema;

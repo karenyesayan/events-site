@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+
 import { userSelector } from "../../redux/slices/userSlice"
-import { movieSelector } from "../../redux/slices/userSlice"
 
 
 const Ticket = (navigateTo) => {

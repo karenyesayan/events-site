@@ -1,9 +1,9 @@
-import instance from "../../api/axios"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+
 import { userSelector } from "../../redux/slices/userSlice"
-import { user } from "../../redux/slices/userSlice"
+import instance from "../../api/axios"
 
 
 const Admin = (navigateTo) => {

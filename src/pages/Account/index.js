@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import instance from "../../api/axios";
-import Registration from "../Registration";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import instance from "../../api/axios";
 import { user } from "../../redux/slices/userSlice";
 
 
@@ -30,23 +30,17 @@ const Account = (navigateTo) => {
         pass: "ADMIN"
     }
 
-
     const handleLogin = () => {
-
-
         users.map(item => {
-
             if (item.name === userName &&
                 item.email === userEmail &&
                 item.pass === userPass) {
                 dispatch((user(item)));
                 navigate('/profile')
-
             } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
                 navigate('/admin')
             } else {
                 navigate('/registration')
-
             }
         }
         )
@@ -67,7 +61,6 @@ const Account = (navigateTo) => {
                             onChange={e => setUserName(e.target.value)}
                         />
                     </label>
-
                 </div>
                 <div className={"group"}>
                     <label className={"label"}> Email
@@ -79,7 +72,6 @@ const Account = (navigateTo) => {
                             onChange={e => setUserEmail(e.target.value)}
                         />
                     </label>
-
                 </div>
                 <div className={"group"}>
                     <label className={"label"}> Password
@@ -91,34 +83,22 @@ const Account = (navigateTo) => {
                             onChange={e => setUserPass(e.target.value)}
                         />
                     </label>
-
                 </div>
                 <div className={"group"}>
                     <center>
                         <button className={"button"} type={"submit"}> login</button>
-
-
-
-
                         <div className='auth-navigate'>
                             <p className="p">Don`t have an account?</p>
-
                             <button
                                 className={"button"}
                                 onClick={() => { navigate('/registration') }}
                             >Sign up
                             </button>
-
-
                         </div>
                     </center>
                 </div>
-
             </form>
-
         </div>
-
-
     )
 }
 
