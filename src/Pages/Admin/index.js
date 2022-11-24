@@ -48,7 +48,6 @@ const Admin = (navigateTo) => {
          <h1> {user.name} </h1>
          <title className={"login-registration"}>ADD NEW CINEMA</title>
          <div className={"form"}>
-
             <div className={"group"}>
                <label className={"label"}> Event Type </label>
                <input className={"input"} type={"text"} onChange={e => setPath("/" + (e.target.value))}></input>
@@ -84,16 +83,11 @@ const Admin = (navigateTo) => {
                   <button className={"button"} onClick={cencel}>Cencel</button>
                </center>
                <center>
-
                </center>
             </div>
-
          </div>
-
       </div>
    )
-
-
 }
 
-export default Admin
+export default Admin;

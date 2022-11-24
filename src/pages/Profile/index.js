@@ -3,16 +3,9 @@ import { useSelector } from "react-redux";
 import { userSelector } from "../../redux/slices/userSlice";
 
 
-const Profile = ({navigateTo }) => {
+const Profile = ({ navigateTo }) => {
 
     const user = useSelector(userSelector);
-
-    const discountCode = () => {
-        return (Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(2)
-        )
-    }
 
     return (
         <div className={"upcoming"}>

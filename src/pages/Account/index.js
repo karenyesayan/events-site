@@ -13,15 +13,7 @@ const Account = (navigateTo) => {
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userPass, setUserPass] = useState("");
-    const [users, setUsers] = useState([]);
 
-
-    useEffect(() => {
-        instance.get("/users")
-            .then(res => {
-                setUsers(res.data)
-            })
-    }, [])
 
     const admin = {
         id: 0,
@@ -30,27 +22,34 @@ const Account = (navigateTo) => {
         pass: "ADMIN"
     }
 
+
     const handleLogin = () => {
-        users.map(item => {
-            if (item.name === userName &&
-                item.email === userEmail &&
-                item.pass === userPass) {
-                dispatch((user(item)));
-                navigate('/profile')
-            } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
-                navigate('/admin')
-            } else {
-                navigate('/registration')
+
+        instance.get("/users")
+            .then(res => {
+                const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
+                console.log(activUser);
+                if (!user) {
+                    navigate('/registration')
+                } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
+                    navigate('/admin')
+                }
+
+                else {
+                    dispatch(user(activUser));
+                    navigate('/profile')
+
+                }
             }
-        }
-        )
+            )
     }
+
 
 
     return (
         <div className={"upcoming"}>
             <title className={"login-registration"}>Personal details</title>
-            <form className={"form"} onSubmit={handleLogin}>
+            <div className={"form"} >
                 <div className={"group"}>
                     <label className={"label"}> Name
                         <input
@@ -59,6 +58,7 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='username'
                             onChange={e => setUserName(e.target.value)}
+
                         />
                     </label>
                 </div>
@@ -70,6 +70,7 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='E-mail'
                             onChange={e => setUserEmail(e.target.value)}
+
                         />
                     </label>
                 </div>
@@ -81,12 +82,13 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='password'
                             onChange={e => setUserPass(e.target.value)}
+
                         />
                     </label>
                 </div>
                 <div className={"group"}>
                     <center>
-                        <button className={"button"} type={"submit"}> login</button>
+                        <button className={"button"} onClick={handleLogin}> login</button>
                         <div className='auth-navigate'>
                             <p className="p">Don`t have an account?</p>
                             <button
@@ -97,7 +99,7 @@ const Account = (navigateTo) => {
                         </div>
                     </center>
                 </div>
-            </form>
+            </div>
         </div>
     )
 }

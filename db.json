@@ -20,6 +20,13 @@
       "email": "ani@gmail.com",
       "pass": "1111",
       "ewallet": "5000"
+    },
+    {
+      "id": "b63",
+      "name": "Harut",
+      "email": "harut@gmail.com",
+      "pass": "2222",
+      "ewallet": "5000"
     }
   ],
   "cinema": [
