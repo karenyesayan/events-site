@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Loading from "./Components/Loading"
+import Loading from "./components/Loading"
 import routes from "./routes/index"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {Provider} from "react-redux";

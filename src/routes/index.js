@@ -1,21 +1,21 @@
 import {lazy} from "react";
 
 import App from "../App";
-import Header from "../Components/Header";
+import Header from "../components/Header";
 
 
-const Home = lazy(() => import("../Pages/Home"))
-const Cinema = lazy(() => import("../Pages/Cinema"))
+const Home = lazy(() => import("../pages/Home"))
+const Cinema = lazy(() => import("../pages/Cinema"))
 //const Concert = lazy(() => import("../pages/Concert"))
 //const Theater = lazy(() => import("../pages/Theater"))
 //const Other = lazy(() => import("../pages/Other"))
-const OperaBallet = lazy(() => import("../Pages/OperaBallet"))
-const ClubsPubs = lazy(() => import("../Pages/ClubsPubs"))
-const Account = lazy(() => import("../Pages/Account"))
-const Profile = lazy(() => import("../Pages/Profile"))
-const Registration = lazy(() => import("../Pages/Registration"))
-const Admin = lazy(() => import("../Pages/Admin"))
-const Ticket = lazy(() => import("../Pages/Ticket"))
+const OperaBallet = lazy(() => import("../pages/OperaBallet"))
+const ClubsPubs = lazy(() => import("../pages/ClubsPubs"))
+const Account = lazy(() => import("../pages/Account"))
+const Profile = lazy(() => import("../pages/Profile"))
+const Registration = lazy(() => import("../pages/Registration"))
+const Admin = lazy(() => import("../pages/Admin"))
+const Ticket = lazy(() => import("../pages/Ticket"))
 
 
 
