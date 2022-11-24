@@ -33,14 +33,14 @@ const routes = [
           path: "cinema",
           element: <Cinema />
         },
-        //{
-          //path: "concert",
-          //element: <Concert />
-        //},
-        //{
-          //path: "theater",
-          //element: <Theater />
-        //},
+        {
+          path: "concert",
+          element: <Concert />
+        },
+        {
+          path: "theater",
+          element: <Theater />
+        },
         {
           path: "operaBallet",
           element: <OperaBallet />
