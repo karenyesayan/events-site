@@ -203,6 +203,216 @@
       "place": ""
     }
   ],
+  "clubs&pabs": [
+    {
+      "id": 2,
+      "name": "Forsh & Re Minor",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/83/19/11/slug-111983.jpg",
+      "info": "Popular and recognized songs of our city performed by Forsh and Re Minor on November 20 at the Hin Areni music hall. A beautiful Yerevan evening, especially for you.",
+      "date": [
+        {
+          "id": 1,
+          "date":"20-11-2022 20:00"
+        }
+      ],
+      "ticket": "10000 - 14000"
+    },
+    {
+      "id": 3,
+      "name": "Aramo and Emma Petrosyan",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/51/20/11/slug-112051.jpg",
+      "info": "On November 23, Aramon and Emma Petrosyan, one of the most beautiful couples of Armenian singing, will perform popular and beautiful performances in the music hall of the Old Arena.",
+      "date": [
+        {
+          "id": 1,
+          "date":"23-11-2022 20:00"
+        }
+      ],
+      "ticket": "4000 - 5000"
+    },
+    {
+      "id": 4,
+      "name": "Arpi & HayWay Band",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/64/21/11/slug-112164.jpg",
+      "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
+      "date": [
+        {
+          "id": 1,
+          "date":"21-11-2022 20:00"
+        }
+      ],
+      "ticket": "4000 - 5000"
+    },
+    {
+      "id": 5,
+      "name": "Arthur & Arsen Safaryans",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/56/20/11/slug-112056.jpg",
+      "info": "Arsen and Arthur Safaryan Beloved, soulful performances performed by popular singers. On November 24, spend a wonderful evening at the Old Arena Music Hall. Places are limited.",
+      "date": [
+        {
+          "id": 1,
+          "date":"24-11-2022 20:00"
+        }
+      ],
+      "ticket": "4000"
+    },
+    {
+      "id": 6,
+      "name": "Watch FIFA World Cup 2022 matches on Astral",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/20/11/slug-112081.jpg",
+      "info": "If you still haven't decided where to watch Fifa2022 games, then we have a good offer. Starting from November 20, every day we invite you to watch the most anticipated football championship with your friends on 3 exceptionally large screens. Interesting surprises and hospitality await football-loving guests. Let's spend the crazy and tense month together. Entrance is FREE.",
+      "date": [
+        {
+          "id": 1,
+          "date":"20-11-2022 20:00"
+        }
+      ],
+      "ticket": "Free"
+    },
+    {
+      "id": 7,
+      "name": "The Band at Mezzo",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/44/19/11/slug-111944.jpg",
+      "info": null,
+      "date": [
+        {
+          "id": 1,
+          "date":"21-11-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date": "30-12-2022 19:00"
+        }
+      ],
+      "ticket": "4000"
+    }
+  ],
+  "theater": [
+    {
+      "id": 2,
+      "name": "Dark, bitter chocolate",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
+      "date": [
+        {
+          "id": 1,
+          "date":"18-11-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date": "01-12-2022 19:00"
+        },
+        {
+          "id": 3,
+          "date": "11-12-2022 19:00"
+        },
+        {
+          "id": 4,
+          "date": "27-12-2022 19:00"
+        }
+      ],
+      "ticket": "1000 - 5000"
+    },
+    {
+      "id": 3,
+      "name": "Birth certificate",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/66/07/11/slug-110766.jpg",
+      "info": "History of the origin and formation of the Armenian people, where the answers to the most pressing questions of our birth certificate will be heard.",
+      "date": [
+        {
+          "id": 1,
+          "date":"23-11-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date": "24-11-2022 19:00"
+        },
+        {
+          "id": 3,
+          "date": "13-12-2022 19:00"
+        },
+        {
+          "id": 4,
+          "date": "21-12-2022 19:00"
+        }
+      ],
+      "ticket": "1000 - 3000"
+    },
+    {
+      "id": 4,
+      "name": "Aladin",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/33/29/10/slug-102933.jpg",
+      "info": "Musical fairy tale from part 1. The play is a stage version of a well-known fairy tale. This musical performance promises magic, fireworks of colors, spectacle and endless joy. This is a tale about Aladdin's magic lamp and how all our dreams can come true.",
+      "date": [
+        {
+          "id": 1,
+          "date":"19-11-2022 12:00"
+        },
+        {
+          "id": 2,
+          "date": "19-12-2022 15:00"
+        }
+      ],
+      "ticket": "2000 - 6000"
+    },
+    {
+      "id": 5,
+      "name": "Backstage or Anatomy of the Theatre",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/96/11/11/slug-111196.jpg",
+      "info": "In a happy and carefree atmosphere, we will try to travel together in the world of theater and discover unknown sides to the audience. This play features the real stories of the actors, intrigue, secrets and, of course, endless laughs.",
+      "date": [
+        {
+          "id": 1,
+          "date":"18-11-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date": "01-12-2022 19:00"
+        },
+        {
+          "id": 3,
+          "date": "11-12-2022 19:00"
+        },
+        {
+          "id": 4,
+          "date": "27-12-2022 19:00"
+        }
+      ],
+      "ticket": "4000"
+    },
+    {
+      "id": 6,
+      "name": "Paplik",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/20/35/10/slug-103520.jpg",
+      "info": "Ardent patriotism often evaporates when it collides with one's self-interest. Look for the stage version of Guy de Maupassant's The Fat Ball, one of the pillars of classical literature, in our playbook under the title The Dumpling.",
+      "date": [
+        {
+          "id": 1,
+          "date":"18-11-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date": "01-12-2022 19:00"
+        },
+        {
+          "id": 3,
+          "date": "11-12-2022 19:00"
+        },
+        {
+          "id": 4,
+          "date": "27-12-2022 19:00"
+        }
+      ],
+      "ticket": "1500 - 2500"
+    },
+    {
+      "id": 7,
+      "name": "Stayed home",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/35/96/09/slug-99635.jpg",
+      "info": "A new mono performance by Tamara Petrosyan. The actress will present the interesting, sometimes nerve-wracking, but always up-to-date theme of staying at home in all its nuances with her special humorous prism.",
+      "date": ["18-11-2022 19:00"],
+      "ticket": "1000 - 1600"
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

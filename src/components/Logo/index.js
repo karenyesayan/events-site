@@ -6,10 +6,10 @@ const Logo = () => {
     return (
     <Link to={"/"}>
       <div className="logo">
-        <img src={logo} className="Site-logo" alt="logo"></img>
+        <img src={logo} className="Site-logo" alt="logo" />
       </div>
     </Link>
     );
-  }
+}
 
 export default  Logo;

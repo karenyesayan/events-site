@@ -2,6 +2,7 @@ import {lazy} from "react";
 
 import App from "../App";
 import Header from "../components/Header";
+import SingleEvent from "../components/SingleEvent";
 
 
 const Home = lazy(() => import("../pages/Home"))
@@ -20,6 +21,7 @@ const Ticket = lazy(() => import("../pages/Ticket"))
 
 
 const routes = [
+
   {
       path: "/",
       element: <Header />,
@@ -73,6 +75,7 @@ const routes = [
         element: <Ticket />
       }
        
+
       ]
   }
     ]
