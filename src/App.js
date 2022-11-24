@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 
 import './App.css';
 import Footer from "./components/Footer";
-// import {hash} from "./helpers"
+//import {hash} from "./helpers"
 import Content from "./components/Content";
 // import Header from './components/Header';
+
 
 
 const obj = [
