@@ -5,29 +5,18 @@ import Header from "../components/Header";
 import SingleEvent from "../components/SingleEvent";
 
 
-<<<<<<< HEAD
-import Home from "../pages/Home";
-import Cinema from "../pages/Cinema";
-import Concert from "../pages/Concert";
-import Theater from "../pages/Theater";
-import Other from "../pages/Other";
-import OperaBallet from "../pages/OperaBallet";
-import ClubsPubs from "../pages/ClubsPubs";
-
-import Account from "../pages/Account";
-import Profile from "../pages/Profile";
-import Registration from "../pages/Registration";
-=======
 const Home = lazy(() => import("../pages/Home"))
 const Cinema = lazy(() => import("../pages/Cinema"))
-const Concert = lazy(() => import("../pages/Concert"))
+//const Concert = lazy(() => import("../pages/Concert"))
 const Theater = lazy(() => import("../pages/Theater"))
-const Other = lazy(() => import("../pages/Other"))
+//const Other = lazy(() => import("../pages/Other"))
 const OperaBallet = lazy(() => import("../pages/OperaBallet"))
 const ClubsPubs = lazy(() => import("../pages/ClubsPubs"))
 const Account = lazy(() => import("../pages/Account"))
 const Profile = lazy(() => import("../pages/Profile"))
 const Registration = lazy(() => import("../pages/Registration"))
+const Admin = lazy(() => import("../pages/Admin"))
+const Ticket = lazy(() => import("../pages/Ticket"))
 
 
 
@@ -46,10 +35,10 @@ const routes = [
           path: "cinema",
           element: <Cinema />
         },
-        {
-          path: "concert",
-          element: <Concert />
-        },
+     //   {
+     //     path: "concert",
+     //     element: <Concert />
+     //   },
         {
           path: "theater",
           element: <Theater />
@@ -62,10 +51,10 @@ const routes = [
           path: "clubsPubs",
           element: <ClubsPubs />
         },
-        {
-         path: "other",
-         element: <Other />
-        },
+      //  {
+      //   path: "other",
+      //   element: <Other />
+      //  },
         {
           path: "myaccount",
           element: <Account />
