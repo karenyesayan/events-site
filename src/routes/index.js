@@ -2,6 +2,8 @@ import {lazy} from "react";
 
 import App from "../App";
 import Header from "../components/Header";
+import SingleEvent from "../components/SingleEvent";
+
 
 <<<<<<< HEAD
 import Home from "../pages/Home";
@@ -50,6 +52,10 @@ const routes = [
             element: <Theater />
           },
           {
+            path: "singleEvent",
+            element: <SingleEvent />
+          },
+          {
             path: "operaBallet",
             element: <OperaBallet />
           },
@@ -73,7 +79,7 @@ const routes = [
             path: "registration",
             element: <Registration />
           }
-         
+
         ]
     }
       ]

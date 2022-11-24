@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import instance from "../../api/axios";
 import Registration from "../Registration";
 import { useNavigate } from "react-router-dom";
@@ -9,24 +8,24 @@ import Profile from "../Profile";
 const Account = (navigateTo) => {
     const navigate = useNavigate()
 
-    const[userName,setUserName] = useState([]);
-    const[userEmail,setUserEmail] = useState([]);
-    const[userPass,setUserPass] = useState([]);
-    const [user,setUser]= useState([]);
-    console.log(user)
+    const [userName,setUserName] = useState("");
+    const [userEmail,setUserEmail] = useState("");
+    const [userPass,setUserPass] = useState("");
+    const [users,setUsers]= useState([]);
+    
     
     
         useEffect(() => {
             instance.get("/users")
-            .then(res => {setUser(res.data)} )
+            .then(res => {setUsers(res.data)} )
         }, []) 
 
                    
 
 
                const handleLogin  = () => {
-                user.map(item => {
-                    if(item.userName === userName && item.Email === userEmail && item.pass === userPass)  {
+                users.map(item => {
+                    if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
                         console.log(item.userName,item.Email,item.pass)
                         navigate('/profile') 
                     } else {
