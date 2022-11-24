@@ -1,94 +1,108 @@
 import { useState, useEffect } from "react";
-import instance from "../../api/axios";
-import Registration from "../Registration";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Profile from "../Profile";
+
+import instance from "../../api/axios";
+import { user } from "../../redux/slices/userSlice";
 
 
 const Account = (navigateTo) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const [userName,setUserName] = useState("");
-    const [userEmail,setUserEmail] = useState("");
-    const [userPass,setUserPass] = useState("");
-    const [users,setUsers]= useState([]);
-    
-    
-    
-        useEffect(() => {
-            instance.get("/users")
-            .then(res => {setUsers(res.data)} )
-        }, []) 
-
-                   
+    const [userName, setUserName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [userPass, setUserPass] = useState("");
 
 
-               const handleLogin  = () => {
-                users.map(item => {
-                    if(item.userName === userName && item.email === userEmail && item.pass === userPass)  {
-                        console.log(item.userName,item.Email,item.pass)
-                        navigate('/profile') 
-                    } else {
-                        navigate('/registration') 
-                                               
-                    }
-                 } 
-                )
+    const admin = {
+        id: 0,
+        name: "ADMIN",
+        email: "ADMIN@gmail.com",
+        pass: "ADMIN"
+    }
+
+
+    const handleLogin = () => {
+
+        instance.get("/users")
+            .then(res => {
+                const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
+                console.log(activUser);
+                if (!user) {
+                    navigate('/registration')
+                } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
+                    navigate('/admin')
                 }
-                        
+
+                else {
+                    dispatch(user(activUser));
+                    navigate('/profile')
+
+                }
+            }
+            )
+    }
+
+
 
     return (
-        
-            <div className="upcoming">
-                <div >
-                <h3 className={"login-registration"}>Personal details</h3>
-                <p className="p">Name </p>
-                <input
-                    type="text"
-                    value={userName}
-                    className = {"input"}
-                    placeholder='username'
-                   onChange={e => setUserName(e.target.value)}
-             
-                />
-                <p className="p">Email </p>
-                <input
-                    type="E-mail"
-                    value={userEmail}
-                    className = {"input"}
-                    placeholder='E-mail'
-                    onChange={e => setUserEmail(e.target.value)}
-                />
-                <p className="p">Password</p>
-                <input
-                    type="password"
-                    value={userPass}
-                    className = {"input"}
-                    placeholder='password'
-                  onChange={e => setUserPass(e.target.value)}
-                />
-                <p className="p"></p>
-                <button
-                    className = {"button"}
-                   onClick={handleLogin}
-                >
-                    Log in
-                </button>
-                                 
-                <div className='auth-navigate'>
-                    <p className="p">Don`t have an account?</p>
-                    <button
-                        className = {"button"}
-                       onClick={() => {navigate('/registration')}}
-                    >Sign up</button>
+        <div className={"upcoming"}>
+            <title className={"login-registration"}>Personal details</title>
+            <div className={"form"} >
+                <div className={"group"}>
+                    <label className={"label"}> Name
+                        <input
+                            type="text"
+                            value={userName}
+                            className={"input"}
+                            placeholder='username'
+                            onChange={e => setUserName(e.target.value)}
+
+                        />
+                    </label>
                 </div>
+                <div className={"group"}>
+                    <label className={"label"}> Email
+                        <input
+                            type="E-mail"
+                            value={userEmail}
+                            className={"input"}
+                            placeholder='E-mail'
+                            onChange={e => setUserEmail(e.target.value)}
+
+                        />
+                    </label>
+                </div>
+                <div className={"group"}>
+                    <label className={"label"}> Password
+                        <input
+                            type="password"
+                            value={userPass}
+                            className={"input"}
+                            placeholder='password'
+                            onChange={e => setUserPass(e.target.value)}
+
+                        />
+                    </label>
+                </div>
+                <div className={"group"}>
+                    <center>
+                        <button className={"button"} onClick={handleLogin}> login</button>
+                        <div className='auth-navigate'>
+                            <p className="p">Don`t have an account?</p>
+                            <button
+                                className={"button"}
+                                onClick={() => { navigate('/registration') }}
+                            >Sign up
+                            </button>
+                        </div>
+                    </center>
                 </div>
             </div>
-        
-        )
-     }
+        </div>
+    )
+}
 
-   
-   
 
-export default Account
+export default Account;
