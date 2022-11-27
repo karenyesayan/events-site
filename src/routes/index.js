@@ -1,8 +1,11 @@
 import {lazy} from "react";
 
 import App from "../App";
-import Header from "../components/Header";
-import SingleEvent from "../components/SingleEvent";
+import Header from "../Components/Header";
+import ClubsEvent from "../Pages/ClubsPubs/ClubsEvent";
+import ConcertEvent from "../Pages/Concert/concertEvent";
+import OperaEvent from "../Pages/OperaBallet/operaEvent";
+import SingleEvent from "../Pages/Theater/singleEvent";
 
 
 const Home = lazy(() => import("../pages/Home"))

@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import instance from '../../api/axios'
 import { useDispatch } from 'react-redux'
+import { setTheatreEvent } from '../../redux/slices/theatreSlice';
 import { useNavigate } from 'react-router-dom'
-import { setOperaEvent } from '../../redux/slices/operaSlice';
+import { setConcertEvent } from '../../redux/slices/concertSlice';
 
-const OperaBallet = () => {
+const ClubsPubs = () => {
     const[theater,setTheater] = useState  ([]);
    
     const dispatch = useDispatch()
     const navigate = useNavigate()
    
     useEffect(() => {
-      instance.get('operaBallet')
+      instance.get('concert')
           .then(res => {
               setTheater(res.data)
           })
@@ -31,8 +32,8 @@ const OperaBallet = () => {
           ticket,
       }
   
-      dispatch(setOperaEvent(eventObj))
-      navigate('/operaEvent')
+      dispatch(setConcertEvent(eventObj))
+      navigate('/clubsEvent')
     }
   
       return (
@@ -70,4 +71,4 @@ const OperaBallet = () => {
 }
 
 
-export default OperaBallet
+export default ClubsPubs
