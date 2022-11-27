@@ -186,6 +186,7 @@
       "date": "30/11/22"
     }
   ],
+  
   "events": [
     {
       "id": 1,
@@ -210,6 +211,135 @@
       "date": "2022-11-23",
       "time": "",
       "place": ""
+    }
+  ],
+  "operaBallet": [
+    {
+      "id": 2,
+      "name": "Chipolino",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/59/16/11/slug-111659.jpg",
+      "info": "Conductor: Harutyun Arzumanyan Stage choreographer: Henrikh Majorov.",
+      "date": [
+        {
+          "id": 1,
+          "date":"03-12-2022 19:00"
+        },
+        {
+          "id": 2,
+          "date":"15-12-2022 19:00"
+        }
+      ],
+      "ticket": "5000 - 10000"
+    },
+    {
+      "id": 3,
+      "name": "Concert performance of Puccini's opera Tosca",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/40/22/11/slug-112240.jpg",
+      "info": "Concert performance of Giacomo Puccini's opera 'Tosca' with the participation of world opera stars in Aram Khachatryan concert hall. Floria Tosca - Hibla Gerzmava, soprano Mario Cavaradossi - Arsen Soghomonyan, tenor Scarpia - Vladislav Sulimski, baritone National Philharmonic Orchestra of Armenia, Artistic Director and Chief Conductor: Eduard Topchyan",
+      "date": [
+        {
+          "id": 1,
+          "date":"10-12-2022 20:00"
+        }
+      ],
+      "ticket": "3000 - 20000"
+    },
+    {
+      "id": 4,
+      "name": "Spartak",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/60/16/11/slug-111660.jpg",
+      "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
+      "date": [
+        {
+          "id": 1,
+          "date":"06-11-2022 20:00"
+        },
+        {
+          "id": 2,
+          "date":"20-11-2022 20:00"
+        }
+      ],
+      "ticket": "4000 - 5000"
+    },
+    {
+      "id": 5,
+      "name": "Karmen",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/58/16/11/slug-111658.jpg",
+      "info": "Musical director and conductor of the performance: Karen Durgaryan /Honored Artist of RA/ Stage director: Armen Meliksetyan /Honored Art Worker of RA/ Set designer: Rafael Khachatryan",
+      "date": [
+        {
+          "id": 1,
+          "date":"05-11-2022 20:00"
+        }
+      ],
+      "ticket": "5000 - 20000"
+    },
+    {
+      "id": 6,
+      "name": "Forsh & Re Minor",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/64/10/slug-106481.jpg",
+      "info": "Stage director: Gegham Griogoryan /People’s Artist of RA and RL/ Set designer: Grisha Sahakyan /Honored Art Worker of RA/ Chief choirmaster: Hrach Boryan Choreographer: Vilen Galstyan /People’s Artist of RA/",
+      "date": [
+        {
+          "id": 1,
+          "date":"14-11-2022 20:00"
+        }
+      ],
+      "ticket": "5000 - 14000"
+    }
+  ],
+  "concert": [
+    {
+      "id": 2,
+      "name": "Don't stop dreaming",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/79/18/11/slug-111879.jpg",
+      "info": "On November 25, at 19:00, the solo concert of the Yeva Sujyan & Black Gold Project group will take place at the Hovhannes Tumanyan Puppet Theater entitled 'Don't Stop Dreaming'. The special guests of the concert are Hasmik Karapetyan and Vahan Artsruni.",
+      "date": [
+        {
+          "id": 1,
+          "date":"27-12-2022 19:00"
+        }
+      ],
+      "ticket": "5000 - 7000"
+    },
+    {
+      "id": 3,
+      "name": "An evening of author's song and poetry",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/19/20/11/slug-112019.jpg",
+      "info": "On November 25, an evening of original song and poetry at the Old Arena music hall. Sincere conversation and music, an exceptional evening for the soul and mind. The participation of all of you is extremely important. this time, too, we will direct the funds to an important cause, and the details on the spot. Hurry up to book your place.",
+      "date": [
+        {
+          "id": 1,
+          "date":"10-12-2022 20:00"
+        }
+      ],
+      "ticket": "5000"
+    },
+    {
+      "id": 4,
+      "name": "Yerevan Jazz Fest",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/97/20/11/slug-112097.jpg",
+      "info": "On November 25, within the framework of the Yerevan Jazz Festival, Arno Babajanyan Concert Hall will be hosting the leading pianists of Armenia.",
+      "date": [
+        {
+          "id": 1,
+          "date":"25-11-2022 20:00"
+        }
+      ],
+      "ticket": "3000 - 7000"
+    },
+    {
+      "id": 5,
+      "name": "Grand Opening Concert",
+      "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/63/21/11/slug-112163.jpg",
+      "info": "Don’t miss Babylon Theatre’s reopening concert on November 25th! Bands: Rozen, Tal, TEELxSocko, VANAKAN ",
+      "date": [
+        {
+          "id": 1,
+          "date":"20-11-2022 20:00"
+        }
+      ],
+      "ticket": "5000"
     }
   ],
   "clubs&pabs": [
