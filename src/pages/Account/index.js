@@ -1,14 +1,21 @@
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import instance from "../../api/axios";
-import { user } from "../../redux/slices/userSlice";
+import { user, userSelector } from "../../redux/slices/userSlice";
 
 
 const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const activUser = useSelector(userSelector);
+console.log(user);
+
+    useEffect(() => {
+        if(activUser.name){
+        navigate('/profile') }
+    },[activUser.name])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");

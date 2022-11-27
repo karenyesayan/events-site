@@ -16,6 +16,10 @@ const Profile = ({ navigateTo }) => {
             </h2>
         </div>
 
+
+
+
     )
+
 }
 export default Profile;
