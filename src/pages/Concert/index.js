@@ -33,7 +33,7 @@ const ClubsPubs = () => {
       }
   
       dispatch(setConcertEvent(eventObj))
-      navigate('/clubsEvent')
+      navigate('/concertEvent')
     }
   
       return (
