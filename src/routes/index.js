@@ -10,7 +10,7 @@ import SingleEvent from "../Pages/Theater/singleEvent";
 
 const Home = lazy(() => import("../Pages/Home"))
 const Cinema = lazy(() => import("../Pages/Cinema"))
-//const Concert = lazy(() => import("../pages/Concert"))
+const Concert = lazy(() => import("../Pages/Concert"))
 const Theater = lazy(() => import("../Pages/Theater"))
 //const Other = lazy(() => import("../pages/Other"))
 const OperaBallet = lazy(() => import("../Pages/OperaBallet"))
@@ -38,10 +38,10 @@ const routes = [
           path: "cinema",
           element: <Cinema />
         },
-     //   {
-     //     path: "concert",
-     //     element: <Concert />
-     //   },
+       {
+         path: "concert",
+         element: <Concert />
+       },
         {
           path: "theater",
           element: <Theater />
