@@ -32,7 +32,7 @@ const Admin = (navigateTo) => {
       .substring(2);
 
 
-   const add = () => {
+   const addNewEvent = () => {
       instance.post(path, { id: id(), ...newEvent });
 
    }
@@ -78,7 +78,7 @@ const Admin = (navigateTo) => {
             </div>
             <div className={"group"}>
                <center>
-                  <button className={"button"} onClick={add}> Add</button>
+                  <button className={"button"} onClick={addNewEvent}> Add</button>
                   <b> </b>
                   <button className={"button"} onClick={cencel}>Cencel</button>
                </center>

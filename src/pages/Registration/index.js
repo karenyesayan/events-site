@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import instance from "../../api/axios"
 
 
-
 const Registration = ({ navigateTo }) => {
     const navigate = useNavigate()
 
@@ -27,7 +26,7 @@ const Registration = ({ navigateTo }) => {
         .toString(16)
         .substring(2);
 
-    let obj = {
+    let objNewUser = {
 
         "name": newUserName,
         "email": newUserEmail,
@@ -35,10 +34,9 @@ const Registration = ({ navigateTo }) => {
         "ewallet": newUserEwallet
     }
     const submit = () => {
-        instance.post("/users", { id: id(), ...obj });
+        instance.post("users", { id: id(), ...objNewUser });
         navigate('/myaccount');
         reset();
-
     }
 
     return (
@@ -100,9 +98,7 @@ const Registration = ({ navigateTo }) => {
                         {errors?.ewallet && <p style={{ color: "red" }}>Please enter your password</p>}
                     </div>
                 </div>
-
-                <input className={"button"} type={"submit"} />
-
+                <input className={"buttonRegistartion"} type={"submit"} />
                 <p className="p">Already have an account?</p>
                 <center>
                     <button className={"button"} onClick={() => { navigate('/myaccount') }}

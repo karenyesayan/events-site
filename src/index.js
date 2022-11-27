@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import routes from "./routes/index"
 import {store} from './redux/store'
-import Loading from "./Components/Loading"
+import Loading from "./components/Loading"
 
 import './index.css';
 

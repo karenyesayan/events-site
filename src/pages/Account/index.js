@@ -25,23 +25,24 @@ const Account = (navigateTo) => {
 
     const handleLogin = () => {
 
-        instance.get("/users")
+        instance.get("users")
             .then(res => {
                 const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
                 console.log(activUser);
-                if (!user) {
+                if (!activUser) {
                     navigate('/registration')
                 } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
                     navigate('/admin')
                 }
-
                 else {
                     dispatch(user(activUser));
                     navigate('/profile')
 
                 }
-            }
-            )
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
 

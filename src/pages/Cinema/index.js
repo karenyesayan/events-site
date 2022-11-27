@@ -10,20 +10,25 @@ import { movie } from "../../redux/slices/moviesSlice";
 
 const Cinema = ({ navigateTo }) => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     const user = useSelector(userSelector);
+
     const [movies, setMovies] = useState([]);
     const [activMovie, setActivMovie] = useState(null);
    
    const dispatch = useDispatch();
 
     useEffect(() => {
-        instance.get("/cinema")
+        instance.get("cinema")
             .then(res => setMovies(res.data))
+            .catch(err => {
+                console.log(err)
+            })
     }, [])
 
 
-    const buy = () => {
+    const navigateToTicket = () => {
         if (user.name) {
             navigate('/ticket');
         } else { navigate('/myaccount') }
@@ -58,7 +63,7 @@ const Cinema = ({ navigateTo }) => {
                                 <div className="upcoming-event-date">
                                     {item.price}
                                 </div>
-                                <button className={"button-cinem"} onClick={buy} >Buy now</button>
+                                <button className={"button-cinem"} onClick={navigateToTicket} >Buy now</button>
                             </div>
                         )
                     }
