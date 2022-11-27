@@ -2,10 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import './App.css';
-import Footer from "./Components/Footer";
-// import {hash} from "./helpers"
-import Content from "./Components/Content";
+import Footer from "./components/Footer";
+//import {hash} from "./helpers"
+import Content from "./components/Content";
 // import Header from './components/Header';
+
 
 
 const obj = [
