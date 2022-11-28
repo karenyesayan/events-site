@@ -286,3 +286,45 @@ width: 300;
   margin-left: 165px;
   text-align: justify;
  }
+/* PROFILE */
+ .profile-img{
+  width: 180px;
+  height: 30vh; 
+  object-fit:none;
+  border-radius: 1px;
+   
+}
+.ticket-img{
+  width: 550px;
+  height: 40vh; 
+  object-fit:none;
+  border-radius: 1px;
+   
+}
+.profile{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 70px 0;
+ 
+}
+.profil-user{
+  background: rgba(196, 182, 196, 0.272);
+ 
+  padding: 20px 0;
+  width: 1200px;
+  height: 900px;
+  box-shadow: 2px 2px 5px;
+  border-radius: 20px/20px;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+.profile-title{
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+.profile-ticket-title{
+  font-size: 29px;
+  text-transform: uppercase;
+  color: #ccc;
+  }
