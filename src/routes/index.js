@@ -1,26 +1,28 @@
 import {lazy} from "react";
 
 import App from "../App";
-import Header from "../Components/Header"
+import Header from "../components/Header"
+import SingleOtherPageCard from "../pages/SinglePages/SingleOtherPageCard/index"
+import ErrorPage from "../pages/Error-page/error-page"
 
 
-const Home = lazy(() => import("../Pages/Home"))
-const Cinema = lazy(() => import("../Pages/Cinema"))
-const Concert = lazy(() => import("../Pages/Concert"))
-const Theater = lazy(() => import("../Pages/Theater"))
-const Other = lazy(() => import("../Pages/Other"))
-const OperaBallet = lazy(() => import("../Pages/OperaBallet"))
-const ClubsPubs = lazy(() => import("../Pages/ClubsPubs"))
-const Account = lazy(() => import("../Pages/Account"))
-const Profile = lazy(() => import("../Pages/Profile"))
-const Registration = lazy(() => import("../Pages/Registration"))
-
+const Home = lazy(() => import("../pages/Home"))
+const Cinema = lazy(() => import("../pages/Cinema"))
+const Concert = lazy(() => import("../pages/Concert"))
+const Theater = lazy(() => import("../pages/Theater"))
+const Other = lazy(() => import("../pages/Other"))
+const OperaBallet = lazy(() => import("../pages/OperaBallet"))
+const ClubsPubs = lazy(() => import("../pages/ClubsPubs"))
+const Account = lazy(() => import("../pages/Account"))
+const Profile = lazy(() => import("../pages/Profile"))
+const Registration = lazy(() => import("../pages/Registration"))
 
 
 const routes = [
     {
         path: "/",
         element: <Header />,
+        errorElement: <ErrorPage />,
         children: [
           { index: true, element: <App /> },
           {
@@ -52,6 +54,10 @@ const routes = [
             element: <Other />
           },
           {
+            path: 'other/:id',
+            element: <SingleOtherPageCard />
+          },
+          {
             path: "myaccount",
             element: <Account />
           },
@@ -62,10 +68,9 @@ const routes = [
           {
             path: "registration",
             element: <Registration />
-          }
-         
+          },
         ]
     }
-      ]
+    ]
 
 export default routes;

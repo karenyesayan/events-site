@@ -1,78 +1,36 @@
-import {NavLink, Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom"
 
-
-import Search from "../Search";
-import User from "../User";
-import LanguageBar from "../LanguageBar";
-// import logo from "../../images/logo.png"
+import { useLanguage } from "../../contexts/LanguageProvider"
+import Search from "../Search"
+import UserBar from "../UserBar"
+import LanguageBar from "../LanguageBar"
 import Logo from "../Logo"
-
-const navigation = [
-    {
-        id: '1',
-        title: 'Home',
-        to: 'home',
-    },
-    {
-        id: '2',
-        title: 'Cinema',
-        to: 'cinema',
-    },
-    {
-        id: '3',
-        title: 'Concert',
-        to: 'concert',
-    },
-    {
-        id: '4',
-        title: 'Theater',
-        to: 'theater',
-    },
-    {
-        id: '5',
-        title: 'Opera & Ballet',
-        to: 'operaBallet',
-    },
-    {
-        id: '6',
-        title: 'Clubs & Pubs',
-        to: 'clubsPubs',
-    },
-
-    {
-        id: '7',
-        title: 'Other',
-        to: 'other',
-    },
-]
-
-
+import {HEADERNAVIGATION} from "../../constants/index"
 
 
 const Header = () => {
+    const { t } = useLanguage();
+
     return (
         <>
-        <header className='header'>
+        <header className='header-container'>
             <nav className='nav'>
-                {/* <div className="logo">
-                    <img src={logo} className="Site-logo" alt="logo"></img>
-                </div> */}
                 <Logo />
                     {
-                        navigation.map(({id, title, to}) => (
+                        HEADERNAVIGATION.map(({id, title, to}) => (
                                 <NavLink
                                     to={to}
                                     key={id}
-                                    className={({isActive}) => isActive ? 'active-nav' : 'nav-item'}
-                                >{title}
+                                    className={({isActive}) => isActive ? 'active-nav' : 'inactive-nav'}
+                                >{t(title)}
                                 </NavLink>
                         ))
                     } 
                     <Search />
             </nav>
-            <div className="rightBar">
+            <div className="right-bar">
                 <LanguageBar />
-                <User />
+                <UserBar />
             </div>
         </header>
         
