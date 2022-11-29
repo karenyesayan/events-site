@@ -7,7 +7,6 @@ import './index.css'
 import Loading from "./components/Loading"
 import routes from "./routes/index"
 import {store} from './redux/store'
-import Loading from "./components/Loading"
 import LanguageProvider from './contexts/LanguageProvider'
 
 const router = createBrowserRouter(routes)
