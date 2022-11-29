@@ -214,24 +214,8 @@ code {
   display: block;
   margin-inline-start: 5px; 
 }
- .button {
-  background-color: #6b14cf;
-  color: white;
-  padding: 14px 20px;
-  margin: 0px 0;
-  margin-left: 10cm;
-  border: solid;
-  cursor: pointer;
-  width: 8%;
- }
- .input {
-  min-width: 15rem;
-    border-radius: 5px;
-    padding: 10px;
-    border: .5px #cccccc solid;
-    margin-left: 21Ch;
-   width: 5cm;
- }
+
+ 
  .p {
   font-size: medium;
   font: 1.2em sans-serif;
@@ -247,8 +231,85 @@ code {
     margin-bottom: 20px;
     margin-top: 0cm;
   text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 3px;
+  color: #ccc;
 }
 
+/* ADMIN */
+.form{
+  background: rgb(255,0,241);
+  background: linear-gradient(210deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 100%);
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 450px;
+  height: 800px;
+  box-shadow: 2px 2px 5px;
+  border-radius: 20px/20px;
+}
+
+.group{
+  margin: 10px;
+  padding: 5px;
+}
+.label {
+ padding-left: 5px;
+ text-transform: uppercase;
+ color: #ccc;
+
+}
+.input {
+  min-width: 15rem;
+   border-radius: 20px/20px;
+    padding: 4px;
+    border: none;
+    margin-top: 10px;
+    height: 25px;
+   width: 400px;
+   padding-left: 15px;
+   font-size: 18px;
+ }
+ .input:focus{
+  border: 2px solid;
+transform: translateX(15px);
+width: 300;
+ }
+
+ .button {
+  background-color: #6b14cf;
+  color: white;
+  padding: 2px 60px;
+  border: none;
+  cursor: pointer;
+  width: 2%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,82);
+  border-radius: 20px/20px;
+  font-weight: 100px;
+  }
+ .button:hover{
+  opacity: .80;
+  font-weight: bold;
+  transform: scale(1.1);
+ }
+ .buttonRegistartion {
+  background-color: #6b14cf;
+  color: white;
+  padding: 2px 60px;
+  border: none;
+  cursor: pointer;
+  width: 2%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,82);
+  border-radius: 20px/20px;
+  font-weight: 100px;
+  margin-left: 165px;
+  text-align: justify;
+ }
 /* ERROR PAGE */
 
 .error-page-container {

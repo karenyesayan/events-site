@@ -18,6 +18,7 @@ const App = () => {
     setCounter( counter + 1 >= APPSLIDERITEMS.length ? 0 : previousValue => previousValue + 1)
   }, 4000);
 
+
   useEffect(() => {
     return () => clearTimeout(timer)
   }, [timer])
@@ -31,7 +32,7 @@ const App = () => {
                 <div className="poster-title">{t(APPSLIDERITEMS[counter].title)}</div>
                 <div className="poster-details-button">{t("Details")}</div>
             </div>
-          </div> 
+          </div>
       </main>
       <AppContentComponent />
       <Footer />

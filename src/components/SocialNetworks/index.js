@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const SocialNetworks = () => {
+
     return (
         <div className='networks-container'>
             <a className='facebook' href="https://www.facebook.com/" target='_blank'> 
@@ -14,6 +15,6 @@ const SocialNetworks = () => {
             </a>
         </div>
     )
-} 
+}
 
 export default SocialNetworks

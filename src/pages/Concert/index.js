@@ -3,6 +3,7 @@ import instance from '../../api/axios'
 import { useDispatch } from 'react-redux'
 import { setTheatreEvent } from '../../redux/slices/theatreSlice';
 import { useNavigate } from 'react-router-dom'
+import { setConcertEvent } from '../../redux/slices/concertSlice';
 
 const ClubsPubs = () => {
     const[theater,setTheater] = useState  ([]);
@@ -11,7 +12,7 @@ const ClubsPubs = () => {
     const navigate = useNavigate()
    
     useEffect(() => {
-      instance.get('clubs&pabs')
+      instance.get('concert')
           .then(res => {
               setTheater(res.data)
           })
@@ -31,8 +32,8 @@ const ClubsPubs = () => {
           ticket,
       }
   
-      dispatch(setTheatreEvent(eventObj))
-      navigate('/singleEvent')
+      dispatch(setConcertEvent(eventObj))
+      navigate('/concertEvent')
     }
   
       return (

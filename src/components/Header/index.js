@@ -9,7 +9,7 @@ import {HEADERNAVIGATION} from "../../constants/index"
 
 
 const Header = () => {
-    const { t } = useLanguage();
+    const { t } = useLanguage()
 
     return (
         <>

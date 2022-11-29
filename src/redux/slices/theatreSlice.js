@@ -18,5 +18,4 @@ export const {setTheatreEvent} = theatreSlice.actions
 
 export const theatreEventSelector = state => state.theatre.theatreEvent
 
-
 export default theatreSlice.reducer
