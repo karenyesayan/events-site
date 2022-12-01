@@ -16,8 +16,8 @@ const Cinema = ({ navigateTo }) => {
 
     const [movies, setMovies] = useState([]);
     const [activMovie, setActivMovie] = useState(null);
-   
-   const dispatch = useDispatch();
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         instance.get("cinema")
@@ -44,9 +44,9 @@ const Cinema = ({ navigateTo }) => {
                 </div>
                 <div className="upcoming-events">
                     {movies.map(item => {
-                         
+
                         return (
-                            
+
                             <div key={item.id} className={"upcoming-event"}>
                                 <div className="upcoming-event-img-div">
                                     <img src={item.img} className="upcoming-event-img" />

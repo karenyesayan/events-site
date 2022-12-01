@@ -10,12 +10,13 @@ const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const activUser = useSelector(userSelector);
-console.log(user);
+    console.log(user);
 
     useEffect(() => {
-        if(activUser.name){
-        navigate('/profile') }
-    },[activUser.name])
+        if (activUser.name) {
+            navigate('/profile')
+        }
+    }, [activUser.name])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -38,19 +39,17 @@ console.log(user);
                 console.log(activUser);
                 if (!activUser) {
                     navigate('/registration')
-                } 
+                } if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
+                    navigate('/admin')
+                }
                 else {
                     dispatch(user(activUser));
                     navigate('/profile')
-
                 }
             })
             .catch(err => {
                 console.log(err)
             })
-            if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
-                navigate('/admin')
-            }
     }
 
 
