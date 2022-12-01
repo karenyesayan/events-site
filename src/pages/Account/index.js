@@ -38,9 +38,7 @@ console.log(user);
                 console.log(activUser);
                 if (!activUser) {
                     navigate('/registration')
-                } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
-                    navigate('/admin')
-                }
+                } 
                 else {
                     dispatch(user(activUser));
                     navigate('/profile')
@@ -50,6 +48,9 @@ console.log(user);
             .catch(err => {
                 console.log(err)
             })
+            if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
+                navigate('/admin')
+            }
     }
 
 
