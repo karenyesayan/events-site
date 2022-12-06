@@ -44,9 +44,7 @@ const Cinema = ({ navigateTo }) => {
                 </div>
                 <div className="upcoming-events">
                     {movies.map(item => {
-
                         return (
-
                             <div key={item.id} className={"upcoming-event"}>
                                 <div className="upcoming-event-img-div">
                                     <img src={item.img} className="upcoming-event-img" />
@@ -63,7 +61,7 @@ const Cinema = ({ navigateTo }) => {
                                 <div className="upcoming-event-date">
                                     {item.price}
                                 </div>
-                                <button className={"button-cinem"} onClick={navigateToTicket} >Buy now</button>
+                                <button className={"button-cinem"} onClick={navigateToTicket    } >Buy now</button>
                             </div>
                         )
                     }
