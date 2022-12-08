@@ -159,6 +159,51 @@ code {
 
 /* CINEMA */
 
+.cinema{
+  background: rgb(255,0,241);
+  background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
+  padding: 10px 10px 10px 10px;
+ 
+}
+.cinema-events{background: rgba(196, 182, 196, 0.272);
+ 
+  padding: 20px 0;
+  width: 1200px;
+ 
+  box-shadow: 2px 2px 5px;
+  border-radius: 20px/20px;
+  margin: 10px;
+  margin-bottom: 10px;
+  /* display: grid;
+  grid-template-columns:auto;
+  gap: 50px;
+  justify-content: center;
+  width: 100%; */
+}
+.movie-events{
+  padding: 20px 20px;
+  width: 40%;
+ 
+  margin-bottom: 10px;
+  
+  box-shadow: 2px 2px 5px;
+  border-radius: 10px/10px;
+  margin: 10px 10px 10px 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+ 
+  display: inline-block;
+
+  
+  
+  
+}
+.cinema-container{
+  width: 100%;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+
 .cin {
   background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612244826_199-p-spasibo-za-vnimanie-fioletovii-fon-234.jpg);
   display: flex;
@@ -243,7 +288,6 @@ code {
   padding: 20px 0;
   margin: 0 auto;
   width: 450px;
-  height: 800px;
   box-shadow: 2px 2px 5px;
   border-radius: 20px/20px;
 }
@@ -271,8 +315,7 @@ code {
  }
  .input:focus{
   border: 2px solid;
-transform: translateX(15px);
-width: 300;
+  width: 300;
  }
 
  .button {
@@ -337,7 +380,7 @@ width: 300;
  
   padding: 20px 0;
   width: 1200px;
-  height: 900px;
+ 
   box-shadow: 2px 2px 5px;
   border-radius: 20px/20px;
   margin: 10px;
@@ -353,6 +396,50 @@ width: 300;
   text-transform: uppercase;
   color: #ccc;
   }
+  .profile-edit-logout{
+  background-color: #6b14cf;
+  color: white;
+  padding: 2px 60px;
+  border: none;
+  cursor: pointer;
+  width: 2%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,82);
+  border-radius: 20px/20px;
+  font-weight: 100px;
+  }
+ .profile-edit-logout:hover{
+  opacity: .80;
+  font-weight: bold;
+  transform: scale(1.1);
+ }
+ .selectedEvents{
+  padding: 20px 20px;
+  width: 43%;
+  height: 50%;
+  box-shadow: 2px 2px 5px;
+  border-radius: 10px/10px;
+  margin: 10px 10px 10px 20px;
+ 
+  display: inline-block;
+ }
+ .selectedEvents-img{
+  width: 80%;
+  height: 70%; 
+  border-radius: 5px;
+  display: inline-block;
+  }
+  .selectedEvents-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ccc;
+    display: inline-block;
+    
+  }
+ 
+  
 
 /* ERROR PAGE */
 

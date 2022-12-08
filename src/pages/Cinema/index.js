@@ -12,10 +12,11 @@ const Cinema = ({ navigateTo }) => {
 
     const navigate = useNavigate();
 
-    const user = useSelector(userSelector);
+    const {id,name,selectedEvents} = useSelector(userSelector);
+    console.log("sel"+selectedEvents )
 
     const [movies, setMovies] = useState([]);
-    const [activMovie, setActivMovie] = useState(null);
+    
 
     const dispatch = useDispatch();
 
@@ -28,26 +29,28 @@ const Cinema = ({ navigateTo }) => {
     }, [])
 
 
-    const navigateToTicket = () => {
-        if (user.name) {
+    const navigateToTicket = (activMovie) => {
+        if (name) {
+           const body ={selectedEvents:[activMovie,...selectedEvents]}
+           instance.patch(`users/${id}/`, body)
+            dispatch(movie(activMovie))
             navigate('/ticket');
+           
         } else { navigate('/myaccount') }
     }
 
 
     return (
 
-        <div className="upcoming">
-            <div className="upcoming-container">
-                <div className="upcoming-title">
+        <div className="cinema">
+            <div className="cinema-container">
+                <h1 className="upcoming-title">
                     MOVIES
-                </div>
-                <div className="upcoming-events">
-                    {movies.map(item => {
-
+                </h1>
+                <div className="cinema-events">
+                    {movies.map((item) => {
                         return (
-
-                            <div key={item.id} className={"upcoming-event"}>
+                            <div key={item.activMovieid} className={"movie-events"}>
                                 <div className="upcoming-event-img-div">
                                     <img src={item.img} className="upcoming-event-img" />
                                 </div>
@@ -63,7 +66,7 @@ const Cinema = ({ navigateTo }) => {
                                 <div className="upcoming-event-date">
                                     {item.price}
                                 </div>
-                                <button className={"button-cinem"} onClick={navigateToTicket} >Buy now</button>
+                                <button className={"theatre-schedule-btn"} onClick={() => navigateToTicket(item)} >Buy now</button>
                             </div>
                         )
                     }
