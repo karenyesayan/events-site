@@ -14,29 +14,13 @@ const Profile = ({ navigateTo }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const {id,name,email,pass,ewallet} = useSelector(userSelector);
-    const[editName,setEditName] = useState(name);
-    const[editEmail,setEditEmail] = useState(email);
-    const[editPass,setEditPass] = useState(pass);
-    const[editEwallet,setEditEwallet] = useState(ewallet);
-    const[isEdit,setIsEdit] = useState(false);
+    const { name, email, pass, ewallet } = useSelector(userSelector);
 
 
     const handleLogOut = () => {
         dispatch(user({}));
         navigate('/')
     }
-const userEdit ={
-    name:editName,
-    email:editEmail,
-    pass:editPass,
-    ewallet:editEwallet
-
-}
-    const handleEditProfile = () => {
-        instance.patch(`user/${id}`, {userEdit})
-         navigate('/')
-     }
 
     return (
 
@@ -60,12 +44,6 @@ const userEdit ={
                 <button className="profile-edit-logout" onClick={handleLogOut}>
                     Log out
                 </button>
-                <button className="profile-edit-logout" >
-                    Edit Profile
-                    
-                
-                </button>
-               
             </div>
         </div>
     )

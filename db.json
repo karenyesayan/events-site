@@ -12,17 +12,9 @@
       "name": "meri",
       "email": "meri@gmail.com",
       "pass": "meri",
-      "ewallet": "5000"
+      "ewallet": "5000",
+      "selectedEvents":[]
      
-    },
-    {
-      "id": "xqTJTC3"
-    },
-    {
-      "id": "ELYpW6q"
-    },
-    {
-      "id": "8LpkMdn"
     }
   ],
   "cinema": [

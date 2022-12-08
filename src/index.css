@@ -270,8 +270,7 @@ code {
  }
  .input:focus{
   border: 2px solid;
-transform: translateX(15px);
-width: 300;
+  width: 300;
  }
 
  .button {
@@ -336,7 +335,7 @@ width: 300;
  
   padding: 20px 0;
   width: 1200px;
-  height: 900px;
+  height: 300px;
   box-shadow: 2px 2px 5px;
   border-radius: 20px/20px;
   margin: 10px;
