@@ -13,8 +13,7 @@ const Cinema = ({ navigateTo }) => {
     const navigate = useNavigate();
 
     const {id,name,selectedEvents} = useSelector(userSelector);
-    console.log("sel"+selectedEvents )
-
+   
     const [movies, setMovies] = useState([]);
     
 
