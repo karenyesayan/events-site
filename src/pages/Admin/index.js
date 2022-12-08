@@ -34,9 +34,11 @@ const Admin = (navigateTo) => {
 
    const addNewEvent = () => {
       instance.post(path, { id: id(), ...newEvent })
-         }
+
+   }
 
    const cencel = () => {
+      setPath(null)
       navigate("/admin")
    }
 
@@ -54,7 +56,7 @@ const Admin = (navigateTo) => {
                <input className={"input"} type={"text"} onChange={e => setTitle(e.target.value)}></input>
             </div>
             <div className={"group"}>
-               <label className={"label"}>img </label>
+               <label className={"label"}>img URL</label>
                <input className={"input"} type={"text"} onChange={e => setImage(e.target.value)}></input>
             </div>
             <div className={"group"}>
