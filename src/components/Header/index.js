@@ -5,7 +5,7 @@ import Search from "../Search"
 import UserBar from "../UserBar"
 import LanguageBar from "../LanguageBar"
 import Logo from "../Logo"
-import {HEADERNAVIGATION} from "../../constants/index"
+import {HEADER_NAVIGATION} from "../../constants/index"
 
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
             <nav className='nav'>
                 <Logo />
                     {
-                        HEADERNAVIGATION.map(({id, title, to}) => (
+                        HEADER_NAVIGATION.map(({id, title, to}) => (
                                 <NavLink
                                     to={to}
                                     key={id}

@@ -1,15 +1,15 @@
 import { useState } from "react"
 import {useDispatch} from "react-redux"
 
-import {filterData, loadItems, setIsFiltersActive} from "../../redux/slices/otherSlice"
+import {filterOnlineData, loadOnlineItems, setIsFiltersActive} from "../../redux/slices/onlineSlice"
 
-import {GENRES, CINEMAS} from "../../constants"
+import {GENRES, PRODUCTION} from "../../constants"
 
 const Sidebar = () => {
     const dispatch = useDispatch()
 
     const [sideBarSwitcher, setSideBarSwitcher] = useState(false)
-    const [ticketPrice, setTicketPrice] = useState(100)
+    const [price, setPrice] = useState(100)
 
     const [isActiveButtons, setIsActiveButtons] = useState(
         {
@@ -25,10 +25,10 @@ const Sidebar = () => {
 
     const [isActiveRadioButtons, setIsActiveRadioButtons] = useState(
         {
-            Moscow: false,
-            KinoPark: false,
-            Hoktember: false,
-            "Cinema Star": false,
+            'Universal Pictures': false,
+            'Warner Bros.': false,
+             Netflix: false,
+            'Sony Pictures': false,
         }
     )
 
@@ -51,8 +51,9 @@ const Sidebar = () => {
             <div className={sideBarSwitcher ? "open-sidebar" : "close-sidebar"}>
                 <div className="sidebar-header-container">
                     <span 
+                        className="reset-btn"
                         onClick={() => {
-                            dispatch(loadItems())
+                            dispatch(loadOnlineItems())
                             dispatch(setIsFiltersActive(false))
                         }}
                         >Reset</span>
@@ -77,13 +78,13 @@ const Sidebar = () => {
                         ))}
                     </div>
                 </div>
-                <div className="sidebar-cinemas">
-                    <div className="cinemas-header">
-                        <p>Cinemas</p>
+                <div className="sidebar-productions">
+                    <div className="productions-header">
+                        <p>Production</p>
                     </div>
-                    <div className="cinemas-radio-container">
-                        {CINEMAS.map(({title}) => (
-                                          <label className="cinemas-radio-buttons">
+                    <div className="radio-buttons-container">
+                        {PRODUCTION.map(({title}) => (
+                                          <label className="radio-buttons">
                                                       <input 
                                                         type="radio"
                                                         checked={isActiveRadioButtons[title]}
@@ -104,17 +105,16 @@ const Sidebar = () => {
                 </div>
             <div className="slider-container">
                 <p>Price</p>
-                <span>{ticketPrice}</span>
+                <span>{price} AMD</span>
                 <label>
                 <input
                     type='range'
-                    onChange={(e) => setTicketPrice(e.target.value)}
+                    onChange={(e) => setPrice(e.target.value)}
                     min={1}
                     max={10000}
-                    step={100}
-                    className='sidebar-slider'
-                    >
-                </input>
+                    value={price}
+                    style={{backgroundSize: (price - 1) * 100 / (10000 - 1)  + "%"}}
+                    />
                 </label>
             </div>
             <div className="apply-button-container">
@@ -124,9 +124,9 @@ const Sidebar = () => {
                         const data = {
                             isActiveButtons,
                             isActiveRadioButtons,
-                            ticketPrice,
+                            price,
                         }
-                        dispatch(filterData(data))
+                        dispatch(filterOnlineData(data))
                         dispatch(setIsFiltersActive(true))
                     }}
                     >Apply</button>
