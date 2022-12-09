@@ -25,39 +25,38 @@ const Admin = (navigateTo) => {
       "date": date,
       "price": price,
       "info": info
-
    }
+
    const id = () => Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(2);
 
 
    const addNewEvent = () => {
-      instance.post(path, { id: id(), ...newEvent });
+      instance.post(path, { id: id(), ...newEvent })
 
    }
 
    const cencel = () => {
+      setPath(null)
       navigate("/admin")
-
    }
 
    return (
-
       <div className={"upcoming"}>
          <h1> {user.name} </h1>
          <title className={"login-registration"}>ADD NEW CINEMA</title>
          <div className={"form"}>
             <div className={"group"}>
                <label className={"label"}> Event Type </label>
-               <input className={"input"} type={"text"} onChange={e => setPath("/" + (e.target.value))}></input>
+               <input className={"input"} type={"text"} onChange={e => setPath((e.target.value))}></input>
             </div>
             <div className={"group"}>
                <label className={"label"}> Title </label>
                <input className={"input"} type={"text"} onChange={e => setTitle(e.target.value)}></input>
             </div>
             <div className={"group"}>
-               <label className={"label"}>img </label>
+               <label className={"label"}>img URL</label>
                <input className={"input"} type={"text"} onChange={e => setImage(e.target.value)}></input>
             </div>
             <div className={"group"}>
