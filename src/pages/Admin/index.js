@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom"
 import { userSelector } from "../../redux/slices/userSlice"
 import instance from "../../api/axios"
 
-
 const Admin = (navigateTo) => {
    const navigate = useNavigate();
+
    const user = useSelector(userSelector);
 
    const [path, setPath] = useState("")
@@ -19,27 +19,24 @@ const Admin = (navigateTo) => {
    const [info, setInfo] = useState("")
 
    const newEvent = {
-      "title": title,
-      "img": image,
-      "cinemas": cinemas,
-      "date": date,
-      "price": price,
-      "info": info
+      title,
+      image,
+      cinemas,
+      date,
+      price,
+      info
    }
 
    const id = () => Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(2);
 
-
    const addNewEvent = () => {
       instance.post(path, { id: id(), ...newEvent })
-
    }
 
    const cencel = () => {
-      setPath(null)
-      navigate("/admin")
+
    }
 
    return (

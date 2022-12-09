@@ -4,20 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
 import { userSelector } from "../../redux/slices/userSlice";
-import { movie } from "../../redux/slices/moviesSlice";
-
-
+import { selectEvent } from "../../redux/slices/eventSlice";
 
 const Cinema = ({ navigateTo }) => {
 
     const navigate = useNavigate();
-
-    const {id,name,selectedEvents} = useSelector(userSelector);
-   
-    const [movies, setMovies] = useState([]);
-    
-
     const dispatch = useDispatch();
+    const {id, name, selectedEvents} = useSelector(userSelector);
+
+    const [movies, setMovies] = useState([]);
+
 
     useEffect(() => {
         instance.get("cinema")
@@ -28,13 +24,12 @@ const Cinema = ({ navigateTo }) => {
     }, [])
 
 
-    const navigateToTicket = (activMovie) => {
+    const navigateToTicket = (event) => {
         if (name) {
-           const body ={selectedEvents:[activMovie,...selectedEvents]}
-           instance.patch(`users/${id}/`, body)
-            dispatch(movie(activMovie))
+            const body = { selectedEvents: [event, ...selectedEvents]}
+            instance.patch(`users/${id}/`, body)
+            dispatch(selectEvent(event))
             navigate('/ticket');
-           
         } else { navigate('/myaccount') }
     }
 
@@ -43,29 +38,26 @@ const Cinema = ({ navigateTo }) => {
 
         <div className="cinema">
             <div className="cinema-container">
-                <h1 className="upcoming-title">
-                    MOVIES
-                </h1>
                 <div className="cinema-events">
-                    {movies.map((item) => {
+                    {movies.map(({ id, img, title, date, info, price }) => {
                         return (
-                            <div key={item.activMovieid} className={"movie-events"}>
+                            <div key={id} className={"movie-events"}>
                                 <div className="upcoming-event-img-div">
-                                    <img src={item.img} className="upcoming-event-img" />
+                                    <img src={img} className="upcoming-event-img" />
                                 </div>
                                 <div className="upcoming-event-title">
-                                    {item.title}
+                                    {title}
                                 </div>
                                 <div className="upcoming-event-date">
-                                    {item.date}
+                                    {date}
                                 </div>
                                 <div className="upcoming-event-info">
-                                    {item.info}
+                                    {info}
                                 </div>
                                 <div className="upcoming-event-date">
-                                    {item.price}
+                                    {price} dram
                                 </div>
-                                <button className={"theatre-schedule-btn"} onClick={() => navigateToTicket(item)} >Buy now</button>
+                                <button className={"theatre-schedule-btn"} onClick={() => navigateToTicket({id, title, img, price, date })} >Buy now</button>
                             </div>
                         )
                     }

@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import instance from "../../api/axios";
 import { user, userSelector } from "../../redux/slices/userSlice";
 
-
 const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const activUser = useSelector(userSelector);
-    console.log(user);
+
+    const { name } = useSelector(userSelector);
 
     useEffect(() => {
-        if (activUser.name) {
+        if (name) {
             navigate('/profile')
         }
-    }, [activUser.name])
+    }, [name])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userPass, setUserPass] = useState("");
-
 
     const admin = {
         id: 0,
@@ -30,16 +28,13 @@ const Account = (navigateTo) => {
         pass: "ADMIN"
     }
 
-
     const handleLogin = () => {
-
         instance.get("users")
             .then(res => {
-                const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
-                console.log(activUser);
+                const activUser = res.data.find(({ name, email, pass }) => name === userName && email === userEmail && pass === userPass)
                 if (!activUser) {
                     navigate('/registration')
-                } if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
+                } else if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
                     navigate('/admin')
                 }
                 else {
@@ -51,8 +46,6 @@ const Account = (navigateTo) => {
                 console.log(err)
             })
     }
-
-
 
     return (
         <div className={"upcoming"}>
@@ -66,7 +59,6 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='username'
                             onChange={e => setUserName(e.target.value)}
-
                         />
                     </label>
                 </div>
@@ -78,7 +70,6 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='E-mail'
                             onChange={e => setUserEmail(e.target.value)}
-
                         />
                     </label>
                 </div>
@@ -90,7 +81,6 @@ const Account = (navigateTo) => {
                             className={"input"}
                             placeholder='password'
                             onChange={e => setUserPass(e.target.value)}
-
                         />
                     </label>
                 </div>
@@ -111,6 +101,5 @@ const Account = (navigateTo) => {
         </div>
     )
 }
-
 
 export default Account;

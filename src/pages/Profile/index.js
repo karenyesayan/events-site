@@ -1,12 +1,11 @@
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
-
-import { user, userSelector } from "../../redux/slices/userSlice";
-import instance from "../../api/axios"
-import { movieSelector } from "../../redux/slices/moviesSlice";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import instance from "../../api/axios";
+
+import {eventSelector } from "../../redux/slices/eventSlice";
+import { user, userSelector } from "../../redux/slices/userSlice";
 
 
 const Profile = ({ navigateTo }) => {
@@ -14,10 +13,10 @@ const Profile = ({ navigateTo }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { name, email, pass, ewallet, selectedEvents } = useSelector(userSelector);
-    const activMovie = useSelector(movieSelector);
+    const { name, email, ewallet, selectedEvents } = useSelector(userSelector);
+    const { id, title, img, date } = useSelector(eventSelector);
 
-    const handleLogOut = () => {
+      const handleLogOut = () => {
         dispatch(user({}));
         navigate('/')
     }
@@ -40,18 +39,18 @@ const Profile = ({ navigateTo }) => {
                     <span className="profile-ticket-title">Your tickets </span>
                 </center>
                 <div >{
-                    activMovie.title && (
-                        <div key={activMovie.id} className="selectedEvents">
+                    title && (
+                        <div key={id} className="selectedEvents">
                             <div className="selectedEvents-title" >
-                                <p >{activMovie.title}</p>
+                                <p >{title}</p>
                             </div>
                             <div>
-                                <img src={activMovie.img} className="selectedEvents-img" />
-                                <span className="selectedEvents-title"> {activMovie.date}</span>
+                                <img src={img} className="selectedEvents-img" />
+                                <span className="selectedEvents-title"> {date}</span>
                             </div>
                         </div>)
                 }
-                    {selectedEvents.map(item => (
+                    {selectedEvents.map(item  => (
                         <div key={item.id} className="selectedEvents">
                             <div className="selectedEvents-title" >
                                 <p >{item.title}</p>
@@ -66,6 +65,11 @@ const Profile = ({ navigateTo }) => {
                 </div>
             </div>
             <div >
+            <div className="profil-user">
+                <center>
+                    <span className="profile-ticket-title">Your Online Movies</span>
+                </center>
+                </div>
                 <button className="profile-edit-logout" onClick={handleLogOut}>
                     Log out
                 </button>

@@ -83,7 +83,7 @@ const Registration = ({ navigateTo }) => {
                         />
                     </label>
                     <div>
-                        {errors?.pass && <p style={{ color: "red" }}>Please enter your password</p>}
+                        {errors?.pass && <p style={{ color: "red" }}>min 4 digit</p>}
                     </div>
                 </div>
                 <div className={"group"}>
