@@ -2,7 +2,7 @@ import {lazy} from "react"
 
 import App from "../App"
 import Header from "../components/Header"
-import SingleOtherPageCard from "../pages/SinglePages/SingleOtherPageCard/index"
+import SingleOnline from "../pages/SinglePages/SingleOnline/index"
 import ErrorPage from "../pages/Error-page/error-page"
 
 const ClubsEvent = lazy(() => import("../pages/ClubsPubs/ClubsEvent"))
@@ -13,7 +13,7 @@ const Home = lazy(() => import("../pages/Home"))
 const Cinema = lazy(() => import("../pages/Cinema"))
 const Concert = lazy(() => import("../pages/Concert"))
 const Theater = lazy(() => import("../pages/Theater"))
-const Other = lazy(() => import("../pages/Other"))
+const Online = lazy(() => import("../pages/Online"))
 const OperaBallet = lazy(() => import("../pages/OperaBallet"))
 const ClubsPubs = lazy(() => import("../pages/ClubsPubs"))
 const Account = lazy(() => import("../pages/Account"))
@@ -54,12 +54,12 @@ const routes = [
             element: <ClubsPubs />
           },
           {
-            path: "other",
-            element: <Other />
+            path: "online",
+            element: <Online />
           },
           {
-            path: 'other/:id',
-            element: <SingleOtherPageCard />
+            path: 'online/:id',
+            element: <SingleOnline />
           },
           {
             path: "myaccount",

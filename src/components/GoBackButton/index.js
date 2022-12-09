@@ -9,7 +9,7 @@ const GoBackButton = () => {
             className='go-back-button'
             onClick={() => navigate(-1)}
             >
-            <IoMdArrowBack size={28} color="purple"/>
+            <IoMdArrowBack size={30} color="white"/>
         </div>
     )
 } 
