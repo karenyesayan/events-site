@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import instance from '../../api/axios'
 import { useDispatch } from 'react-redux'
-import { setTheatreEvent } from '../../redux/slices/theatreSlice';
 import { useNavigate } from 'react-router-dom'
+import { setClubsEvent } from '../../redux/slices/clubsSlice';
 
 const ClubsPubs = () => {
-    const[theater,setTheater] = useState  ([]);
+    const[clubsInfo, setClubsInfo] = useState([]);
    
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -13,7 +13,7 @@ const ClubsPubs = () => {
     useEffect(() => {
       instance.get('clubs&pabs')
           .then(res => {
-              setTheater(res.data)
+              setClubsInfo(res.data)
           })
           .catch(err => {
               console.log(err)
@@ -21,25 +21,25 @@ const ClubsPubs = () => {
     }, [])
     
   
-    const moreInfo = (id, name, img, info, date, ticket) => {
+    const moreInfo = (id, title, img, info, date, ticket) => {
       const eventObj = {
           id,
-          name,
+          title,
           img,
           info,
           date,
           ticket,
       }
   
-      dispatch(setTheatreEvent(eventObj))
-      navigate('/singleEvent')
+      dispatch(setClubsEvent(eventObj))
+      navigate('/ClubsEvent')
     }
   
       return (
   
           <div className='theatre-back'>
               <div className='theatre-container'>
-                  {theater.map (({id, name, img, info, date, time, ticket})  => {
+                  {clubsInfo.map (({id, title, img, info, date, ticket})  => {
                       return(
                           <div className="theatre"
                               key = {id}>
@@ -47,10 +47,10 @@ const ClubsPubs = () => {
                                   <img className='theatre-img' src={img}/>
                               </div>
                               <div className="theatre-name">
-                                  {name}
+                                  {title}
                               </div>
                               <div className="theatre-date">
-                                  Since {date[0].date}
+                                  Since {date}
                               </div>
                               <div className="theatre-info" >
                                   {info}
@@ -58,7 +58,7 @@ const ClubsPubs = () => {
                               <div >
                                  Tickets {ticket !== 'Free' ? `${ticket}dr.` : ticket} 
                               </div>
-                              <button onClick={() => moreInfo(id, name, img, info, date, time, ticket)} className='theater-btn'>
+                              <button onClick={() => moreInfo(id, title, img, info, date, ticket)} className='theater-btn'>
                                   Buy now
                               </button>
                           </div>
