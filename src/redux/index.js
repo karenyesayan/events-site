@@ -1,7 +1,7 @@
 import {combineReducers} from "@reduxjs/toolkit"
 
 import theatre from "./slices/theatreSlice"
-import other from "./slices/otherSlice"
+import online from "./slices/onlineSlice"
 import user from "./slices/userSlice";
 import movie from "./slices/moviesSlice";
 import clubs from "./slices/clubsSlice";
@@ -16,5 +16,5 @@ export const rootReducer = combineReducers({
     clubs,
     concert,
     opera,
-    other,
+    online,
 })

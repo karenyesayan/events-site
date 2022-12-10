@@ -2,21 +2,20 @@ import { useState } from "react"
 
 import { useLanguage } from "../../contexts/LanguageProvider"
 
-
 const LanguageBar = () => {
     const {setLanguage } = useLanguage()
 
     const [isActiveEng, setIsActiveEng] = useState("black")
     const [isActiveHy, setIsActiveHy] = useState("black")
 
-    const handleLanguageChange = (language) => {
+    const handleLanguageChange = language => {
         if(language === "eng") {
             setLanguage("en")
-            setIsActiveEng("red")
+            setIsActiveEng("magenta")
             setIsActiveHy("black")
         } else if (language === "hy") {
             setLanguage("hy")
-            setIsActiveHy("red")
+            setIsActiveHy("magenta")
             setIsActiveEng("black")
         }
 
