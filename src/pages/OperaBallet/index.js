@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { setOperaEvent } from '../../redux/slices/operaSlice';
 
 const OperaBallet = () => {
-    const[theater,setTheater] = useState  ([]);
+    const[opera, setOpera] = useState([]);
    
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -13,7 +13,7 @@ const OperaBallet = () => {
     useEffect(() => {
       instance.get('operaBallet')
           .then(res => {
-              setTheater(res.data)
+              setOpera(res.data)
           })
           .catch(err => {
               console.log(err)
@@ -21,10 +21,10 @@ const OperaBallet = () => {
     }, [])
     
   
-    const moreInfo = (id, name, img, info, date, ticket) => {
+    const moreInfo = (id, title, img, info, date, ticket) => {
       const eventObj = {
           id,
-          name,
+          title,
           img,
           info,
           date,
@@ -39,7 +39,7 @@ const OperaBallet = () => {
   
           <div className='theatre-back'>
               <div className='theatre-container'>
-                  {theater.map (({id, name, img, info, date, time, ticket})  => {
+                  {opera.map (({id, title, img, info, date, time, ticket})  => {
                       return(
                           <div className="theatre"
                               key = {id}>
@@ -47,10 +47,10 @@ const OperaBallet = () => {
                                   <img className='theatre-img' src={img}/>
                               </div>
                               <div className="theatre-name">
-                                  {name}
+                                  {title}
                               </div>
                               <div className="theatre-date">
-                                  Since {date[0].date}
+                                  Since {date}
                               </div>
                               <div className="theatre-info" >
                                   {info}
@@ -58,7 +58,7 @@ const OperaBallet = () => {
                               <div >
                                  Tickets {ticket !== 'Free' ? `${ticket}dr.` : ticket} 
                               </div>
-                              <button onClick={() => moreInfo(id, name, img, info, date, time, ticket)} className='theater-btn'>
+                              <button onClick={() => moreInfo(id, title, img, info, date, time, ticket)} className='theater-btn'>
                                   Buy now
                               </button>
                           </div>

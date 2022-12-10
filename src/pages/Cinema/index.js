@@ -29,6 +29,7 @@ const Cinema = ({ navigateTo }) => {
 
 
     const navigateToTicket = (activMovie) => {
+        console.log('activMovie', activMovie)
         if (name) {
            const body ={selectedEvents:[activMovie,...selectedEvents]}
            instance.patch(`users/${id}/`, body)

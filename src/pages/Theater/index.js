@@ -5,7 +5,7 @@ import { setTheatreEvent } from '../../redux/slices/theatreSlice';
 import { useNavigate } from 'react-router-dom'
 
 const Theater = () => {
-  const[theater,setTheater] = useState  ([]);
+  const[theater, setTheater] = useState([]);
    
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -21,10 +21,10 @@ const Theater = () => {
   }, [])
   
 
-  const moreInfo = (id, name, img, info, date, ticket) => {
+  const moreInfo = (id, title, img, info, date, ticket) => {
     const eventObj = {
         id,
-        name,
+        title,
         img,
         info,
         date,
@@ -39,7 +39,7 @@ const Theater = () => {
 
         <div className='theatre-back'>
             <div className='theatre-container'>
-                {theater.map (({id, name, img, info, date, time, ticket})  => {
+                {theater.map (({id, title, img, info, date, time, ticket})  => {
                     return(
                         <div className="theatre"
                             key = {id}>
@@ -47,7 +47,7 @@ const Theater = () => {
                                 <img className='theatre-img' src={img}/>
                             </div>
                             <div className="theatre-name">
-                                {name}
+                                {title}
                             </div>
                             <div className="theatre-date">
                               Since {date[0].date}
@@ -58,7 +58,7 @@ const Theater = () => {
                             <div >
                                 Tickets {ticket}dr. 
                             </div>
-                            <button onClick={() => moreInfo(id, name, img, info, date, time, ticket)} className='theater-btn'>
+                            <button onClick={() => moreInfo(id, title, img, info, date, time, ticket)} className='theater-btn'>
                                 Buy now
                             </button>
                         </div>
