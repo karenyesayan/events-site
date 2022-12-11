@@ -21,7 +21,6 @@ const Schedule = () => {
       useEffect(() => {
         if(date == false){
             setChoosed(false)
-            console.log('choosed', choosed)
         } else {
             setChoosed(true)
         }

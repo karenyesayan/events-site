@@ -642,6 +642,7 @@
   cursor: pointer;
   background-color: transparent;
   border-radius: 8px;
+  margin-top: 25px;
   transition: 0.3s all;
 }
 .theatre-schedule-btn:hover{
