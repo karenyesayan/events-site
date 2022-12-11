@@ -70,7 +70,7 @@ const onlineSlice = createSlice({
         },
         resetFindItemsResult: state => {
             state.findItemsResult = null
-        },
+        }
     },
     extraReducers: builder => {
         getOnlineExtraReducer(builder)

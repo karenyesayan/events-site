@@ -3,17 +3,24 @@ import {useLocation} from "react-router-dom"
 import GoBackButton from "../../../components/GoBackButton/index"
 import Trailer from "../../../components/Trailer/index"
 
+import useOnlineContentBuy from "../../../hooks/useOnlineContentBuy"
+
 const SingleOnline = () => {
+
+    const onlineContentBuy = useOnlineContentBuy()
 
     const {
         state: {
             title,
             genre,
             runtime,
+            img,
             date,
+            cinemas,
             price,
             about,
             trailer, 
+            production,
         }
     } = useLocation()
 
@@ -26,7 +33,9 @@ const SingleOnline = () => {
                     <Trailer src={trailer}/>
                      <h2>{title}</h2>
                      <section className="content-details">
-                        <button>Buy {price} AMD</button>
+                        <button
+                            onClick={() => onlineContentBuy({title, genre, runtime, img, date, cinemas, price, about, trailer, production})}
+                        >Buy {price} AMD</button>
                         <span className="card-date"> {date} |</span>
                         <span> {genre} |</span>
                         <span> {runtime} min.</span>
