@@ -114,6 +114,18 @@
       "selectedEvents": [],
       "selectedOnlineContent": [
         {
+          "title": "Barbarian",
+          "genre": "horror",
+          "runtime": "102",
+          "img": "https://s.yimg.com/fz/api/res/1.2/942J6F.KlHbJ955odRh5XA--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/d1d18f54-5c17-32d3-bfed-c198d587d70f/t_1024x1024",
+          "date": "2022",
+          "cinemas": "Cinema Star",
+          "price": 7500,
+          "about": "A woman staying at an Airbnb discovers that the house she has rented is not what it seems.",
+          "trailer": "Dr89pmKrqkI",
+          "production": "20th Century"
+        },
+        {
           "title": "See How They Run",
           "genre": "comedy",
           "runtime": "98",
