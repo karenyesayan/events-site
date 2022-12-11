@@ -32,7 +32,8 @@ const Registration = ({ navigateTo }) => {
         "email": newUserEmail,
         "pass": newUserPass,
         "ewallet": newUserEwallet,
-        "selectedEvents": []
+        "selectedEvents": [],
+        "selectedOnlineContent": [],
     }
     const submit = () => {
         instance.post("users", { id: id(), ...objNewUser });

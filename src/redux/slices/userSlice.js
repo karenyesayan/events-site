@@ -12,12 +12,15 @@ const userSlice = createSlice({
     reducers: {
         user: (state, { payload }) => {
             state.user = payload
-        }
+        },
+        addOnlineContent: (state, { payload }) => {
+            state.user.selectedOnlineContent = [payload,...state.user.selectedOnlineContent]
+        },
 
     }
 })
 
-export const { user } = userSlice.actions;
+export const { user, addOnlineContent } = userSlice.actions;
 
 export const userSelector = state => state.user.user;
 

@@ -95,6 +95,61 @@
           "info": "Ֆիլմը Տիգրանի մասին է, ով վատ շրջապատի ազդեցության տակ դրսևորում է իր բացասական կողմերը, հաճախակի հայտնվում է պատմությունների մեջ և չի սիրում սովորել: "
         }
       ]
+    },
+    {
+      "id": "80a",
+      "name": "Robin",
+      "email": "Robin@gmail.com",
+      "pass": "1234",
+      "ewallet": "14568",
+      "selectedEvents": [],
+      "selectedOnlineContent": [
+        {
+          "title": "See How They Run",
+          "genre": "comedy",
+          "runtime": "98",
+          "date": "2022",
+          "cinemas": "KinoPark",
+          "price": 9000,
+          "about": "In the West End of 1950s London, plans for a movie version of a smash-hit play come to an abrupt halt after a pivotal member of the crew is murdered.",
+          "trailer": "Q00qh7Ab6Mk",
+          "production": "Walt Disney"
+        },
+        {
+          "title": "Smile",
+          "genre": "horror",
+          "runtime": "115",
+          "img": "https://s.yimg.com/fz/api/res/1.2/kMPeFrn6g_XH_Wsg9k6q8A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/a0d7b13d-1b74-3366-9bb0-a4eb5db46114/t_1024x1024",
+          "date": "2022",
+          "cinemas": "Moscow",
+          "price": 1000,
+          "about": "After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. Rose must confront her troubling past in order to survive and escape her horrifying new reality.",
+          "trailer": "BcDK7lkzzsU",
+          "production": "Paramount Pictures"
+        },
+        {
+          "title": "Аram MP3",
+          "genre": "music",
+          "runtime": "95",
+          "date": "2021",
+          "cinemas": "-",
+          "price": 2500,
+          "about": "Մենահամերգ - Aram Mp3",
+          "trailer": "64NtAZyDd-w"
+        },
+        {
+          "title": "Elvis",
+          "genre": "drama",
+          "runtime": "159",
+          "img": "https://s.yimg.com/fz/api/res/1.2/cL5RMpnbqVycdFDq_Kyh9w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/42345d80-ca59-3a82-a045-b02478f61607/t_1024x1024",
+          "date": "2022",
+          "cinemas": "KinoPark",
+          "price": 1500,
+          "about": "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker.",
+          "trailer": "wBDLRvjHVOY",
+          "production": "Warner Bros."
+        }
+      ]
     }
   ],
   "cinema": [
@@ -635,7 +690,6 @@
   "profile": {
     "name": "typicode"
   },
-
   "online": [
     {
       "id": "1",
