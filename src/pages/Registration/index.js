@@ -37,7 +37,7 @@ const Registration = ({ navigateTo }) => {
     }
     const submit = () => {
         instance.post("users", { id: id(), ...objNewUser });
-        navigate('/myaccount');
+        navigate("/myaccount");
         reset();
     }
 

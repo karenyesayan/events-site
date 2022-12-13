@@ -9,14 +9,14 @@ import { user, userSelector } from "../../redux/slices/userSlice";
 const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const activUser = useSelector(userSelector);
-    console.log(user);
+    const {id,name} = useSelector(userSelector);
+    
 
     useEffect(() => {
-        if (activUser.name) {
+        if (name) {
             navigate('/profile')
         }
-    }, [activUser.name])
+    }, [name])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import instance from "../../api/axios";
 import { clubsEventSelector } from "../../redux/slices/clubsSlice"
-import { movie } from "../../redux/slices/moviesSlice";
+import { selectEvent } from "../../redux/slices/eventSlice";
 import { userSelector } from "../../redux/slices/userSlice";
 
 const ClubsEvent = () => {
@@ -18,7 +18,7 @@ const ClubsEvent = () => {
         if (name) {
            const body ={selectedEvents:[mainEvent,...selectedEvents]}
            instance.patch(`users/${id}/`, body)
-            dispatch(movie(mainEvent))
+            dispatch(selectEvent(mainEvent))
             navigate('/ticket');
            
         } else { navigate('/myaccount') }

@@ -1,12 +1,10 @@
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
 
-import { user, userSelector } from "../../redux/slices/userSlice";
-import instance from "../../api/axios"
-import { movieSelector } from "../../redux/slices/moviesSlice";
-import { useEffect } from "react";
+import { user, userSelector} from "../../redux/slices/userSlice";
+
+
 
 
 const Profile = ({ navigateTo }) => {
@@ -14,8 +12,8 @@ const Profile = ({ navigateTo }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { name, email, pass, ewallet, selectedEvents } = useSelector(userSelector);
-    const activMovie = useSelector(movieSelector);
+    const {name, email, ewallet, selectedEvents } = useSelector(userSelector);
+    
 
     const handleLogOut = () => {
         dispatch(user({}));
@@ -39,18 +37,7 @@ const Profile = ({ navigateTo }) => {
                 <center>
                     <span className="profile-ticket-title">Your tickets </span>
                 </center>
-                <div >{
-                    activMovie.title && (
-                        <div key={activMovie.id} className="selectedEvents">
-                            <div className="selectedEvents-title" >
-                                <p >{activMovie.title}</p>
-                            </div>
-                            <div>
-                                <img src={activMovie.img} className="selectedEvents-img" />
-                                <span className="selectedEvents-title"> {activMovie.date}</span>
-                            </div>
-                        </div>)
-                }
+                <div >
                     {selectedEvents.map(item => (
                         <div key={item.id} className="selectedEvents">
                             <div className="selectedEvents-title" >

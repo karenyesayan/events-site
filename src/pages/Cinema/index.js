@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-
-import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
+
+import instance from "../../api/axios";
 import { userSelector } from "../../redux/slices/userSlice";
-import { movie } from "../../redux/slices/moviesSlice";
+import { navigateToTicket } from "../../helpers";
+import eventSlice from "../../redux/slices/eventSlice";
+import { selectEvent } from "../../redux/slices/eventSlice";
 
 
 
 const Cinema = ({ navigateTo }) => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const {id,name,selectedEvents} = useSelector(userSelector);
    
     const [movies, setMovies] = useState([]);
+  
+
     
-
-    const dispatch = useDispatch();
-
     useEffect(() => {
         instance.get("cinema")
             .then(res => setMovies(res.data))
@@ -27,21 +29,8 @@ const Cinema = ({ navigateTo }) => {
             })
     }, [])
 
-
-    const navigateToTicket = (activMovie) => {
-        console.log('activMovie', activMovie)
-        if (name) {
-           const body ={selectedEvents:[activMovie,...selectedEvents]}
-           instance.patch(`users/${id}/`, body)
-            dispatch(movie(activMovie))
-            navigate('/ticket');
-           
-        } else { navigate('/myaccount') }
-    }
-
-
+  
     return (
-
         <div className="cinema">
             <div className="cinema-container">
                 <h1 className="upcoming-title">
@@ -66,7 +55,15 @@ const Cinema = ({ navigateTo }) => {
                                 <div className="upcoming-event-date">
                                     {item.price}
                                 </div>
-                                <button className={"theatre-schedule-btn"} onClick={() => navigateToTicket(item)} >Buy now</button>
+                                <button className={"theatre-schedule-btn"} 
+                                onClick={() => navigateToTicket({
+                                    id,
+                                    selectedEvents,
+                                     dispatch,
+                                      navigate, 
+                                      item 
+                                    } )}
+                                >Buy now</button>
                             </div>
                         )
                     }
