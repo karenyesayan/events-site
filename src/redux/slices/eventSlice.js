@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    selectedEvent: {}
+    selectEvent: {}
 
 }
 
 const eventSlice = createSlice({
-    name: 'eventSlice',
+    name: 'event',
     initialState,
     reducers: {
         selectEvent: (state, { payload }) => {
-            state.selectedEvent = payload
+            state.selectEvent = payload
         }
 
     }
@@ -19,6 +19,6 @@ const eventSlice = createSlice({
 
 export const { selectEvent } = eventSlice.actions;
 
-export const eventSelector = state => state.eventSlice.selectedEvent;
+export const eventSelector = state => state.event.selectEvent;
 
 export default eventSlice.reducer;

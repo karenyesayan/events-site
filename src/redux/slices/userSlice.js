@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     user: {}
-
+    
 }
 
 const userSlice = createSlice({
-    name: 'userSlice',
+    name: 'user',
     initialState,
     reducers: {
         user: (state, { payload }) => {
@@ -18,7 +18,7 @@ const userSlice = createSlice({
         },
         addEventToUser: (state, { payload }) => {
             state.user.selectedEvents = [payload, ...state.user.selectedEvents]
-        }
+        },
 
     }
 })
@@ -26,6 +26,7 @@ const userSlice = createSlice({
 export const { user, addOnlineContent, addEventToUser } = userSlice.actions;
 
 export const userSelector = state => state.user.user;
-export const userEventsSelector = state => state.user.user.addEventToUser;
+export const userEventsSelector = state => state.user.user.selectedEvents;
+export const userOnlineContentSelector = state => state.user.user.selectedOnlineContent;
 
 export default userSlice.reducer;

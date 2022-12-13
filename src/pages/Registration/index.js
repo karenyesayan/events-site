@@ -2,10 +2,11 @@ import { useState } from "react"
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
+
 import instance from "../../api/axios"
 
 
-const Registration = ({ navigateTo }) => {
+const Registration = (navigateTo) => {
     const navigate = useNavigate()
 
     const {
@@ -103,7 +104,7 @@ const Registration = ({ navigateTo }) => {
                 <input className={"buttonRegistartion"} type={"submit"} />
                 <p className="p">Already have an account?</p>
                 <center>
-                    <button className={"button"} onClick={() => { navigate('/myaccount') }}
+                    <button className={"button"} onClick={() => { navigate("/myaccount") }}
                     >LOGIN</button>
                 </center>
             </form>

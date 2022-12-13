@@ -3,19 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import instance from "../../api/axios";
-import { userSelector } from "../../redux/slices/userSlice";
+import {userSelector } from "../../redux/slices/userSlice";
 import { navigateToTicket } from "../../helpers";
-import eventSlice from "../../redux/slices/eventSlice";
-import { selectEvent } from "../../redux/slices/eventSlice";
 
 
 
-const Cinema = ({ navigateTo }) => {
+
+const Cinema = (navigateTo) => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const {id,name,selectedEvents} = useSelector(userSelector);
+    const {id, selectedEvents} = useSelector(userSelector);
+    
+    
    
     const [movies, setMovies] = useState([]);
   

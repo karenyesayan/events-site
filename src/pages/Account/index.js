@@ -9,14 +9,15 @@ import { user, userSelector } from "../../redux/slices/userSlice";
 const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {id,name} = useSelector(userSelector);
+    const {id} = useSelector(userSelector);
     
 
     useEffect(() => {
-        if (name) {
-            navigate('/profile')
+        if (id) {
+            console.log("ussssssssssssssssssssssssssssssser")
+            navigate("/profile")
         }
-    }, [name])
+    }, [id])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -38,13 +39,13 @@ const Account = (navigateTo) => {
                 const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
                 console.log(activUser);
                 if (!activUser) {
-                    navigate('/registration')
+                    navigate("/registration")
                 } if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
-                    navigate('/admin')
+                    navigate("/admin")
                 }
                 else {
-                    dispatch(user(activUser));
-                    navigate('/profile')
+                    dispatch(user(activUser))
+                    navigate("/profile")
                 }
             })
             .catch(err => {
@@ -64,7 +65,7 @@ const Account = (navigateTo) => {
                             type="text"
                             value={userName}
                             className={"input"}
-                            placeholder='username'
+                            placeholder="username"
                             onChange={e => setUserName(e.target.value)}
 
                         />
@@ -76,7 +77,7 @@ const Account = (navigateTo) => {
                             type="E-mail"
                             value={userEmail}
                             className={"input"}
-                            placeholder='E-mail'
+                            placeholder="E-mail"
                             onChange={e => setUserEmail(e.target.value)}
 
                         />
@@ -88,7 +89,7 @@ const Account = (navigateTo) => {
                             type="password"
                             value={userPass}
                             className={"input"}
-                            placeholder='password'
+                            placeholder="password"
                             onChange={e => setUserPass(e.target.value)}
 
                         />
@@ -101,7 +102,7 @@ const Account = (navigateTo) => {
                             <p className="p">Don`t have an account?</p>
                             <button
                                 className={"button"}
-                                onClick={() => { navigate('/registration') }}
+                                onClick={() => { navigate("/registration") }}
                             >Sign up
                             </button>
                         </div>

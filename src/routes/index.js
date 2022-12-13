@@ -77,7 +77,7 @@ const routes = [
             path: "admin",
             element: <Admin />
           },
-          {path: "ticket",
+          { path: "ticket",
           element: <Ticket />
         },
         {

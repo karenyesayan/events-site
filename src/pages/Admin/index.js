@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
-import { userSelector } from "../../redux/slices/userSlice"
+import {userSelector } from "../../redux/slices/userSlice"
 import instance from "../../api/axios"
 
 
@@ -40,6 +40,7 @@ const Admin = (navigateTo) => {
    const cencel = () => {
       setPath(null)
       navigate("/admin")
+     
    }
 
    return (
