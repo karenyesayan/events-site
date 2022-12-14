@@ -9,15 +9,14 @@ import { user, userSelector } from "../../redux/slices/userSlice";
 const Account = (navigateTo) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {id} = useSelector(userSelector);
-    
+    const activUser = useSelector(userSelector);
+    console.log(user);
 
     useEffect(() => {
-        if (id) {
-            console.log("ussssssssssssssssssssssssssssssser")
-            navigate("/profile")
+        if (activUser.name) {
+            navigate('/profile')
         }
-    }, [id])
+    }, [activUser.name])
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
@@ -39,13 +38,13 @@ const Account = (navigateTo) => {
                 const activUser = res.data.find(item => item.name === userName && item.email === userEmail && item.pass === userPass)
                 console.log(activUser);
                 if (!activUser) {
-                    navigate("/registration")
+                    navigate('/registration')
                 } if (admin.name === userName && admin.email === userEmail && admin.pass === userPass) {
-                    navigate("/admin")
+                    navigate('/admin')
                 }
                 else {
-                    dispatch(user(activUser))
-                    navigate("/profile")
+                    dispatch(user(activUser));
+                    navigate('/profile')
                 }
             })
             .catch(err => {

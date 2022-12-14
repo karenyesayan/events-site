@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import instance from "../../api/axios";
-import {userSelector } from "../../redux/slices/userSlice";
+import {userSelector} from "../../redux/slices/userSlice";
 import { navigateToTicket } from "../../helpers";
+import { addEventToUser } from "../../redux/slices/userSlice";
+import { selectEvent } from "../../redux/slices/eventSlice";
 
 
 
@@ -29,6 +31,17 @@ const Cinema = (navigateTo) => {
                 console.log(err)
             })
     }, [])
+
+    const navigateToTicket = (activEvent) => { 
+        if (id) {
+            
+            const body = { selectedEvents: [activEvent, ...selectedEvents]};
+            instance.patch(`users/${id}/`, body);
+            dispatch(selectEvent(activEvent));
+            dispatch(addEventToUser(activEvent));
+            navigate("/ticket");
+        } else { navigate("/myaccount") }
+    };
 
   
     return (
@@ -57,13 +70,7 @@ const Cinema = (navigateTo) => {
                                     {item.price}
                                 </div>
                                 <button className={"theatre-schedule-btn"} 
-                                onClick={() => navigateToTicket({
-                                    id,
-                                    selectedEvents,
-                                     dispatch,
-                                      navigate, 
-                                      item 
-                                    } )}
+                                onClick={() => navigateToTicket(item)}
                                 >Buy now</button>
                             </div>
                         )

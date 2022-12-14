@@ -22,6 +22,7 @@ const Registration = lazy(() => import("../pages/Registration"))
 const Admin = lazy(() => import("../pages/Admin"))
 const Ticket = lazy(() => import("../pages/Ticket"))
 
+
 const routes = [
     {
         path: "/",

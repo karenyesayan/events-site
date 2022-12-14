@@ -8,27 +8,70 @@
   ],
   "users": [
     {
-      "id": "420",
+      "id": "234",
       "name": "meri",
       "email": "meri@gmail.com",
       "pass": "meri",
       "ewallet": "10000",
       "selectedEvents": [
         {
+          "id": "hd8",
+          "title": "Forsh & Re Minor",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/83/19/11/slug-111983.jpg",
+          "info": "Popular and recognized songs of our city performed by Forsh and Re Minor on November 20 at the Hin Areni music hall. A beautiful Yerevan evening, especially for you.",
+          "date": "20-11-2022 21:00",
+          "ticket": "10000 - 14000"
+        },
+        null,
+        null,
+        {
           "id": "shh",
           "title": "Dark, bitter chocolate",
           "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
           "date": "24-11-2022 19:00"
+        },
+        null
+      ],
+      "selectedOnlineContent": [
+        {
+          "title": "Elvis",
+          "genre": "drama",
+          "runtime": "159",
+          "img": "https://s.yimg.com/fz/api/res/1.2/cL5RMpnbqVycdFDq_Kyh9w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/42345d80-ca59-3a82-a045-b02478f61607/t_1024x1024",
+          "date": "2022",
+          "cinemas": "KinoPark",
+          "price": 1500,
+          "about": "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker.",
+          "trailer": "wBDLRvjHVOY",
+          "production": "Warner Bros."
         }
       ]
     },
     {
-      "id": "1fb",
-      "name": "harut",
-      "email": "harut@gmail.com",
-      "pass": "harut",
-      "ewallet": "7000",
+      "id": "229",
+      "name": "a",
+      "email": "a@gmail.com",
+      "pass": "5555",
+      "ewallet": "1000",
       "selectedEvents": [
+        {
+          "id": 3,
+          "title": "Իշխանություն - 2",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/97/19/11/slug-111997.jpg",
+          "cinemas": "KinoPark (Դահլիճ 3)",
+          "date": "20/11/22",
+          "price": 1000,
+          "info": "«Իշխանություն II» ֆիլմը համանուն առաջին ֆիլմի շարունակությունն է: Գլխավոր հերոսը՝ Ալիսան, այս անգամ անցնելով կյանքի և մահվան եզրագծով, դավաճանություններ հաղթահարելով և դավադրություններ բացահայտելով հասնում է իր նպատակին:",
+          "to": "https://youtu.be/j_NJPAnLsV4"
+        },
+        {
+          "id": "ma0",
+          "title": "Arpi & HayWay Band",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/64/21/11/slug-112164.jpg",
+          "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
+          "date": "20-11-2022 21:00",
+          "ticket": "4000 - 5000"
+        },
         {
           "id": "di8",
           "title": "Watch FIFA World Cup 2022 matches on Astral",
@@ -37,43 +80,72 @@
           "date": "20-11-2022 21:00",
           "ticket": "Free"
         },
-        null,
-        null,
-        null,
-        null,
         {
-          "id": "lq1",
-          "title": "Paplik",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/20/35/10/slug-103520.jpg",
-          "info": "Ardent patriotism often evaporates when it collides with one's self-interest. Look for the stage version of Guy de Maupassant's The Fat Ball, one of the pillars of classical literature, in our playbook under the title The Dumpling.",
-          "date": "23-11-2022 19:00"
+          "id": "di8",
+          "title": "Watch FIFA World Cup 2022 matches on Astral",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/20/11/slug-112081.jpg",
+          "info": "If you still haven't decided where to watch Fifa2022 games, then we have a good offer. Starting from November 20, every day we invite you to watch the most anticipated football championship with your friends on 3 exceptionally large screens. Interesting surprises and hospitality await football-loving guests. Let's spend the crazy and tense month together. Entrance is FREE.",
+          "date": "20-11-2022 21:00",
+          "ticket": "Free"
         },
         {
-          "id": "sy2",
-          "title": "Don't stop dreaming",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/79/18/11/slug-111879.jpg",
-          "info": "On November 25, at 19:00, the solo concert of the Yeva Sujyan & Black Gold Project group will take place at the Hovhannes Tumanyan Puppet Theater entitled 'Don't Stop Dreaming'. The special guests of the concert are Hasmik Karapetyan and Vahan Artsruni.",
-          "date": "27-12-2022 19:00"
+          "id": "06f",
+          "title": "Ёлки 9",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/span12/27/23/11/slug-112327.jpg",
+          "cinemas": "KinoPark",
+          "date": "31/12/22",
+          "price": "2000",
+          "info": "За считанные часы до праздника все с замиранием сердца надеются на чудо. Вся деревня Глухарево готовится с размахом встречать зарубежную кинозвезду."
         },
         {
-          "id": "shh",
-          "title": "Dark, bitter chocolate",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
-          "date": "24-11-2022 19:00"
+          "id": 4,
+          "title": "Վայրենի Տատին կամ Փոքրիկ զորավարը 2",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/41/17/11/slug-111741.jpg",
+          "cinemas": "«Moscow» cinema (Կապույտ փոքր դահլիճ)",
+          "date": "22/11/22",
+          "price": 1500,
+          "info": "«Պրեմիերա Կատակերգությունը»"
+        },
+        {
+          "id": 4,
+          "title": "Վայրենի Տատին կամ Փոքրիկ զորավարը 2",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/41/17/11/slug-111741.jpg",
+          "cinemas": "«Moscow» cinema (Կապույտ փոքր դահլիճ)",
+          "date": "22/11/22",
+          "price": 1500,
+          "info": "«Պրեմիերա Կատակերգությունը»"
+        },
+        {
+          "id": 2,
+          "title": "Վիշապ",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/18/00/11/slug-110018.jpg",
+          "cinemas": "Մոսկվա կինոթատրոն (Կապույտ փոքր դահլիճ)",
+          "date": "18/11/22",
+          "price": 2000,
+          "info": "Ֆիլմի գլխավոր հերոսը Հայկն է։ Նա ուսանող է, որ լրացուցիչ աշխատում է սուրհանդակային ծառայությունում, պարբերաբար հայտնվում է տհաճ պատմությունների մեջ, իսկ վեճը համակուրսեցու հետ դառնում է հերթական անախորժությունը։"
+        },
+        {
+          "id": 2,
+          "title": "Վիշապ",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/18/00/11/slug-110018.jpg",
+          "cinemas": "Մոսկվա կինոթատրոն (Կապույտ փոքր դահլիճ)",
+          "date": "18/11/22",
+          "price": 2000,
+          "info": "Ֆիլմի գլխավոր հերոսը Հայկն է։ Նա ուսանող է, որ լրացուցիչ աշխատում է սուրհանդակային ծառայությունում, պարբերաբար հայտնվում է տհաճ պատմությունների մեջ, իսկ վեճը համակուրսեցու հետ դառնում է հերթական անախորժությունը։"
         }
       ],
       "selectedOnlineContent": [
         {
-          "title": "Terrifier 2",
-          "genre": "horror",
-          "runtime": "138",
-          "img": "https://s.yimg.com/fz/api/res/1.2/YEHPt2Wi6ajOTf9KmqFIuw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zMDQ7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MTky/https://s.yimg.com/zb/imgv1/e02a6966-0f8e-342f-bb5f-fc521c37c62d/t_1024x1024",
+          "title": "Elvis",
+          "genre": "drama",
+          "runtime": "159",
+          "img": "https://s.yimg.com/fz/api/res/1.2/cL5RMpnbqVycdFDq_Kyh9w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/42345d80-ca59-3a82-a045-b02478f61607/t_1024x1024",
           "date": "2022",
           "cinemas": "KinoPark",
-          "price": 3000,
-          "about": "After being resurrected by a sinister entity, Art the Clown returns to the timid town of Miles County where he targets a teenage girl and her younger brother on Halloween night.",
-          "trailer": "6KkONLf_ZKU",
-          "production": "Cinedigm"
+          "price": 1500,
+          "about": "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker.",
+          "trailer": "wBDLRvjHVOY",
+          "production": "Warner Bros."
         },
         {
           "title": "Luckiest Girl Alive",
@@ -86,6 +158,18 @@
           "about": "A woman in New York, who seems to have things under control, is faced with a trauma that makes her life unravel.",
           "trailer": "B_XUlbPW-eY",
           "production": "Netflix"
+        },
+        {
+          "title": "Ticket to Paradise",
+          "genre": "action",
+          "runtime": "107",
+          "img": "https://s.yimg.com/fz/api/res/1.2/zqI4Cx9QW7EP_VlKjPQQ_Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/6c30c1d6-3315-3fd7-b354-0e114df44dfa/t_1024x1024",
+          "date": "2022",
+          "cinemas": "Cinema Star",
+          "price": 2500,
+          "about": "Pete  Mitchell keeps pushing the envelope after years of service as one of the Navy's top aviators. He must soon confront the past while training a new squad of graduates for a dangerous",
+          "trailer": "hkP4tVTdsz8",
+          "production": "Universal Pictures"
         }
       ]
     }
