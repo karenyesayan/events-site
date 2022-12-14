@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import instance from "../../api/axios"
 
-
-const Registration = ({ navigateTo }) => {
+const Registration = (navigateTo) => {
     const navigate = useNavigate()
 
     const {
@@ -20,7 +19,7 @@ const Registration = ({ navigateTo }) => {
     const [newUserName, setNewUserName] = useState("");
     const [newUserEmail, setNewUserEmail] = useState("");
     const [newUserPass, setNewUserPass] = useState("");
-    const [newUserEwallet, setNewUserEwallet] = useState("");
+    const [newUserEwallet, setNewUserEwallet] = useState(null);
 
     const id = () => Math.floor((1 + Math.random()) * 0x10000)
         .toString(16)
@@ -37,7 +36,7 @@ const Registration = ({ navigateTo }) => {
     }
     const submit = () => {
         instance.post("users", { id: id(), ...objNewUser });
-        navigate('/myaccount');
+        navigate("/myaccount");
         reset();
     }
 
@@ -46,7 +45,6 @@ const Registration = ({ navigateTo }) => {
         <div className={"upcoming"}>
             <title className={"login-registration"}>Registration</title>
             <form className={"form"} onSubmit={handleSubmit(submit)}>
-
                 <div className={"group"}>
                     <label className={"label"}> Name
                         <input
@@ -103,7 +101,7 @@ const Registration = ({ navigateTo }) => {
                 <input className={"buttonRegistartion"} type={"submit"} />
                 <p className="p">Already have an account?</p>
                 <center>
-                    <button className={"button"} onClick={() => { navigate('/myaccount') }}
+                    <button className={"button"} onClick={() => { navigate("/myaccount") }}
                     >LOGIN</button>
                 </center>
             </form>

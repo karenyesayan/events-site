@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-
-import instance from "../../api/axios"
 import { useNavigate } from "react-router-dom";
+
+import instance from "../../api/axios";
 import { userSelector } from "../../redux/slices/userSlice";
-import { movie } from "../../redux/slices/moviesSlice";
+//port { navigateToTicket } from "../../helpers";
+import { addEventToUser } from "../../redux/slices/userSlice";
+import { selectEvent } from "../../redux/slices/eventSlice";
 
 
-
-const Cinema = ({ navigateTo }) => {
+const Cinema = (navigateTo) => {
 
     const navigate = useNavigate();
-
-    const {id,name,selectedEvents} = useSelector(userSelector);
-   
-    const [movies, setMovies] = useState([]);
-    
-
     const dispatch = useDispatch();
+
+    const { id, name, ewallet, selectedEvents } = useSelector(userSelector);
+
+    const [movies, setMovies] = useState([]);
+
 
     useEffect(() => {
         instance.get("cinema")
@@ -27,21 +27,19 @@ const Cinema = ({ navigateTo }) => {
             })
     }, [])
 
-
-    const navigateToTicket = (activMovie) => {
-        console.log('activMovie', activMovie)
-        if (name) {
-           const body ={selectedEvents:[activMovie,...selectedEvents]}
-           instance.patch(`users/${id}/`, body)
-            dispatch(movie(activMovie))
-            navigate('/ticket');
-           
-        } else { navigate('/myaccount') }
+    const navigateToTicket = (activEvent) => {
+        if (id) {
+            if (ewallet >= activEvent.price) {
+                const body = { selectedEvents: [activEvent, ...selectedEvents] };
+                instance.patch(`users/${id}/`, body);
+                dispatch(selectEvent(activEvent));
+                dispatch(addEventToUser(activEvent));
+                navigate("/ticket");
+            } else { alert(`Sorry${name} your Ewallet balance is, less than ticket's price`) }
+        } else { navigate("/myaccount") }
     }
 
-
     return (
-
         <div className="cinema">
             <div className="cinema-container">
                 <h1 className="upcoming-title">
@@ -49,24 +47,28 @@ const Cinema = ({ navigateTo }) => {
                 </h1>
                 <div className="cinema-events">
                     {movies.map((item) => {
+                        const { id, img, title, date, info, price } = item
+
                         return (
-                            <div key={item.activMovieid} className={"movie-events"}>
+                            <div key={id} className={"movie-events"}>
                                 <div className="upcoming-event-img-div">
-                                    <img src={item.img} className="upcoming-event-img" />
+                                    <img src={img} className="upcoming-event-img" />
                                 </div>
                                 <div className="upcoming-event-title">
-                                    {item.title}
+                                    {title}
                                 </div>
                                 <div className="upcoming-event-date">
-                                    {item.date}
+                                    {date}
                                 </div>
                                 <div className="upcoming-event-info">
-                                    {item.info}
+                                    {info}
                                 </div>
                                 <div className="upcoming-event-date">
-                                    {item.price}
+                                    {price}
                                 </div>
-                                <button className={"theatre-schedule-btn"} onClick={() => navigateToTicket(item)} >Buy now</button>
+                                <button className={"theatre-schedule-btn"}
+                                    onClick={() => navigateToTicket(item)}
+                                >Buy now</button>
                             </div>
                         )
                     }

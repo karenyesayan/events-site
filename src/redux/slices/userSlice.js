@@ -2,12 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    user: {}
-
+    user: {
+        ewallet: null,
+        selectedEvents:[],
+        selectedOnlineContent:[]
+    }
+    
 }
 
 const userSlice = createSlice({
-    name: 'userSlice',
+    name: 'user',
     initialState,
     reducers: {
         user: (state, { payload }) => {
@@ -16,12 +20,20 @@ const userSlice = createSlice({
         addOnlineContent: (state, { payload }) => {
             state.user.selectedOnlineContent = [payload,...state.user.selectedOnlineContent]
         },
+        addEventToUser: (state, { payload }) => {
+            state.user.selectedEvents = [payload, ...state.user.selectedEvents]
+        },
+        ewalletBalance:(state, {payload}) => {
+            state.user.ewallet = payload
+        }
 
     }
 })
 
-export const { user, addOnlineContent } = userSlice.actions;
+export const { user, addOnlineContent, addEventToUser, ewalletBalance} = userSlice.actions;
 
 export const userSelector = state => state.user.user;
+export const userEventsSelector = state => state.user.user.selectedEvents;
+export const userOnlineContentSelector = state => state.user.user.selectedOnlineContent;
 
 export default userSlice.reducer;

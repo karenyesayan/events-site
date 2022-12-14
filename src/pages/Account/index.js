@@ -64,7 +64,7 @@ const Account = (navigateTo) => {
                             type="text"
                             value={userName}
                             className={"input"}
-                            placeholder='username'
+                            placeholder="username"
                             onChange={e => setUserName(e.target.value)}
 
                         />
@@ -76,7 +76,7 @@ const Account = (navigateTo) => {
                             type="E-mail"
                             value={userEmail}
                             className={"input"}
-                            placeholder='E-mail'
+                            placeholder="E-mail"
                             onChange={e => setUserEmail(e.target.value)}
 
                         />
@@ -88,7 +88,7 @@ const Account = (navigateTo) => {
                             type="password"
                             value={userPass}
                             className={"input"}
-                            placeholder='password'
+                            placeholder="password"
                             onChange={e => setUserPass(e.target.value)}
 
                         />
@@ -101,7 +101,7 @@ const Account = (navigateTo) => {
                             <p className="p">Don`t have an account?</p>
                             <button
                                 className={"button"}
-                                onClick={() => { navigate('/registration') }}
+                                onClick={() => { navigate("/registration") }}
                             >Sign up
                             </button>
                         </div>
