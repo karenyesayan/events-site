@@ -1,17 +1,13 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
-import { user,  userSelector} from "../../redux/slices/userSlice";
+import { user, userSelector } from "../../redux/slices/userSlice";
 
-const Profile = ( navigateTo ) => {
+const Profile = (navigateTo) => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const{name, email, ewallet, selectedEvents, selectedOnlineContent} = useSelector(userSelector);
-    
-
-    console.log(selectedEvents[0])
+    const { name, email, ewallet, selectedEvents, selectedOnlineContent } = useSelector(userSelector);
 
     function handleLogOut() {
         dispatch(user({}));
@@ -36,49 +32,41 @@ const Profile = ( navigateTo ) => {
                     <span className="profile-ticket-title">Your tickets </span>
                 </center>
                 <div >
-                {selectedEvents.map(item => (
-                    <div key={item.id} className="selectedEvents">
-                    <div className="selectedEvents-title" >
-                        <p >{item.title}</p>
-                    </div>
-                    <div>
-                        <img src={item.img} className="selectedEvents-img" />
-                        <span className="selectedEvents-title"> {item.date}</span>
-                    </div>
+                    {selectedEvents.map(item => (
+                        <div key={item.id} className="selectedEvents">
+                            <div className="selectedEvents-title" >
+                                <p >{item.title}</p>
+                            </div>
+                            <div>
+                                <img src={item.img} className="selectedEvents-img" />
+                                <span className="selectedEvents-title"> {item.date}</span>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                ))}
-                    
-                </div>
-                <div className="profil-user">
                 <center>
                     <span className="profile-ticket-title">Your Online movies </span>
                 </center>
-                </div>
                 <div >
-                {selectedOnlineContent.map(item => (
-                    <div key={item.id} className="selectedEvents">
-                    <div className="selectedEvents-title" >
-                        <p >{item.title}</p>
-                    </div>
-                    <div>
-                        <img src={item.img} className="selectedEvents-img" />
-                        <span className="selectedEvents-title"> {item.date}</span>
-                    </div>
+                    {selectedOnlineContent.map(item => (
+                        <div key={item.id} className="selectedEvents">
+                            <div className="selectedEvents-title" >
+                                <p >{item.title}</p>
+                            </div>
+                            <div>
+                                <img src={item.img} className="selectedEvents-img" />
+                                <span className="selectedEvents-title"> {item.date}</span>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                ))}
-                    
-                </div>
-
                 <div >
                     <button className="profile-edit-logout" onClick={handleLogOut}>
                         Log out
                     </button>
                 </div>
             </div>
-
         </div>
-
-
     )
 }
 export default Profile;

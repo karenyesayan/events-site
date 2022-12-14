@@ -8,51 +8,11 @@
   ],
   "users": [
     {
-      "id": "234",
+      "id": "c1f",
       "name": "meri",
       "email": "meri@gmail.com",
       "pass": "meri",
       "ewallet": "10000",
-      "selectedEvents": [
-        {
-          "id": "hd8",
-          "title": "Forsh & Re Minor",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/83/19/11/slug-111983.jpg",
-          "info": "Popular and recognized songs of our city performed by Forsh and Re Minor on November 20 at the Hin Areni music hall. A beautiful Yerevan evening, especially for you.",
-          "date": "20-11-2022 21:00",
-          "ticket": "10000 - 14000"
-        },
-        null,
-        null,
-        {
-          "id": "shh",
-          "title": "Dark, bitter chocolate",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
-          "date": "24-11-2022 19:00"
-        },
-        null
-      ],
-      "selectedOnlineContent": [
-        {
-          "title": "Elvis",
-          "genre": "drama",
-          "runtime": "159",
-          "img": "https://s.yimg.com/fz/api/res/1.2/cL5RMpnbqVycdFDq_Kyh9w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/42345d80-ca59-3a82-a045-b02478f61607/t_1024x1024",
-          "date": "2022",
-          "cinemas": "KinoPark",
-          "price": 1500,
-          "about": "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker.",
-          "trailer": "wBDLRvjHVOY",
-          "production": "Warner Bros."
-        }
-      ]
-    },
-    {
-      "id": "229",
-      "name": "a",
-      "email": "a@gmail.com",
-      "pass": "5555",
-      "ewallet": "1000",
       "selectedEvents": [
         {
           "id": 3,
@@ -65,66 +25,6 @@
           "to": "https://youtu.be/j_NJPAnLsV4"
         },
         {
-          "id": "ma0",
-          "title": "Arpi & HayWay Band",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/64/21/11/slug-112164.jpg",
-          "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
-          "date": "20-11-2022 21:00",
-          "ticket": "4000 - 5000"
-        },
-        {
-          "id": "di8",
-          "title": "Watch FIFA World Cup 2022 matches on Astral",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/20/11/slug-112081.jpg",
-          "info": "If you still haven't decided where to watch Fifa2022 games, then we have a good offer. Starting from November 20, every day we invite you to watch the most anticipated football championship with your friends on 3 exceptionally large screens. Interesting surprises and hospitality await football-loving guests. Let's spend the crazy and tense month together. Entrance is FREE.",
-          "date": "20-11-2022 21:00",
-          "ticket": "Free"
-        },
-        {
-          "id": "di8",
-          "title": "Watch FIFA World Cup 2022 matches on Astral",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/20/11/slug-112081.jpg",
-          "info": "If you still haven't decided where to watch Fifa2022 games, then we have a good offer. Starting from November 20, every day we invite you to watch the most anticipated football championship with your friends on 3 exceptionally large screens. Interesting surprises and hospitality await football-loving guests. Let's spend the crazy and tense month together. Entrance is FREE.",
-          "date": "20-11-2022 21:00",
-          "ticket": "Free"
-        },
-        {
-          "id": "06f",
-          "title": "Ёлки 9",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/span12/27/23/11/slug-112327.jpg",
-          "cinemas": "KinoPark",
-          "date": "31/12/22",
-          "price": "2000",
-          "info": "За считанные часы до праздника все с замиранием сердца надеются на чудо. Вся деревня Глухарево готовится с размахом встречать зарубежную кинозвезду."
-        },
-        {
-          "id": 4,
-          "title": "Վայրենի Տատին կամ Փոքրիկ զորավարը 2",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/41/17/11/slug-111741.jpg",
-          "cinemas": "«Moscow» cinema (Կապույտ փոքր դահլիճ)",
-          "date": "22/11/22",
-          "price": 1500,
-          "info": "«Պրեմիերա Կատակերգությունը»"
-        },
-        {
-          "id": 4,
-          "title": "Վայրենի Տատին կամ Փոքրիկ զորավարը 2",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/41/17/11/slug-111741.jpg",
-          "cinemas": "«Moscow» cinema (Կապույտ փոքր դահլիճ)",
-          "date": "22/11/22",
-          "price": 1500,
-          "info": "«Պրեմիերա Կատակերգությունը»"
-        },
-        {
-          "id": 2,
-          "title": "Վիշապ",
-          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/18/00/11/slug-110018.jpg",
-          "cinemas": "Մոսկվա կինոթատրոն (Կապույտ փոքր դահլիճ)",
-          "date": "18/11/22",
-          "price": 2000,
-          "info": "Ֆիլմի գլխավոր հերոսը Հայկն է։ Նա ուսանող է, որ լրացուցիչ աշխատում է սուրհանդակային ծառայությունում, պարբերաբար հայտնվում է տհաճ պատմությունների մեջ, իսկ վեճը համակուրսեցու հետ դառնում է հերթական անախորժությունը։"
-        },
-        {
           "id": 2,
           "title": "Վիշապ",
           "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/18/00/11/slug-110018.jpg",
@@ -136,18 +36,6 @@
       ],
       "selectedOnlineContent": [
         {
-          "title": "Elvis",
-          "genre": "drama",
-          "runtime": "159",
-          "img": "https://s.yimg.com/fz/api/res/1.2/cL5RMpnbqVycdFDq_Kyh9w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/42345d80-ca59-3a82-a045-b02478f61607/t_1024x1024",
-          "date": "2022",
-          "cinemas": "KinoPark",
-          "price": 1500,
-          "about": "The life of American music icon Elvis Presley, from his childhood to becoming a rock and movie star in the 1950s while maintaining a complex relationship with his manager, Colonel Tom Parker.",
-          "trailer": "wBDLRvjHVOY",
-          "production": "Warner Bros."
-        },
-        {
           "title": "Luckiest Girl Alive",
           "genre": "thriller",
           "runtime": "113",
@@ -158,18 +46,6 @@
           "about": "A woman in New York, who seems to have things under control, is faced with a trauma that makes her life unravel.",
           "trailer": "B_XUlbPW-eY",
           "production": "Netflix"
-        },
-        {
-          "title": "Ticket to Paradise",
-          "genre": "action",
-          "runtime": "107",
-          "img": "https://s.yimg.com/fz/api/res/1.2/zqI4Cx9QW7EP_VlKjPQQ_Q--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODA7cHhvZmY9NTA7cHlvZmY9MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/6c30c1d6-3315-3fd7-b354-0e114df44dfa/t_1024x1024",
-          "date": "2022",
-          "cinemas": "Cinema Star",
-          "price": 2500,
-          "about": "Pete  Mitchell keeps pushing the envelope after years of service as one of the Navy's top aviators. He must soon confront the past while training a new squad of graduates for a dangerous",
-          "trailer": "hkP4tVTdsz8",
-          "production": "Universal Pictures"
         }
       ]
     }
@@ -245,7 +121,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/span12/27/23/11/slug-112327.jpg",
       "cinemas": "KinoPark",
       "date": "31/12/22",
-      "price": "2000",
+      "price": 2000,
       "info": "За считанные часы до праздника все с замиранием сердца надеются на чудо. Вся деревня Глухарево готовится с размахом встречать зарубежную кинозвезду."
     },
     {
@@ -254,7 +130,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/span12/04/13/11/slug-111304.jpg",
       "cinemas": "KinoPark ",
       "date": "20/12/22",
-      "price": "1500",
+      "price": 1500,
       "info": "Разведённая пара вынуждена объединиться, чтобы поехать на Бали и помешать дочери Лили выйти замуж за местного парня."
     }
   ],

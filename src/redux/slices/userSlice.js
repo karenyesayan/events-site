@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     user: {
+        ewallet: null,
         selectedEvents:[],
         selectedOnlineContent:[]
     }
@@ -22,11 +23,14 @@ const userSlice = createSlice({
         addEventToUser: (state, { payload }) => {
             state.user.selectedEvents = [payload, ...state.user.selectedEvents]
         },
+        ewalletBalance:(state, {payload}) => {
+            state.user.ewallet = payload
+        }
 
     }
 })
 
-export const { user, addOnlineContent, addEventToUser } = userSlice.actions;
+export const { user, addOnlineContent, addEventToUser, ewalletBalance} = userSlice.actions;
 
 export const userSelector = state => state.user.user;
 export const userEventsSelector = state => state.user.user.selectedEvents;

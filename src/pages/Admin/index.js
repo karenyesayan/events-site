@@ -38,7 +38,6 @@ const Admin = (navigateTo) => {
    }
 
    const cencel = () => {
-      setPath(null)
       navigate("/admin")
      
    }
