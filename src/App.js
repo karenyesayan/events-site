@@ -35,6 +35,18 @@ const App = () => {
                   onClick={() => navigateToDetails({...APP_SLIDER_ITEMS[counter]})}
                   >{t("Details")}</div>
             </div>
+            <section className="nav-buttons">
+              {
+                APP_SLIDER_ITEMS.map((_, index) => {
+                  return (
+                    <button
+                      className={counter === index ? "active-nav-button" : "inactive-nav-button"}
+                      onClick={() => setCounter(index)}
+                    ></button>
+                  )
+              })
+              }
+            </section>
           </div>
       </main>
       <AppContentComponent />
