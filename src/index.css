@@ -155,6 +155,7 @@ option:checked, option:hover {
 .search-bar {
   display: flex;
   color: rgba(11, 0, 129, 1);
+  cursor: pointer;
 }
 
 .search-bar:hover > .hidden-input .inactive-input {
@@ -525,8 +526,6 @@ option:checked, option:hover {
     
   }
  
-  
-
 /* ERROR PAGE */
 
 .error-page-container {
@@ -553,6 +552,7 @@ option:checked, option:hover {
   column-gap: 0.5rem;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
   resize: horizontal;
   background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1));
 }
@@ -753,6 +753,17 @@ option:checked, option:hover {
 .sidebar-genres {
   height: 28vh;
   width: 100%;
+  left: -23vw;
+  position: relative;
+  transition: all 0.3s ease-out;
+} 
+
+.close-sidebar > .sidebar-genres {
+  left: -23vw;
+}
+
+.open-sidebar > .sidebar-genres {
+  left: 0;
 } 
 
 .genres-header {
@@ -770,7 +781,7 @@ option:checked, option:hover {
 }
 
 .genres-buttons-container {
-  width: 100%;
+  width: 22.5vw;
   height: 100%;
   display: flex;
   flex-direction: row; 
@@ -803,7 +814,18 @@ option:checked, option:hover {
 .sidebar-productions {
   height: 22vh;
   width: 100%;
+  left: -23vw;
+  position: relative;
+  transition: all 0.3s ease-out;
 }
+
+.close-sidebar > .sidebar-productions {
+  left: -23vw;
+}
+
+.open-sidebar > .sidebar-productions {
+  left: 0;
+} 
 
 .productions-header {
   width: 100%;
@@ -819,7 +841,7 @@ option:checked, option:hover {
 }
 
 .radio-buttons-container {
-  width: 100%;
+  width: 22.5vw;
   height: 100%;
   display: flex; 
   flex-direction: row; 
@@ -862,9 +884,20 @@ input[type='radio']:checked:after {
 
 .slider-container {
   height: 10vh;
-  width: 100%;
+  width: 23vw;
   border-top: 2px solid purple;;
+  left: -23vw;
+  position: relative;
+  transition: all 0.3s ease-out;
 }
+
+.close-sidebar > .slider-container {
+  left: -23vw;
+}
+
+.open-sidebar > .slider-container {
+  left: 0;
+} 
 
 .slider-container p {
   position: relative;
@@ -881,9 +914,20 @@ input[type='radio']:checked:after {
 .apply-button-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-top: 30%;
+  width: 22.8vw;
+  margin-top: 13vh;
+  left: -23vw;
+  position: relative;
+  transition: all 0.3s ease-out;
 }
+
+.close-sidebar > .apply-button-container {
+  left: -23vw;
+} 
+
+.open-sidebar > .apply-button-container {
+  left: 0;
+} 
 
 .apply-button {
   width: 94%;
@@ -915,7 +959,18 @@ input[type='radio']:checked:after {
   padding-left: 0.75vw;
   height: 6.79vh;
   border-bottom: 2px solid purple;
+  left: -23vw;
+  position: relative;
 }
+
+.close-sidebar > .sidebar-header-container {
+  left: -23vw;
+  transition: all 0.7s ease-out;
+}
+
+.open-sidebar > .sidebar-header-container{
+  left: 0;
+} 
 
 .sidebar-header-container span {
   font-size: 1.1rem;
