@@ -409,6 +409,33 @@
   cursor: pointer;
 }
 
+
+/* App Scroller */
+
+.app-scroller-container {
+  width: 100%;
+  height: 65vh;
+  background-color: rgb(1, 1, 34);
+  display: flex;
+  justify-content: center;
+}
+
+.app-scroller {
+  width: 75%;
+  height: 65vh;
+  display: flex;
+}
+
+.empty-div {
+  width: 100%;
+  background-image: url("https://www.exond.net/wp-content/uploads/2018/02/header-bg.png");
+  height: 80vh;
+  display: flex;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /* FOOTER */
 
 .footer {

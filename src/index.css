@@ -726,7 +726,7 @@ option:checked, option:hover {
 .scroller-container {
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-top: 10vh;
+  margin-top: 2vh;
 }
 
 .translate-container {
