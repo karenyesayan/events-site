@@ -5,13 +5,15 @@ import { TbMovie } from "react-icons/tb";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import useNavigateToDetails from "../../hooks/useNavigateToDetails"
-import {randomSelect, randomlySelectedSelector} from "../../redux/slices/onlineSlice"
+import {randomSelect, randomlySelectedSelector, allOnlineItemsSelector} from "../../redux/slices/onlineSlice"
+import {getOnlineData} from "../../redux/thunks/onlineThunk"
 
 const OnlineScroller = ({title}) => {
   const [translate, setTranslate] = useState(0)
 
   const dispatch = useDispatch()
   const selected = useSelector(randomlySelectedSelector)
+  const allItems = useSelector(allOnlineItemsSelector)
   const navigateToDetails = useNavigateToDetails()
 
   const goLeft = () => {
@@ -25,8 +27,9 @@ const OnlineScroller = ({title}) => {
   }
 
   useEffect(() => {
+    if(allItems.length === 0) dispatch(getOnlineData())
     dispatch(randomSelect(title))
-  }, [dispatch, title])
+  }, [dispatch, title, allItems])
 
   return (
     <div className="scroller-container">

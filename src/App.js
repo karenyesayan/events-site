@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 
 import './App.css'
 import {APP_SLIDER_ITEMS} from "../src/constants/index"
+import OnlineScroller from "./components/OnlineScroller"
 import Footer from "./components/Footer"
 import AppContentComponent from "./components/AppContentComponent"
 import useNavigateToDetails from "./hooks/useNavigateToDetails"
@@ -50,6 +51,12 @@ const App = () => {
           </div>
       </main>
       <AppContentComponent />
+      <div className="app-scroller-container">
+        <div className="app-scroller">
+          <OnlineScroller />
+        </div>
+      </div>
+      <div className="empty-div"></div>
       <Footer />
     </>
   )
