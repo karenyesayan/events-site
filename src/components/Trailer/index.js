@@ -2,8 +2,8 @@ const Trailer = ({src}) => {
 
   return (
     <iframe
-      width="1102"
-      height="620"
+      width="100%"
+      height="900"
       src={`https://youtube.com/embed/${src}?autoplay=1&&mute=1&playlist=${src}&loop=1&showinfo=0&controls=1`}
       title="YouTube video player"
       frameborder="0"
