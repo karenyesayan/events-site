@@ -45,12 +45,11 @@ const OnlineScroller = ({title}) => {
         <div className="scroller-nav-buttons">
           <FaChevronLeft 
               size={25} 
-              color='white'
               onClick={goLeft}
+              className="scroller-left-button"
           />
           <FaChevronRight 
               size={25} 
-              color='white'
               onClick={goRight}
               className="scroller-right-button"
           />
@@ -66,6 +65,7 @@ const OnlineScroller = ({title}) => {
                   onClick={() => navigateToDetails({link: `../online/${id}`, title, genre, runtime, img, date, cinemas, price, about, trailer, production})}
                   style={{backgroundImage:`url(${img})`}}
                   className="scroller-inner-div"
+                  key={id}
                 >
                   <p>{title}</p>
                 </div>

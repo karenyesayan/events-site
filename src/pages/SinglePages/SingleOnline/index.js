@@ -42,7 +42,7 @@ const SingleOnline = () => {
                         <span> {runtime} min.</span>
                      </section>
                      <article>{about}</article>
-                     <OnlineScroller title={title}/>
+                     <OnlineScroller title/>
                 </div>
             </div>
         </>

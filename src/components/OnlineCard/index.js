@@ -7,8 +7,8 @@ const OnlineCard = ({id, title, genre, runtime, img, date, cinemas, price, about
     const navigateToDetails = useNavigateToDetails()
     const onlineContentBuy = useOnlineContentBuy()
 
-    return (
-                  <div className="online-cards-container" ref={lastItemRef}>
+    return (      
+                  <div className="online-cards-container" ref={lastItemRef}> 
                     <div className="card-img" style={{ 
                       backgroundImage:`url(${img})`
                       }}>
