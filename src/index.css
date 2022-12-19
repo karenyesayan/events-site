@@ -721,6 +721,21 @@ option:checked, option:hover {
 .scroller-right-button {
   display: flex;
   margin: 0 2vw;
+  color: white;
+}
+
+.scroller-right-button:active {
+  color: #555D62;
+  transition: all 0.4s ease;
+}
+
+.scroller-left-button {
+  color: white;
+}
+
+.scroller-left-button:active {
+  color: #555D62;
+  transition: all 0.4s ease;
 }
 
 .scroller-container {

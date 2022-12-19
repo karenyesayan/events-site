@@ -1,4 +1,4 @@
-import { useEffect, useRef, lazy } from "react"
+import { useEffect, lazy, useState } from "react"
 import {useDispatch, useSelector} from "react-redux"
 
 import {
@@ -15,8 +15,8 @@ import OnlineCard from "../../components/OnlineCard"
 const Sidebar = lazy(() => import("../../components/Sidebar"))
 
 const Online = () => {
-    const lastItemRef = useRef()
-    const observer = useRef()
+    const [lastItem, setLastItem] = useState(null)
+
     const dispatch = useDispatch()
     
     const errorMessage = useSelector(errorMessageSelector)
@@ -27,24 +27,20 @@ const Online = () => {
       if(allOnlineItemsSelector.length === 0) dispatch(getOnlineData())
     }, [dispatch])
 
+
     useEffect(() => {
-      observer.current = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting && !isFiltersActive) {
-          dispatch(loadOnlineItems()) 
-        }
+      const currentObserver = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !isFiltersActive) dispatch(loadOnlineItems()) 
       }, {
         root: null,
         rootMargin: "20px",
         threshold: 1
       })
 
-      if (lastItemRef.current) {
-        observer.current.observe(lastItemRef.current)
-      }
-      return () => {
-        observer.current.disconnect()
-      }
-    })
+      if(lastItem) currentObserver.observe(lastItem)
+
+      return () => currentObserver.disconnect()
+  }, [lastItem, dispatch, isFiltersActive])
 
 
     return (
@@ -57,7 +53,7 @@ const Online = () => {
                                     if(index === onlineCards.length - 1) {
                                         return (
                                             <OnlineCard 
-                                                lastItemRef={lastItemRef}
+                                                lastItemRef={setLastItem}
                                                 key={card.id}
                                                 {...card}
                                             />

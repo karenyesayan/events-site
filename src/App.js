@@ -15,14 +15,14 @@ const App = () => {
 
   const [counter, setCounter] = useState(0)
 
-  const timer = setTimeout(() => {
-    setCounter( counter + 1 >= APP_SLIDER_ITEMS.length ? 0 : previousValue => previousValue + 1)
-  }, 4000);
-
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setCounter( counter + 1 >= APP_SLIDER_ITEMS.length ? 0 : previousValue => previousValue + 1)
+    }, 4000);
+
     return () => clearTimeout(timer)
-  }, [timer])
+  }, [counter])
 
 
   return (
