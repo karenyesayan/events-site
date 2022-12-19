@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import instance from "../../api/axios"
 
 import Events from "./Events"
@@ -8,6 +9,8 @@ import Upcomings from "./Upcomings"
 const Home = () => {
   const [imgIndex, setImgIndex] = useState(1)
   const [backImg, setBackImg] = useState([])
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     instance.get('homeBackImg')
@@ -47,7 +50,7 @@ const Home = () => {
                       <div className="homepage-content-title">
                           {title}
                       </div>
-                      <div className="homepage-content-order">
+                      <div onClick={() => navigate('/cinema')} className="homepage-content-order">
                           order ticket
                       </div >
                   </div>

@@ -207,9 +207,9 @@
     },
     {
       "id": 6,
-      "src": "https://rg.ru/uploads/images/207/64/03/cirk.jpg",
-      "title": "Other",
-      "navigateTo": "other"
+      "src": "https://cdn.vox-cdn.com/thumbor/6H6s5lnbO8QawZWDq9GKtHQZ3wA=/0x0:2040x1360/1200x675/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/66952568/jbareham_200318_1006_movie_night_0001.0.jpg",
+      "title": "Online",
+      "navigateTo": "online"
     }
   ],
   "events": [
@@ -245,7 +245,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/59/16/11/slug-111659.jpg",
       "info": "Conductor: Harutyun Arzumanyan Stage choreographer: Henrikh Majorov.",
       "date": "14-12-2022 15:00",
-      "ticket": "5000 - 10000"
+      "price": 2000
     },
     {
       "id": "js7",
@@ -253,7 +253,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/40/22/11/slug-112240.jpg",
       "info": "Concert performance of Giacomo Puccini's opera 'Tosca' with the participation of world opera stars in Aram Khachatryan concert hall. Floria Tosca - Hibla Gerzmava, soprano Mario Cavaradossi - Arsen Soghomonyan, tenor Scarpia - Vladislav Sulimski, baritone National Philharmonic Orchestra of Armenia, Artistic Director and Chief Conductor: Eduard Topchyan",
       "date": "14-12-2022 15:00",
-      "ticket": "3000 - 20000"
+      "price": 3000
     },
     {
       "id": "hd6",
@@ -261,7 +261,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/60/16/11/slug-111660.jpg",
       "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
       "date": "14-12-2022 15:00",
-      "ticket": "4000 - 5000"
+      "price": 4000
     },
     {
       "id": "ak6",
@@ -269,7 +269,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/58/16/11/slug-111658.jpg",
       "info": "Musical director and conductor of the performance: Karen Durgaryan /Honored Artist of RA/ Stage director: Armen Meliksetyan /Honored Art Worker of RA/ Set designer: Rafael Khachatryan",
       "date": "14-12-2022 15:00",
-      "ticket": "5000 - 20000"
+      "price": 5000
     },
     {
       "id": "ah6",
@@ -277,7 +277,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/64/10/slug-106481.jpg",
       "info": "Stage director: Gegham Griogoryan /People’s Artist of RA and RL/ Set designer: Grisha Sahakyan /Honored Art Worker of RA/ Chief choirmaster: Hrach Boryan Choreographer: Vilen Galstyan /People’s Artist of RA/",
       "date": "14-12-2022 15:00",
-      "ticket": "5000 - 14000"
+      "price": 5000
     }
   ],
   "concert": [
@@ -287,7 +287,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/79/18/11/slug-111879.jpg",
       "info": "On November 25, at 19:00, the solo concert of the Yeva Sujyan & Black Gold Project group will take place at the Hovhannes Tumanyan Puppet Theater entitled 'Don't Stop Dreaming'. The special guests of the concert are Hasmik Karapetyan and Vahan Artsruni.",
       "date": "27-12-2022 19:00",
-      "ticket": "5000 - 7000"
+      "price": 5000
     },
     {
       "id": "8ds",
@@ -295,7 +295,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/19/20/11/slug-112019.jpg",
       "info": "On November 25, an evening of original song and poetry at the Old Arena music hall. Sincere conversation and music, an exceptional evening for the soul and mind. The participation of all of you is extremely important. this time, too, we will direct the funds to an important cause, and the details on the spot. Hurry up to book your place.",
       "date": "27-12-2022 19:00",
-      "ticket": "5000"
+      "price": 5000
     },
     {
       "id": "d5",
@@ -303,7 +303,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/97/20/11/slug-112097.jpg",
       "info": "On November 25, within the framework of the Yerevan Jazz Festival, Arno Babajanyan Concert Hall will be hosting the leading pianists of Armenia.",
       "date": "27-12-2022 19:00",
-      "ticket": "3000 - 7000"
+      "price": 3000
     },
     {
       "id": "su2",
@@ -311,7 +311,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/63/21/11/slug-112163.jpg",
       "info": "Don’t miss Babylon Theatre’s reopening concert on November 25th! Bands: Rozen, Tal, TEELxSocko, VANAKAN ",
       "date": "27-12-2022 19:00",
-      "ticket": "5000"
+      "price": 4000
     }
   ],
   "clubs&pabs": [
@@ -321,7 +321,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/83/19/11/slug-111983.jpg",
       "info": "Popular and recognized songs of our city performed by Forsh and Re Minor on November 20 at the Hin Areni music hall. A beautiful Yerevan evening, especially for you.",
       "date": "20-11-2022 21:00",
-      "ticket": "10000 - 14000"
+      "price": 10000
     },
     {
       "id": "at3",
@@ -329,7 +329,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/51/20/11/slug-112051.jpg",
       "info": "On November 23, Aramon and Emma Petrosyan, one of the most beautiful couples of Armenian singing, will perform popular and beautiful performances in the music hall of the Old Arena.",
       "date": "20-11-2022 21:00",
-      "ticket": "4000 - 5000"
+      "price": 5000
     },
     {
       "id": "ma0",
@@ -337,7 +337,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/64/21/11/slug-112164.jpg",
       "info": "Spend a warm August evening at the Old Arena music hall with live music by Arp and the Hayway Band.",
       "date": "20-11-2022 21:00",
-      "ticket": "4000 - 5000"
+      "price": 5000
     },
     {
       "id": "sy6",
@@ -345,7 +345,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/56/20/11/slug-112056.jpg",
       "info": "Arsen and Arthur Safaryan Beloved, soulful performances performed by popular singers. On November 24, spend a wonderful evening at the Old Arena Music Hall. Places are limited.",
       "date": "20-11-2022 21:00",
-      "ticket": "4000"
+      "price": 4000
     },
     {
       "id": "di8",
@@ -353,7 +353,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/81/20/11/slug-112081.jpg",
       "info": "If you still haven't decided where to watch Fifa2022 games, then we have a good offer. Starting from November 20, every day we invite you to watch the most anticipated football championship with your friends on 3 exceptionally large screens. Interesting surprises and hospitality await football-loving guests. Let's spend the crazy and tense month together. Entrance is FREE.",
       "date": "20-11-2022 21:00",
-      "ticket": "Free"
+      "price": 1000
     },
     {
       "id": "di9",
@@ -361,7 +361,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/44/19/11/slug-111944.jpg",
       "info": null,
       "date": "20-11-2022 21:00",
-      "ticket": "4000"
+      "price": 4000
     }
   ],
   "theater": [
@@ -370,7 +370,7 @@
       "title": "Dark, bitter chocolate",
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
       "date": "24-11-2022 19:00",
-      "ticket": "1000 - 5000"
+      "price": 1000
     },
     {
       "id": "56w",
@@ -378,7 +378,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/66/07/11/slug-110766.jpg",
       "info": "History of the origin and formation of the Armenian people, where the answers to the most pressing questions of our birth certificate will be heard.",
       "date": "23-11-2022 19:00",
-      "ticket": "1000 - 3000"
+      "price": 1000
     },
     {
       "id": "px9",
@@ -386,7 +386,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/33/29/10/slug-102933.jpg",
       "info": "Musical fairy tale from part 1. The play is a stage version of a well-known fairy tale. This musical performance promises magic, fireworks of colors, spectacle and endless joy. This is a tale about Aladdin's magic lamp and how all our dreams can come true.",
       "date": "23-11-2022 19:00",
-      "ticket": "2000 - 6000"
+      "price": 2000
     },
     {
       "id": "as6",
@@ -394,7 +394,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/96/11/11/slug-111196.jpg",
       "info": "In a happy and carefree atmosphere, we will try to travel together in the world of theater and discover unknown sides to the audience. This play features the real stories of the actors, intrigue, secrets and, of course, endless laughs.",
       "date": "23-11-2022 19:00",
-      "ticket": "4000"
+      "price": 4000
     },
     {
       "id": "lq1",
@@ -402,7 +402,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/20/35/10/slug-103520.jpg",
       "info": "Ardent patriotism often evaporates when it collides with one's self-interest. Look for the stage version of Guy de Maupassant's The Fat Ball, one of the pillars of classical literature, in our playbook under the title The Dumpling.",
       "date": "23-11-2022 19:00",
-      "ticket": "1500 - 2500"
+      "price": 1500
     },
     {
       "id": "mx0",
@@ -410,7 +410,7 @@
       "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/35/96/09/slug-99635.jpg",
       "info": "A new mono performance by Tamara Petrosyan. The actress will present the interesting, sometimes nerve-wracking, but always up-to-date theme of staying at home in all its nuances with her special humorous prism.",
       "date": "23-11-2022 19:00",
-      "ticket": "1000 - 1600"
+      "price": 1000
     }
   ],
   "profile": {
