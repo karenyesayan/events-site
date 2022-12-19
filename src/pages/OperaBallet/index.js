@@ -39,7 +39,7 @@ const OperaBallet = () => {
   
           <div className='theatre-back'>
               <div className='theatre-container'>
-                  {opera.map (({id, title, img, info, date, time, price})  => {
+                  {opera.map (({id, title, img, info, date, price})  => {
                       return(
                           <div className="theatre"
                               key = {id}>
@@ -58,7 +58,7 @@ const OperaBallet = () => {
                               <div >
                                  Tickets {price} dr. 
                               </div>
-                              <button onClick={() => moreInfo(id, title, img, info, date, time, price)} className='theater-btn'>
+                              <button onClick={() => moreInfo(id, title, img, info, date, price)} className='theater-btn'>
                                   Buy now
                               </button>
                           </div>

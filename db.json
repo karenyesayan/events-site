@@ -12,8 +12,24 @@
       "name": "meri",
       "email": "meri@gmail.com",
       "pass": "meri",
-      "ewallet": "10000",
+      "ewallet": 9000,
       "selectedEvents": [
+        {
+          "id": "shh",
+          "title": "Dark, bitter chocolate",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/bigimage/49/76/09/slug-97649.jpg",
+          "date": "24-11-2022 19:00",
+          "price": 1000
+        },
+        {
+          "id": 2,
+          "title": "Վիշապ",
+          "img": "https://www.tomsarkgh.am/thumbnails/Photo/577_325_center_FFFFFF/18/00/11/slug-110018.jpg",
+          "cinemas": "Մոսկվա կինոթատրոն (Կապույտ փոքր դահլիճ)",
+          "date": "18/11/22",
+          "price": 2000,
+          "info": "Ֆիլմի գլխավոր հերոսը Հայկն է։ Նա ուսանող է, որ լրացուցիչ աշխատում է սուրհանդակային ծառայությունում, պարբերաբար հայտնվում է տհաճ պատմությունների մեջ, իսկ վեճը համակուրսեցու հետ դառնում է հերթական անախորժությունը։"
+        },
         {
           "id": 3,
           "title": "Իշխանություն - 2",
