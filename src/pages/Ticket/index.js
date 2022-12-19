@@ -4,12 +4,15 @@ import { useDispatch, useSelector } from "react-redux"
 
 import { eventSelector } from "../../redux/slices/eventSlice";
 import { ewalletBalance, userSelector } from "../../redux/slices/userSlice"
+import instance from '../../api/axios'
 
 const Ticket = (navigateTo) => {
     const navigate = useNavigate();
-    const { name, ewallet } = useSelector(userSelector);
+    const { id, name, ewallet } = useSelector(userSelector);
     const activEvent = useSelector(eventSelector);
     const dispatch = useDispatch();
+
+    console.log('userId', id)
 
     useEffect(() => {
         setTimeout(() => {
@@ -17,6 +20,7 @@ const Ticket = (navigateTo) => {
         }, 3000);
 
         const balance = ewallet - activEvent.price;
+        instance.patch(`users/${id}`, {ewallet: balance})
         dispatch(ewalletBalance(balance));
     }, [])
 

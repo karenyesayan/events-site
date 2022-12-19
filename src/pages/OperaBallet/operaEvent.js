@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import instance from "../../api/axios";
 import { selectEvent } from "../../redux/slices/eventSlice";
 import { operaEventSelector } from "../../redux/slices/operaSlice"
-import { userSelector } from "../../redux/slices/userSlice";
+import { addEventToUser, userSelector } from "../../redux/slices/userSlice";
 
 const OperaEvent = () => {
     const mainEvent = useSelector(operaEventSelector)
@@ -12,17 +12,20 @@ const OperaEvent = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
-    const {id, name, selectedEvents} = useSelector(userSelector);
+    const {id, name, ewallet, selectedEvents} = useSelector(userSelector);
 
-    const navigateToTicket = () => {
-        if (name) {
-           const body ={selectedEvents:[mainEvent,...selectedEvents]}
-           instance.patch(`users/${id}/`, body)
-            dispatch(selectEvent(mainEvent))
-            navigate('/ticket');
-           
-        } else { navigate('/myaccount') }
-    }
+    const navigateToTicket = (activEvent) => { 
+        if (id) {
+            console.log(activEvent)
+            if (ewallet >= activEvent.price) {
+                const body = { selectedEvents: [activEvent, ...selectedEvents]};
+                instance.patch(`users/${id}/`, body);
+                dispatch(selectEvent(activEvent));
+                dispatch(addEventToUser(activEvent));
+                navigate("/ticket");
+            } else { alert(`Sorry${name} your Ewallet balance is, less than ticket's price`) }
+        } else { navigate("/myaccount") }
+    };
 
     return (
         <div className="theatre-schedule">
@@ -38,7 +41,7 @@ const OperaEvent = () => {
                 </div>
                 <div >
                     <div className="theatre-schedule-btn-div">
-                        <button onClick={navigateToTicket} className="theatre-schedule-btn">
+                        <button onClick={() => navigateToTicket(mainEvent)} className="theatre-schedule-btn">
                             Buy ticket
                         </button>
                     </div>

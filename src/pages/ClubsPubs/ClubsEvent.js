@@ -13,18 +13,20 @@ const ClubsEvent = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
-    const {id, selectedEvents} = useSelector(userSelector);
+    const {id, name, ewallet, selectedEvents} = useSelector(userSelector);
 
     const navigateToTicket = (activEvent) => { 
         if (id) {
-            
-            const body = { selectedEvents: [activEvent, ...selectedEvents]};
-            instance.patch(`users/${id}/`, body);
-            dispatch(selectEvent(activEvent));
-            dispatch(addEventToUser(activEvent));
-            navigate("/ticket");
+            if (ewallet >= activEvent.price) {
+                const body = { selectedEvents: [activEvent, ...selectedEvents]};
+                instance.patch(`users/${id}/`, body);
+                dispatch(selectEvent(activEvent));
+                dispatch(addEventToUser(activEvent));
+                navigate("/ticket");
+            } else { alert(`Sorry${name} your Ewallet balance is, less than ticket's price`) }
         } else { navigate("/myaccount") }
     };
+
 
     return (
         <div className="theatre-schedule">

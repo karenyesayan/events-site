@@ -21,14 +21,14 @@ const Theater = () => {
   }, [])
   
 
-  const moreInfo = (id, title, img, info, date, ticket) => {
+  const moreInfo = (id, title, img, info, date, price) => {
     const eventObj = {
         id,
         title,
         img,
         info,
         date,
-        ticket,
+        price,
     }
 
     dispatch(setTheatreEvent(eventObj))
@@ -39,7 +39,7 @@ const Theater = () => {
 
         <div className='theatre-back'>
             <div className='theatre-container'>
-                {theater.map (({id, title, img, info, date, time, ticket})  => {
+                {theater.map (({id, title, img, info, date, price})  => {
                     return(
                         <div className="theatre"
                             key = {id}>
@@ -56,9 +56,9 @@ const Theater = () => {
                                 {info}
                             </div>
                             <div >
-                                Tickets {ticket}dr. 
+                                Tickets {price}dr. 
                             </div>
-                            <button onClick={() => moreInfo(id, title, img, info, date, time, ticket)} className='theater-btn'>
+                            <button onClick={() => moreInfo(id, title, img, info, date, price)} className='theater-btn'>
                                 Buy now
                             </button>
                         </div>

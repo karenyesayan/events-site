@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+    import { useEffect, useState } from 'react';
 import instance from '../../api/axios'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -21,14 +21,14 @@ const ClubsPubs = () => {
     }, [])
     
   
-    const moreInfo = (id, title, img, info, date, ticket) => {
+    const moreInfo = (id, title, img, info, date, price) => {
       const eventObj = {
           id,
           title,
           img,
           info,
           date,
-          ticket,
+          price,
       }
   
       dispatch(setClubsEvent(eventObj))
@@ -39,7 +39,7 @@ const ClubsPubs = () => {
   
           <div className='theatre-back'>
               <div className='theatre-container'>
-                  {clubsInfo.map (({id, title, img, info, date, ticket})  => {
+                  {clubsInfo.map (({id, title, img, info, date, price})  => {
                       return(
                           <div className="theatre"
                               key = {id}>
@@ -56,9 +56,9 @@ const ClubsPubs = () => {
                                   {info}
                               </div>
                               <div >
-                                 Tickets {ticket !== 'Free' ? `${ticket}dr.` : ticket} 
+                                 Tickets {price } dr.
                               </div>
-                              <button onClick={() => moreInfo(id, title, img, info, date, ticket)} className='theater-btn'>
+                              <button onClick={() => moreInfo(id, title, img, info, date, price)} className='theater-btn'>
                                   Buy now
                               </button>
                           </div>
