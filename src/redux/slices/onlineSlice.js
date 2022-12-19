@@ -8,6 +8,7 @@ const initialState = {
     findItemsResult: null,
     loading: false,
     errorMessage: false,
+    randomlySelected: [],
 }
 
 const onlineSlice = createSlice({
@@ -70,6 +71,9 @@ const onlineSlice = createSlice({
         },
         resetFindItemsResult: state => {
             state.findItemsResult = null
+        },
+        randomSelect: (state, {payload}) => {
+            state.randomlySelected = state.allItems.filter(element => element.title !== payload).sort(() => .5 - Math.random()).slice(0, 12)
         }
     },
     extraReducers: builder => {
@@ -78,12 +82,13 @@ const onlineSlice = createSlice({
 })
 
 
-export const {loadOnlineItems, filterOnlineData, setIsFiltersActive, findOnlineItems, resetFindItemsResult} = onlineSlice.actions
+export const {loadOnlineItems, filterOnlineData, setIsFiltersActive, findOnlineItems, resetFindItemsResult, randomSelect} = onlineSlice.actions
 
 export const allOnlineItemsSelector = state => state.online.allItems
 export const uploadedItemsSelector = state => state.online.uploadedItems
 export const isFiltersActiveSelector = state => state.online.isFiltersActive
 export const findItemsResultSelector = state => state.online.findItemsResult
 export const errorMessageSelector = state => state.online.errorMessage
+export const randomlySelectedSelector = state => state.online.randomlySelected
 
 export default onlineSlice.reducer

@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom"
 
 import GoBackButton from "../../../components/GoBackButton/index"
 import Trailer from "../../../components/Trailer/index"
+import OnlineScroller from "../../../components/OnlineScroller"
 
 import useOnlineContentBuy from "../../../hooks/useOnlineContentBuy"
 
@@ -41,6 +42,7 @@ const SingleOnline = () => {
                         <span> {runtime} min.</span>
                      </section>
                      <article>{about}</article>
+                     <OnlineScroller title={title}/>
                 </div>
             </div>
         </>
