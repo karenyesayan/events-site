@@ -50,7 +50,7 @@ code {
   height: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -107,7 +107,7 @@ code {
 
 select {
   overflow-y: auto;
-  width: 17vw;
+  width: 18vw;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   font-size: 0.9rem;
@@ -154,12 +154,15 @@ option:checked, option:hover {
 
 .search-bar {
   display: flex;
+  position: absolute;
+  right: 15.8vw;
+  top: 4.05vw;
   color: rgba(11, 0, 129, 1);
   cursor: pointer;
 }
 
 .search-bar:hover > .hidden-input .inactive-input {
-  width: 17vw;
+  width: 18vw;
   top: 0;
   right: 100%;
   border: 1px solid lightgray;
@@ -170,7 +173,7 @@ option:checked, option:hover {
   position: relative;
   top: 0;
   left: 0;
-  width: 17vw;
+  width: 18vw;
   height: 4vh;
   outline: none;
   border: 1px solid lightgray;
