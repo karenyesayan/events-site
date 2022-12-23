@@ -276,8 +276,14 @@
 
 /* APP-SLIDER */
 
+.main-app {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .app-container {
-  width: 100%;
+  display: flex;
+  width: 600vw;
   height: 75vh;
 }
 
@@ -286,8 +292,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  width: 100%;
-  transition: 0.7s ease-in-out;
+  width: 100vw;
   background-repeat: no-repeat; 
   background-size: 100% 150%;
 }
@@ -295,37 +300,29 @@
 .poster-details-container {
   width: 25%;
   height: 45%;
-  position: absolute;
+  position: relative;
   left: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   color: rgba(11,0,129,1);
   cursor: default;
 }
 
 .poster-details-button {
-  display: block;
-  width: 65%;
-  height: 12%;
+  width: 18vw;
+  height: 5.9vh;
+  line-height: 5.3vh;
+  text-align: center;
+  font-size: 1.15rem;
   background: linear-gradient(326deg, rgba(255,0,241,1) 0%, rgba(11,0,129,1) 95%);
   border-radius: 1.5rem;
-  text-align: center;
-  line-height	: 2rem;
   color: white;
-  font-weight: 700;
+  font-weight: 650;
   cursor: pointer;
 }
 
 .poster-details-button:hover {
-  display: block;
-  width: 65%;
-  height: 12%;
-  border-radius: 1.5rem;
-  text-align: center;
-  line-height	: 2rem;
-  font-weight: 700;
-  cursor: pointer;
   background: magenta;
   color: white;
 }
@@ -336,10 +333,9 @@
 }
 
 .nav-buttons {
-  display: flex;
-  align-self: flex-end;
-  margin: 0 auto;
-  margin-bottom: 2.3vh;
+  margin-left: 45vw;
+  margin-top: -4vh; 
+  position: absolute;
 }
 
 .inactive-nav-button {
@@ -426,7 +422,9 @@
   display: flex;
 }
 
-.empty-div {
+/* Reg Content */
+
+.reg-container {
   width: 100%;
   background-image: url("https://www.exond.net/wp-content/uploads/2018/02/header-bg.png");
   height: 80vh;
@@ -434,6 +432,30 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+.reg-container h1 {
+  font-size: 3rem;
+}
+
+.reg-container button {
+  width: 14vw;
+  height: 6.5vh;
+  background: white;
+  color: #034694;
+  font-size: larger;
+  font-weight: 550;
+  border-radius: 1.5rem;
+  border: 2px solid #034694;
+  cursor: pointer;
+}
+
+.reg-container button:hover {
+  color: magenta;
 }
 
 /* FOOTER */
