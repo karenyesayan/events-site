@@ -25,6 +25,9 @@ const dictionary = {
     ["About"]: "About",
     ["Information"]: "Information",
     ["Help"]: "Help",
+    ["What else to watch"]: "What else to watch",
+    ["Order online"]: "Order online",
+    Register: "Register",
   },
   hy: {
     Home: "Գլխավոր էջ",
@@ -48,6 +51,9 @@ const dictionary = {
     ["About"]: "Մեր մասին",
     ["Information"]: "Տեղեկատվություն",
     ["Help"]: "Օգնություն",
+    ["What else to watch"]: "Դիտել նաեւ",
+    ["Order online"]: "Պատվիրել առցանց",
+    Register: "Գրանցվել",
   }
 };
 

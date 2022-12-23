@@ -79,7 +79,7 @@ export const HEADER_NAVIGATION = [
 
 export const APP_SLIDER_ITEMS = [
     {
-        id: "59",
+        id: 0,
         title: "Аram MP3",
         genre: "music",
         runtime: "95",
@@ -92,7 +92,7 @@ export const APP_SLIDER_ITEMS = [
         trailer: "64NtAZyDd-w",
     },
     {
-        id: "57",
+        id: 100,
         title: "Sevak Khanagyan",
         genre: "music",
         runtime: "100",
@@ -105,7 +105,7 @@ export const APP_SLIDER_ITEMS = [
         trailer: "3RPwOFno_Wc",
     },
     {   
-        id: "55",
+        id: 200,
         title: "Vay Grig Grig",
         genre: "comedy",
         runtime: "120",
@@ -118,7 +118,7 @@ export const APP_SLIDER_ITEMS = [
         trailer: "onIjwbgHcEk",
     },
     {
-        id: "56",
+        id: 300,
         title: "Retro jazz",
         genre: "music",
         runtime: "150",
@@ -131,7 +131,7 @@ export const APP_SLIDER_ITEMS = [
         trailer: "Jl48lWUO8lM",
     },
     {
-        id: "58",
+        id: 400,
         title: "Love Odd",
         genre: "comedy",
         runtime: "104",
@@ -143,7 +143,20 @@ export const APP_SLIDER_ITEMS = [
         poster: "https://www.tomsarkgh.am/thumbnails/Photo/orig/43/94/02/slug-29443.jpg",
         trailer: "1pItmfvSWJU",
     },
-  ];
+    {
+        id: 500,
+        title: "Аram MP3",
+        genre: "music",
+        runtime: "95",
+        date: "2021",
+        cinemas: "-",
+        price: 2500,
+        about: "Մենահամերգ - Aram Mp3",
+        link: "/online/59",
+        poster: "https://i.ytimg.com/vi/-ISD92BZxfk/maxresdefault.jpg",
+        trailer: "64NtAZyDd-w",
+    },
+  ]
 
   export const App_Content_Items = [
     {
@@ -174,4 +187,4 @@ export const APP_SLIDER_ITEMS = [
     backgroundImage: `url("https://traveltimes.ru/wp-content/uploads/2021/09/RIAN_5621307.HR_.ru_d_850.jpg")`,
     link: "/operaBallet", 
   },
-];
+]

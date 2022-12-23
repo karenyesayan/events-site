@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { TbMovie } from "react-icons/tb";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+import { useLanguage } from "../../contexts/LanguageProvider"
 import useNavigateToDetails from "../../hooks/useNavigateToDetails"
 import {randomSelect, randomlySelectedSelector, allOnlineItemsSelector} from "../../redux/slices/onlineSlice"
 import {getOnlineData} from "../../redux/thunks/onlineThunk"
@@ -15,6 +16,7 @@ const OnlineScroller = ({title}) => {
   const selected = useSelector(randomlySelectedSelector)
   const allItems = useSelector(allOnlineItemsSelector)
   const navigateToDetails = useNavigateToDetails()
+  const { t } = useLanguage()
 
   const goLeft = () => {
     if(translate === 0) setTranslate(prev => prev -148)
@@ -40,7 +42,7 @@ const OnlineScroller = ({title}) => {
             size={40} 
             color='white'
           />
-          <h2>What else to watch</h2>
+          <h2>{t("What else to watch")}</h2>
         </div>
         <div className="scroller-nav-buttons">
           <FaChevronLeft 
